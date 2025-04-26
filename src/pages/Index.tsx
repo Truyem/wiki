@@ -10,6 +10,7 @@ import Trinkets from "@/components/wiki/Trinkets";
 import ServerCommands from "@/components/wiki/ServerCommands";
 import Footer from "@/components/Footer";
 import Upgrades from "@/components/wiki/Upgrades";
+import Races from "@/components/wiki/Races";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("basic-crafting");
@@ -26,6 +27,8 @@ const Index = () => {
         return <MaterialTiers />;
       case "special-items":
         return <SpecialItems />;
+      case "races":
+        return <Races />;
       case "enchantments":
         return <Enchantments />;
       case "trinkets":
