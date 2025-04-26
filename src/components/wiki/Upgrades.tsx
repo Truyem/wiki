@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -6,10 +5,8 @@ import CommonUpgrades from "@/components/wiki/upgradeCategories/CommonUpgrades";
 import ToolUpgrades from "@/components/wiki/upgradeCategories/ToolUpgrades";
 import WeaponUpgrades from "@/components/wiki/upgradeCategories/WeaponUpgrades";
 import ArmorUpgrades from "@/components/wiki/upgradeCategories/ArmorUpgrades";
-
 const Upgrades = () => {
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-2">Chất lượng và nâng cấp</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -29,19 +26,19 @@ const Upgrades = () => {
             <div>
               <h3 className="text-lg font-semibold mb-2 text-center">Nâng cấp: 4</h3>
               <div className="flex justify-center">
-                <img src="/placeholder.svg" alt="Nâng cấp 4 ô" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Nâng cấp 4 ô" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/02348b6b-365e-4888-9511-b82048e6b025.png" />
               </div>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2 text-center">Nâng cấp: 5</h3>
               <div className="flex justify-center">
-                <img src="/placeholder.svg" alt="Nâng cấp 5 ô" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Nâng cấp 5 ô" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/f2f474a1-f6e2-49be-ad57-e340863e2336.png" />
               </div>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-2 text-center">Nâng cấp: 6</h3>
               <div className="flex justify-center">
-                <img src="/placeholder.svg" alt="Nâng cấp 6 ô" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Nâng cấp 6 ô" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/9ed52745-6735-4374-b895-0deae47407bc.png" />
               </div>
             </div>
           </div>
@@ -68,8 +65,6 @@ const Upgrades = () => {
           <ArmorUpgrades />
         </TabsContent>
       </Tabs>
-    </div>
-  );
+    </div>;
 };
-
 export default Upgrades;
