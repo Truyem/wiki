@@ -39,13 +39,13 @@ const QualityUpgrades = () => {
                 Trang bị kim loại (sắt, vàng, kim cương và đồng) mới chế tạo sẽ khá mềm và yếu. Bạn cần tôi luyện chúng bằng cách nung nóng.
               </p>
               <div className="flex justify-center mb-4">
-                <img src="/placeholder.svg" alt="Nung nóng trang bị" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Nung nóng trang bị" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/9879bc63-6f7f-46a5-b1c2-593a12a04d20.png" />
               </div>
               <p className="mb-4">
                 Rồi làm nguội trong vạc nước. Quá trình này tăng gấp đôi độ bền, mang lại nhiều kinh nghiệm Rèn hơn và tăng tốc độ khai thác của công cụ.
               </p>
               <div className="flex justify-center mb-6">
-                <img src="/placeholder.svg" alt="Làm nguội trang bị" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Làm nguội trang bị" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/3fbe3740-0da3-438d-b6b0-1f5e7fa9f389.png" />
               </div>
             </CardContent>
           </Card>
