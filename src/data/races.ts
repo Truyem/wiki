@@ -79,17 +79,69 @@ export const races: RaceCategory[] = [
         name: "Drowned",
         advantages: [
           "Kích hoạt khả năng sử dụng channeling không cần sét và riptide không cần mưa (có thời gian hồi chiêu 60 giây và kéo dài 20 giây)",
-          "Nhìn rõ hơn dưới nước",
+          "Bạn có thể nhìn rõ hơn dưới nước",
           "Guardians không tấn công bạn",
-          "Gây thêm sát thương trong nước",
-          "Có thể thở dưới nước"
+          "Bạn gây thêm sát thương trong nước",
+          "Bạn có thể thở dưới nước",
+          "Bạn bơi nhanh hơn",
+          "Bạn có thể zombify dân làng bằng cách giết họ",
+          "Bạn có thể biến đổi trở lại thành Zombie bằng cách ở trong quần xã sinh vật ấm áp như sa mạc trong một thời gian dài"
         ],
         disadvantages: [
-          "Bốc cháy dưới ánh sáng ban ngày",
-          "Nhận thêm sát thương từ Smite",
-          "Mất đói nhanh hơn",
-          "Chậm hơn trên cạn",
-          "Chỉ có thể ăn thịt (thực phẩm khác không cung cấp độ bão hòa và làm bạn bị độc)"
+          "Nguồn gốc này không thể chọn ban đầu, bạn nhận được nó bằng cách ở trong nước trong một thời gian dài khi là Zombie",
+          "Nguồn gốc này ghi đè phiên bản Drowned từ Origins-Mobs nếu có",
+          "Bạn nhận thêm sát thương từ Smite",
+          "Bạn bốc cháy dưới ánh sáng ban ngày",
+          "Bạn mất đói nhanh hơn",
+          "Bạn chậm hơn con người",
+          "Bạn còn chậm hơn trên cạn",
+          "Bạn chỉ có thể ăn thịt (thực phẩm khác không cung cấp độ bão hòa và làm bạn bị độc)",
+          "Dân làng sợ hãi bạn và sẽ chạy trốn và từ chối giao dịch"
+        ],
+        abilities: []
+      },
+      {
+        name: "Evoker",
+        advantages: [
+          "Bạn có thể nhấp chuột trái khi không cầm gì để triệu hồi răng nanh evoker",
+          "Bạn có 10% cơ hội totem of undying không vỡ khi sử dụng",
+          "Pillagers và Illagers thích bạn"
+        ],
+        disadvantages: [
+          "Dân làng không thích bạn"
+        ],
+        abilities: []
+      },
+      {
+        name: "Guardian",
+        advantages: [
+          "Bạn có gai tự nhiên",
+          "Guardians không tấn công bạn",
+          "Bạn có giáp tự nhiên",
+          "Bạn có thể thở dưới nước nhưng không thở được trên cạn",
+          "Bạn có thể nhìn rõ hơn dưới nước",
+          "Bạn có thể phá khối nhanh hơn dưới nước",
+          "Bạn có thể bơi nhanh hơn dưới nước",
+          "Bạn nhận khí từ thuốc",
+          "Bạn có thể trở thành Elder Guardian bằng cách giết một con"
+        ],
+        disadvantages: [
+          "Bạn yếu hơn trên cạn",
+          "Bạn nhận thêm sát thương từ Impaling"
+        ],
+        abilities: []
+      },
+      {
+        name: "Elder Guardian",
+        advantages: [
+          "Tất cả khả năng của guardian",
+          "Gai tự nhiên của bạn mạnh hơn",
+          "Giáp tự nhiên của bạn mạnh hơn",
+          "Bạn miễn nhiễm với mining fatigue",
+          "Bạn có thể nhấp chuột trái khi không cầm gì để gây mining fatigue cho người chơi gần đó"
+        ],
+        disadvantages: [
+          "Nguồn gốc này không thể chọn ban đầu, bạn biến đổi thành nó bằng cách giết một Elder Guardian tự nhiên khi bạn có nguồn gốc Guardian"
         ],
         abilities: []
       },
@@ -108,50 +160,137 @@ export const races: RaceCategory[] = [
       {
         name: "Zombie",
         advantages: [
-          "Night vision khi ở trên cạn",
-          "Undead mobs không tấn công bạn trừ khi bị tấn công trước",
-          "Có thể zombify dân làng bằng cách giết họ",
-          "Có thể biến đổi thành Husk hoặc Drowned"
+          "Bạn có night vision khi ở trên cạn",
+          "Undead mobs sẽ không tấn công bạn trừ khi bạn tấn công chúng trước",
+          "Bạn có thể zombify dân làng bằng cách giết chúng",
+          "Bạn có thể biến đổi thành Husk hoặc Drowned"
         ],
         disadvantages: [
-          "Nhận thêm sát thương từ Smite",
-          "Bốc cháy dưới ánh sáng ban ngày",
-          "Chậm hơn con người",
-          "Mất đói nhanh hơn",
-          "Chỉ có thể ăn thịt (thực phẩm khác không cung cấp độ bão hòa và gây độc)",
-          "Dân làng sợ hãi và từ chối giao dịch"
+          "Bạn nhận thêm sát thương từ Smite",
+          "Bạn bốc cháy dưới ánh sáng ban ngày",
+          "Bạn chậm hơn con người",
+          "Bạn mất đói nhanh hơn con người",
+          "Bạn chỉ có thể ăn thịt (thực phẩm khác không cung cấp độ bão hòa và làm bạn bị độc)",
+          "Dân làng sợ hãi bạn và sẽ chạy trốn và từ chối giao dịch"
+        ],
+        abilities: []
+      },
+      {
+        name: "Husk",
+        advantages: [
+          "Bạn có night vision khi ở trên cạn",
+          "Undead mobs sẽ không tấn công bạn trừ khi bạn tấn công chúng trước",
+          "Bạn có thể zombify dân làng bằng cách giết chúng",
+          "Bạn có thể biến đổi trở lại thành Zombie bằng cách ở trong nước một thời gian dài"
+        ],
+        disadvantages: [
+          "Nguồn gốc này không thể chọn ban đầu, bạn nhận được nó bằng cách ở trong một quần xã sinh vật ấm áp như sa mạc trong một thời gian dài khi là Zombie",
+          "Bạn nhận thêm sát thương từ Smite",
+          "Bạn chậm hơn con người",
+          "Bạn còn chậm hơn nếu ở trong một quần xã sinh vật lạnh hơn",
+          "Bạn mất đói nhanh hơn con người",
+          "Bạn chỉ có thể ăn thịt (thực phẩm khác không cung cấp độ bão hòa và làm bạn bị độc)",
+          "Dân làng sợ hãi bạn và sẽ chạy trốn và từ chối giao dịch"
         ],
         abilities: []
       },
       {
         name: "Skeleton",
         advantages: [
-          "Night vision khi ở trên cạn",
-          "Vô hạn mũi tên",
-          "Undead mobs không tấn công bạn trừ khi bị tấn công trước",
-          "Mục tiêu hoàn hảo với cung",
-          "Có thể biến đổi thành Stray"
+          "Bạn có night vision khi ở trên cạn",
+          "Bạn có vô hạn mũi tên",
+          "Undead mobs sẽ không tấn công bạn trừ khi bạn tấn công chúng trước",
+          "Bạn có mục tiêu hoàn hảo với cung",
+          "Bạn có thể biến đổi thành Stray"
         ],
         disadvantages: [
-          "Nhận thêm sát thương từ Smite",
-          "Bốc cháy dưới ánh sáng ban ngày",
-          "Ít hơn 2 trái tim so với con người",
-          "Saturation tối đa bị giảm một nửa"
+          "Bạn nhận thêm sát thương từ Smite",
+          "Bạn bốc cháy dưới ánh sáng ban ngày",
+          "Bạn có ít hơn con người 2 trái tim",
+          "Saturation tối đa của bạn bị giảm một nửa"
+        ],
+        abilities: []
+      },
+      {
+        name: "Stray",
+        advantages: [
+          "Bạn có vô hạn mũi tên",
+          "Bạn không nhận sát thương từ bột tuyết",
+          "Undead mobs sẽ không tấn công bạn trừ khi bạn tấn công chúng trước",
+          "Bạn có mục tiêu hoàn hảo với cung",
+          "Tất cả mũi tên bạn bắn gây hiệu ứng Slowness",
+          "Bạn có thể biến đổi trở lại thành skeleton bằng cách ở trong một quần xã sinh vật ấm áp như sa mạc trong một thời gian dài"
+        ],
+        disadvantages: [
+          "Nguồn gốc này không thể chọn ban đầu, bạn nhận được nó bằng cách ở trong bột tuyết hoặc trong một quần xã sinh vật lạnh trong một thời gian dài khi là Skeleton",
+          "Bạn nhận thêm sát thương từ Smite",
+          "Bạn bốc cháy dưới ánh sáng ban ngày",
+          "Bạn có ít hơn con người 2 trái tim",
+          "Bạn di chuyển chậm hơn ở các quần xã sinh vật ấm hơn",
+          "Bạn nhận gấp đôi sát thương từ tất cả các nguồn lửa"
         ],
         abilities: []
       },
       {
         name: "Warden",
         advantages: [
-          "Cảm nhận các sinh vật gần đó với đường viền phát sáng",
-          "Gây gấp đôi sát thương",
-          "Phóng sonic boom bằng cách nhấp chuột trái không cầm gì",
-          "Gấp đôi máu con người",
-          "Phòng thủ tự nhiên không cần giáp"
+          "Bạn có thể cảm nhận các sinh vật gần đó với một đường viền phát sáng",
+          "Bạn gây gấp đôi sát thương",
+          "Bạn có thể phóng sonic boom bằng cách nhấp chuột trái mà không cầm gì",
+          "Bạn có gấp đôi máu con người",
+          "Bạn có phòng thủ tự nhiên mà không cần giáp"
         ],
         disadvantages: [
-          "Chỉ nhìn được vài khối (xa hơn một chút với night vision)",
-          "Không thể sử dụng khiên"
+          "Bạn chỉ có thể nhìn thấy vài khối, nhưng có thể nhìn xa hơn một chút với night vision",
+          "Bạn không thể sử dụng khiên"
+        ],
+        abilities: []
+      },
+      {
+        name: "Wither Skeleton",
+        advantages: [
+          "Những thứ bạn đánh trúng nhận hiệu ứng Wither",
+          "Undead mobs sẽ không tấn công bạn trừ khi bạn tấn công chúng trước",
+          "Bạn miễn nhiễm với hiệu ứng Wither",
+          "Bạn miễn nhiễm với lửa"
+        ],
+        disadvantages: [
+          "Bạn nhận thêm sát thương từ Smite",
+          "Bạn có ít hơn con người 2 trái tim",
+          "Saturation tối đa của bạn bị giảm một nửa",
+          "Xuất hiện mặc định ở Nether"
+        ],
+        abilities: []
+      },
+      {
+        name: "Piglin",
+        advantages: [
+          "Giáp vàng tốt như kim cương và không thể vỡ",
+          "Bạn nhận được giữa 2 và 5 lần số lượng tài nguyên từ bartering",
+          "Piglins sẽ không tấn công bạn trừ khi bạn tấn công chúng trước, ngay cả khi bạn phá khối vàng hoặc mở rương",
+          "Bạn có mục tiêu hoàn hảo với cung",
+          "Bạn có thể biến đổi thành Zombified Piglin"
+        ],
+        disadvantages: [
+          "Xuất hiện mặc định ở Nether"
+        ],
+        abilities: []
+      },
+      {
+        name: "Zombified Piglin",
+        advantages: [
+          "Vũ khí vàng mạnh gấp đôi và không thể vỡ",
+          "Zombified Piglins gần đó sẽ chiến đấu cho bạn nếu bạn tấn công một thứ gì đó hoặc bị tấn công",
+          "Bạn có thể biến đổi trở lại thành piglin bằng cách ăn một quả táo vàng khi bạn có hiệu ứng weakness",
+          "Undead mobs sẽ không tấn công bạn trừ khi bạn tấn công chúng trước",
+          "Bạn không nhận bất kỳ dạng sát thương lửa nào"
+        ],
+        disadvantages: [
+          "Nguồn gốc này không thể chọn ban đầu, bạn nhận được nó bằng cách ở ở thế giới Overworld trong 15 giây khi là Piglin",
+          "Bạn nhận thêm sát thương từ Smite",
+          "Bạn chậm hơn con người",
+          "Bạn mất đói nhanh hơn",
+          "Xuất hiện mặc định ở Nether"
         ],
         abilities: []
       }
@@ -161,44 +300,68 @@ export const races: RaceCategory[] = [
     category: "Nonhuman",
     items: [
       {
-        name: "Bee",
+        name: "Slime",
         advantages: [
-          "Cứ sau 5 giây, đánh trúng mục tiêu làm nó trúng độc",
-          "Hồi máu khi ở gần hoa",
-          "Ong không tức giận với bạn khi lấy mật ong"
+          "Bạn nảy trên tất cả các khối như slime",
+          "Bạn có thể nhấp chuột trái khi không cầm gì để tách và triệu hồi một slime chiến đấu cho bạn (tốn điểm đói)",
+          "Bạn gây knockback mạnh hơn nhưng sát thương ít hơn khi còn ít máu",
+          "Bạn không nhận sát thương khi rơi"
         ],
         disadvantages: [
-          "Ít hơn 2 trái tim so với con người",
-          "Không thể ăn thịt (không cung cấp độ no và gây độc)"
         ],
         abilities: []
       },
       {
-        name: "Fox",
+        name: "Snow Golem",
         advantages: [
-          "Di chuyển nhanh hơn khi có 3+ người chơi khác ở gần",
-          "Quả mọng cung cấp nhiều độ bão hòa và điểm đói hơn",
-          "Bụi cây dâu ngọt không gây sát thương",
-          "Nhặt vật phẩm từ xa hơn",
-          "Di chuyển nhanh hơn con người"
+          "Cầu tuyết bạn ném gây sát thương",
+          "Bạn gây thêm sát thương ở những khu vực lạnh"
         ],
         disadvantages: [
-          "Ít hơn 2 trái tim so với con người"
+          "Bạn nhận sát thương trong nước",
+          "Bạn mất tốc độ và máu nếu ở quá lâu trong các quần xã sinh vật ấm áp",
+          "Bạn để lại vệt tuyết phía sau"
         ],
         abilities: []
       },
       {
-        name: "Merling",
+        name: "Strider",
         advantages: [
-          "Thở được trong nước, không thở được ngoài nước",
-          "Nhìn rõ hơn dưới nước",
-          "Phá khối nhanh hơn dưới nước",
-          "Bơi nhanh hơn dưới nước",
-          "Chỉ chìm trong nước nếu muốn",
-          "Nhận khí từ thuốc"
+          "Bạn không nhận sát thương lửa",
+          "Bạn có thể đi trên dung nham",
+          "Người chơi khác có thể cưỡi bạn",
+          "Bạn có thể ăn warped fungus để tăng tốc độ"
         ],
         disadvantages: [
-          "Nhận thêm sát thương từ Impaling"
+          "Bạn xuất hiện mặc định ở Nether",
+          "Bạn nhận sát thương từ nước",
+          "Bạn di chuyển chậm hơn trên cạn"
+        ],
+        abilities: []
+      },
+      {
+        name: "Witch",
+        advantages: [
+          "Thuốc bạn uống có tác dụng gấp đôi",
+          "Bạn có thể nhấp chuột trái với tay không để uống một loại thuốc hữu ích cho tình huống hiện tại",
+          "Pillagers và Illagers thích bạn"
+        ],
+        disadvantages: [
+          "Bạn có các hạt witch",
+          "Dân làng không thích bạn"
+        ],
+        abilities: []
+      },
+      {
+        name: "Arachnid",
+        advantages: [
+          "Có thể leo lên tất cả các bề mặt rắn, không chỉ thang",
+          "Có thể leo quanh bên trong mạng nhện, chế tạo mạng nhện với 2 sợi dây, tạm thời nhốt mục tiêu trong mạng nhện khi bạn đánh trúng chúng và có thể nhìn thấy hiệu ứng phát sáng xung quanh bất kỳ mob nào bên trong mạng nhện"
+        ],
+        disadvantages: [
+          "Chỉ có thể ăn thịt (bất kỳ thực phẩm nào khác không cung cấp độ bão hòa và làm bạn bị độc)",
+          "Chỉ có 7 trái tim",
+          "Nhận nhiều sát thương hơn và bị làm chậm bởi Bane of Arthropods"
         ],
         abilities: []
       },
@@ -211,21 +374,304 @@ export const races: RaceCategory[] = [
         ],
         disadvantages: [
           "Chỉ có thể ngủ trên độ cao Y 86",
-          "Không thể ăn thịt (không cung cấp độ bão hòa và gây độc)"
+          "Không thể ăn thịt (cung cấp không độ bão hòa và làm bạn bị độc)"
+        ],
+        abilities: []
+      },
+      {
+        name: "Blazeborn",
+        advantages: [
+          "Miễn nhiễm với tất cả các dạng sát thương lửa",
+          "Gây thêm sát thương khi đang bốc cháy",
+          "Miễn nhiễm độc và ngộ độc thực phẩm"
+        ],
+        disadvantages: [
+          "Xuất hiện mặc định ở Nether",
+          "Nhận sát thương trong nước",
+          "Có các hạt lửa",
+          "Nhận sát thương từ cầu tuyết và thuốc"
         ],
         abilities: []
       },
       {
         name: "Elytrian",
         advantages: [
-          "Lướt mà không cần elytra bằng cách nhấp đúp nhảy",
-          "Phóng lên không trung bằng cách nhấn shift khi lướt",
+          "Có thể lướt mà không cần elytra bằng cách nhấp đúp nhảy",
+          "Có thể phóng lên không trung bằng cách nhấn shift khi đang lướt",
           "Gây sát thương gấp đôi khi đang lướt"
         ],
         disadvantages: [
           "Không thể mặc giáp tốt hơn giáp xích",
-          "Bị làm chậm và suy yếu khi có khối phía trên",
+          "Bị làm chậm và suy yếu khi có khối ngay phía trên",
           "Nhận gấp đôi sát thương động năng"
+        ],
+        abilities: []
+      },
+      {
+        name: "Enderian",
+        advantages: [
+          "Có thể ném ender pearl mỗi 30 giây bằng cách nhấp chuột trái vào không khí khi không cầm gì"
+        ],
+        disadvantages: [
+          "Nhận sát thương trong nước",
+          "Không thể nhìn thấy người chơi đội bí ngô và nhận độc và buồn nôn từ bánh bí ngô",
+          "Có các hạt ender",
+          "Nhận sát thương từ thuốc"
+        ],
+        abilities: []
+      },
+      {
+        name: "Merling",
+        advantages: [
+          "Có thể thở trong nước nhưng không thở được ngoài nước",
+          "Có thể nhìn rõ hơn dưới nước",
+          "Có thể phá khối nhanh hơn dưới nước",
+          "Bơi nhanh hơn dưới nước",
+          "Chỉ chìm trong nước nếu bạn muốn",
+          "Nhận khí từ thuốc"
+        ],
+        disadvantages: [
+          "Nhận thêm sát thương từ Impaling"
+        ],
+        abilities: []
+      },
+      {
+        name: "Phantom",
+        advantages: [
+          "Có thể vào/ra Dạng Phantom để xuyên vật thể và tàng hình",
+          "Tàng hình trong Dạng Phantom"
+        ],
+        disadvantages: [
+          "Bốc cháy dưới ánh sáng ban ngày khi không ở Dạng Phantom",
+          "Mất đói nhanh hơn trong Dạng Phantom",
+          "Chỉ có 7 trái tim",
+          "Có lớp phủ màu đỏ trong Dạng Phantom"
+        ],
+        abilities: []
+      },
+      {
+        name: "Shulk",
+        advantages: [
+          "Có 9 ô đồ không bị mất khi chết",
+          "Có phòng thủ tự nhiên mà không cần mặc giáp",
+          "Có thể phá vỡ các khối đá tự nhiên mà không cần cuốc"
+        ],
+        disadvantages: [
+          "Không thể sử dụng khiên",
+          "Mất đói nhanh hơn"
+        ],
+        abilities: []
+      },
+      {
+        name: "Bard",
+        advantages: [
+          "Bạn gây thêm sát thương khi còn ít máu",
+          "Bạn nhận được hiệu ứng tái tạo khi có một note block gần đó được chơi",
+          "Bạn có thể nhân đôi allays mà không cần jukebox phát nhạc",
+          "Bạn nhận được hiệu ứng tái tạo bằng cách nhấp chuột phải với một mảnh thạch anh tím",
+          "Creepers bạn giết có 25% cơ hội rơi đĩa nhạc ngay cả khi không bị skeleton giết"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Centaur",
+        advantages: [
+          "Bạn luôn ở trên lưng ngựa",
+          "Bạn nhảy cao hơn ngựa thông thường",
+          "Bạn nhanh hơn ngựa thông thường",
+          "Bạn mạnh hơn vào những đêm trăng tròn",
+          "Bạn bắn cung chính xác"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Dragonborn",
+        advantages: [
+          "Bạn có thể nhấp chuột phải với một chai thủy tinh để lưu trữ hơi thở rồng của mình",
+          "Bạn có nhiều máu hơn và mạnh hơn ở The End",
+          "Bạn được hồi máu bởi end crystal",
+          "Bạn có thể bắn một cầu lửa rồng bằng cách nhấp chuột phải với kiếm",
+          "Bạn nhận ít sát thương hơn từ mũi tên"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Dwarf",
+        advantages: [
+          "Bạn có hiệu ứng haste vô hạn",
+          "Bạn có hiệu ứng night vision vô hạn",
+          "Quặng bạn phá vỡ rơi ra nhiều khoáng sản hơn",
+          "Bạn miễn nhiễm với hiệu ứng độc và hiệu ứng gây hại từ thuốc"
+        ],
+        disadvantages: [
+          "Bạn chỉ cao một khối"
+        ],
+        abilities: []
+      },
+      {
+        name: "Elf",
+        advantages: [
+          "Bạn bắn cung chính xác",
+          "Mũi tên bạn bắn gây thêm sát thương và bay nhanh hơn mũi tên của con người",
+          "Hiệu ứng thuốc trên mũi tên của bạn mạnh hơn",
+          "Bằng cách nhấp chuột trái với cung, bạn bắn 3 mũi tên với chi phí của 1, mặc dù điều này vô hiệu hóa cung của bạn trong 7 giây"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Giant",
+        advantages: [
+          "Bạn có gấp đôi máu con người",
+          "Bạn gây thêm sát thương cận chiến",
+          "Bạn có giáp tự nhiên"
+        ],
+        disadvantages: [
+          "Bạn có thời gian hồi chiêu cho các cuộc tấn công lâu hơn",
+          "Bạn bắn cung kém",
+          "Bạn cao 3 khối"
+        ],
+        abilities: []
+      },
+      {
+        name: "Gargoyle",
+        advantages: [
+          "Bạn miễn nhiễm với knockback",
+          "Bạn miễn nhiễm với lửa",
+          "Bạn miễn nhiễm với các hiệu ứng trạng thái",
+          "Bạn gây thêm sát thương cận chiến",
+          "Bạn có giáp tự nhiên"
+        ],
+        disadvantages: [
+          "Da của bạn làm bằng đá xám xỉn (yêu cầu cài đặt SkinsRestorer)",
+          "Bạn đi chậm hơn những người khác",
+          "Bạn có thời gian hồi chiêu cho các cuộc tấn công lâu hơn"
+        ],
+        abilities: []
+      },
+      {
+        name: "Naiad",
+        advantages: [
+          "Bạn có thêm máu và gây thêm sát thương trong nước hoặc mưa",
+          "Bạn có thể thở dưới nước nhưng không trên cạn",
+          "Bạn có thể nhìn rõ ràng dưới nước",
+          "Bạn có thể phá khối dưới nước với tốc độ như trên cạn",
+          "Bạn bơi nhanh hơn trong nước so với con người",
+          "Bạn chỉ chìm trong nước khi bạn muốn"
+        ],
+        disadvantages: [
+          "Bạn yếu hơn và chậm hơn khi không ở trong nước"
+        ],
+        abilities: []
+      },
+      {
+        name: "Vampire",
+        advantages: [
+          "Bạn có thể biến người chơi khác thành vampire bằng cách giết họ",
+          "Bạn hồi một lượng nhỏ máu khi tiêu diệt một thứ gì đó",
+          "Bạn gây thêm sát thương so với con người",
+          "Undead không tấn công bạn trừ khi bị khiêu khích"
+        ],
+        disadvantages: [
+          "Bạn bốc cháy dưới ánh sáng ban ngày",
+          "Bạn nhận sát thương trong nước"
+        ],
+        abilities: []
+      },
+      {
+        name: "Abomination Coven",
+        advantages: [
+          "Bạn có thể triệu hồi một Abomination, cũng như cung cấp vũ khí cho nó chiến đấu"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Bard Coven",
+        advantages: [
+          "Shrill Whistle sẽ làm choáng bất cứ thứ gì gần đó trong 10 giây",
+          "Echolocation sẽ tạo hiệu ứng 'glowing' cho những thứ gần đó, nhưng chỉ từ góc nhìn của bạn"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Beast Keeping Coven",
+        advantages: [
+          "Beast Feeder cho phép bạn cho động vật ăn mà không tốn thức ăn",
+          "Beast Sense cho phép bạn theo dõi nơi người chơi đã đến trong 5 phút gần nhất"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Construction Coven",
+        advantages: [
+          "Bạn có thể sử dụng Strength Glyphs để tăng sức mạnh và tốc độ trong 30 giây",
+          "Phá khối bằng tay nhanh hơn, như thể đang sử dụng Cuốc kim cương"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Healing Coven",
+        advantages: [
+          "Bạn có thể tạo ra một vòng tròn hồi máu cho bất cứ thứ gì bên trong nó",
+          "Sử dụng phép Magical Defence, bạn có thể làm cho bản thân bất tử trước sát thương trong 15 giây"
+        ],
+        disadvantages: [
+          
+        ],
+        abilities: []
+      },
+      {
+        name: "Illusion Coven",
+        advantages: [
+          "Blinding Illusion sẽ tạo ra một vòng ma thuật làm mù bất kỳ ai khác bên trong nó",
+          "Phép Invisibility biến bạn tàng hình cho đến khi bạn nhận sát thương"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Oracle Coven",
+        advantages: [
+          "Good Fortune mang lại cho bạn cơ hội nhận được gấp đôi loot trong rương",
+          "Spirit Sense cho phép bạn nhìn thấy những vệt dẫn bạn trực tiếp đến những người chơi gần đó"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Plant Coven",
+        advantages: [
+          "Green Fingers cho phép bạn tăng tốc độ phát triển của cây mà không cần bone meal",
+          "Tree Feller cho phép bạn chặt cả cây chỉ bằng cách phá một khối"
+        ],
+        disadvantages: [
+        ],
+        abilities: []
+      },
+      {
+        name: "Potions Coven",
+        advantages: [
+          "Bạn có thể đặt các bàn bào chế có vô hạn lần sử dụng và thuốc của bạn bắt đầu được pha chế một nửa",
+          "Potion Breath của bạn có nghĩa là bất kỳ thuốc nào bạn uống có tác dụng vĩnh viễn cho đến khi bạn uống một loại khác"
+        ],
+        disadvantages: [
         ],
         abilities: []
       }
