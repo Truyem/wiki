@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -10,6 +9,7 @@ interface SidebarProps {
 const Sidebar = ({ activeSection, setActiveSection }: SidebarProps) => {
   const sections = [
     { id: "basic-crafting", name: "Chế tạo cơ bản" },
+    { id: "upgrades", name: "Nâng cấp" },
     { id: "quality-upgrades", name: "Cải thiện trang bị" },
     { id: "material-tiers", name: "Cấp độ vật liệu" },
     { id: "special-items", name: "Vật phẩm đặc biệt" },

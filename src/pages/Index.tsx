@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
@@ -10,6 +9,7 @@ import Enchantments from "@/components/wiki/Enchantments";
 import Trinkets from "@/components/wiki/Trinkets";
 import ServerCommands from "@/components/wiki/ServerCommands";
 import Footer from "@/components/Footer";
+import Upgrades from "@/components/wiki/Upgrades";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("basic-crafting");
@@ -18,6 +18,8 @@ const Index = () => {
     switch (activeSection) {
       case "basic-crafting":
         return <BasicCrafting />;
+      case "upgrades":
+        return <Upgrades />;
       case "quality-upgrades":
         return <QualityUpgrades />;
       case "material-tiers":
