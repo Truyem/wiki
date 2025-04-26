@@ -29,7 +29,7 @@ export const skillsData: Skill[] = [
     description: "Rèn là sự thành thạo của bạn trong việc chế tạo công cụ/giáp. Trang bị bạn chế tạo có chất lượng càng cao, thuộc tính của chúng càng tốt.",
     howToGainExp: "Chế tạo bất kỳ công cụ hoặc trang bị nào. Vật liệu càng đắt và sử dụng càng nhiều, bạn càng nhận được nhiều EXP.",
     specialNotes: "Chế tạo công cụ bằng vật liệu cao cấp hơn trình độ của bạn rất nhiều sẽ giảm kinh nghiệm nhận được.",
-    perks: "Trong cấu hình Lite, Rèn chỉ cung cấp các cải thiện chất lượng chung cho trang bị bạn chế tạo, cũng như một vài công thức mới. Tăng cấp Rèn cho phép bạn chế tạo Giáo Ba Chấu và Cánh Elytra của riêng mình."
+    perks: "Tăng cấp Rèn cho phép bạn chế tạo Giáo Ba Chấu và Cánh Elytra của riêng mình."
   },
   {
     name: "Phù Phép",
