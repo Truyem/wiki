@@ -1,11 +1,8 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 const QualityUpgrades = () => {
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-2">Cải thiện trang bị</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -29,7 +26,7 @@ const QualityUpgrades = () => {
                 Áo giáp mới chế tạo sẽ có thuộc tính "Không phù hợp", có nghĩa là nó chưa thực sự phù hợp với cơ thể bạn. Bạn có thể làm cho nó vừa vặn hơn bằng cách thêm nguyên liệu vào vật phẩm, giúp tăng gấp đôi độ bền áo giáp và mang lại nhiều kinh nghiệm Rèn hơn.
               </p>
               <div className="flex justify-center mb-6">
-                <img src="/placeholder.svg" alt="Làm vừa vặn áo giáp" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Làm vừa vặn áo giáp" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/dd80e3e9-2e96-4dfe-bbd3-008fd6057610.png" />
               </div>
             </CardContent>
           </Card>
@@ -109,8 +106,6 @@ const QualityUpgrades = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default QualityUpgrades;
