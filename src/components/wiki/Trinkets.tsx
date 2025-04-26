@@ -1,11 +1,8 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 const Trinkets = () => {
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-2">Trinkets</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -29,10 +26,10 @@ const Trinkets = () => {
               </p>
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex justify-center">
-                  <img src="/placeholder.svg" alt="Danh sách Trinket chưa nâng cấp" className="rounded-lg shadow-md max-w-full h-auto" />
+                  <img alt="Danh sách Trinket chưa nâng cấp" src="/lovable-uploads/e69edda6-4438-489e-befd-01d6fabaf2c0.png" className="rounded-lg shadow-md max-w-full h-auto object-contain" />
                 </div>
                 <div className="flex justify-center">
-                  <img src="/placeholder.svg" alt="Chữ màu vàng" className="rounded-lg shadow-md max-w-full h-auto" />
+                  <img alt="Chữ màu vàng" src="/lovable-uploads/d6b5e36f-e76a-4557-bb69-817dd04f7f7f.png" className="rounded-lg shadow-md max-w-full h-auto object-contain" />
                 </div>
               </div>
             </CardContent>
@@ -47,10 +44,10 @@ const Trinkets = () => {
               </p>
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex justify-center">
-                  <img src="/placeholder.svg" alt="Danh sách Trinket đã nâng cấp" className="rounded-lg shadow-md max-w-full h-auto" />
+                  <img alt="Danh sách Trinket đã nâng cấp" src="/lovable-uploads/41db4547-3376-4ed7-b9c3-9067e4813163.png" className="rounded-lg shadow-md max-w-full h-auto object-contain" />
                 </div>
                 <div className="flex justify-center">
-                  <img src="/placeholder.svg" alt="Chữ màu hồng" className="rounded-lg shadow-md max-w-full h-auto" />
+                  <img alt="Chữ màu hồng" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/92de5b6e-e0d3-4a48-a16d-4be6f5ff8727.png" />
                 </div>
               </div>
             </CardContent>
@@ -65,7 +62,7 @@ const Trinkets = () => {
             Sử dụng Nether star để nâng cấp Trinket.
           </p>
           <div className="flex justify-center mb-6">
-            <img src="/placeholder.svg" alt="Cách nâng cấp trinket" className="rounded-lg shadow-md max-w-full h-auto" />
+            <img alt="Cách nâng cấp trinket" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/6c98906a-1c55-4726-90d3-1e3735039a19.png" />
           </div>
         </CardContent>
       </Card>
@@ -78,8 +75,6 @@ const Trinkets = () => {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default Trinkets;
