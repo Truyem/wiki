@@ -78,34 +78,7 @@ const QualityUpgrades = () => {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardContent className="pt-6">
-          <h2 className="text-2xl font-bold mb-4 text-[#825432] dark:text-[#FFAA00]">Ô nâng cấp</h2>
-          <p className="mb-4">
-            Mỗi trang bị ban đầu có 3 ô nâng cấp, bạn có thể tùy chỉnh bằng nhiều loại nâng cấp khác nhau. Bạn cũng có thể thêm tối đa 6 lỗ nâng cấp cho mỗi vật phẩm bằng các công thức chế tạo dưới đây.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <h3 className="text-lg font-semibold mb-2 text-center">Nâng cấp: 4</h3>
-              <div className="flex justify-center">
-                <img src="/placeholder.svg" alt="Nâng cấp 4 ô" className="rounded-lg shadow-md max-w-full h-auto" />
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-2 text-center">Nâng cấp: 5</h3>
-              <div className="flex justify-center">
-                <img src="/placeholder.svg" alt="Nâng cấp 5 ô" className="rounded-lg shadow-md max-w-full h-auto" />
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-2 text-center">Nâng cấp: 6</h3>
-              <div className="flex justify-center">
-                <img src="/placeholder.svg" alt="Nâng cấp 6 ô" className="rounded-lg shadow-md max-w-full h-auto" />
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+      
     </div>;
 };
 export default QualityUpgrades;
