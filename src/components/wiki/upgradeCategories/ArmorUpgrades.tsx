@@ -1,5 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import EditableImage from "@/components/shared/EditableImage";
 
 const ArmorUpgrades = () => {
   const upgrades = [
@@ -24,6 +25,10 @@ const ArmorUpgrades = () => {
     { title: "Nhà giả kim", description: "Tăng +10 kỹ năng giả kim (chỉ mũ bảo hiểm).", imagePath: "/placeholder.svg" }
   ];
 
+  const handleImageChange = (upgradeIndex: number, newPath: string) => {
+    console.log(`Updating image for upgrade ${upgradeIndex} to ${newPath}`);
+  };
+
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold mb-4 text-[#825432] dark:text-[#FFAA00]">Nâng cấp áo giáp</h2>
@@ -33,13 +38,15 @@ const ArmorUpgrades = () => {
           <Card key={index}>
             <CardContent className="pt-6">
               <div className="flex flex-col items-center">
-                <h3 className="text-xl font-bold mb-2 text-center text-[#259e63] dark:text-[#55FFFF]">{upgrade.title}</h3>
-                <img 
-                  src={upgrade.imagePath} 
-                  alt={`Nâng cấp ${upgrade.title}`} 
-                  className="w-16 h-16 mb-4 rounded-lg shadow-md"
+                <h3 className="text-xl font-bold mb-2 text-center text-[#259e63] dark:text-[#55FFFF]">
+                  {upgrade.title}
+                </h3>
+                <EditableImage 
+                  src={upgrade.imagePath}
+                  alt={`Nâng cấp ${upgrade.title}`}
+                  onImageChange={(newPath) => handleImageChange(index, newPath)}
                 />
-                <p className="text-center">
+                <p className="text-center mt-4">
                   {upgrade.description}
                 </p>
               </div>
