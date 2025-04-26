@@ -14,7 +14,7 @@ const ToolUpgrades = () => {
               <img 
                 alt="Nâng cấp năng lượng" 
                 className="rounded-lg shadow-md max-w-full h-auto mb-4" 
-                src="/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png"
+                src="/lovable-uploads/31_1_1_352643862-fc7d219e-dc2a-4480-8b86-398964980d42.png.133619a6-7eec-411c-a201-7a866cc41a03.png"
               />
               <p className="text-center">
                 Tăng +1 Sức mạnh Khai thác, giúp khai thác khối nhanh hơn.
