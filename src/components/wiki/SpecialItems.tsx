@@ -1,11 +1,8 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 const SpecialItems = () => {
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-2">Vật phẩm đặc biệt</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -28,7 +25,7 @@ const SpecialItems = () => {
                 Yêu cầu mở khóa kỹ năng Rèn biển (rèn).
               </p>
               <div className="flex justify-center mb-6">
-                <img src="/placeholder.svg" alt="Công thức chế tạo đinh ba" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Công thức chế tạo đinh ba" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/69d6e0e1-63b4-422e-92e0-2271b6152cb0.png" />
               </div>
             </CardContent>
           </Card>
@@ -40,8 +37,8 @@ const SpecialItems = () => {
                 Yêu cầu mở khóa kỹ năng Rèn ngoại giới (rèn).
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center mb-6">
-                <img src="/placeholder.svg" alt="Công thức chế tạo cánh elytra 1" className="rounded-lg shadow-md max-w-full h-auto" />
-                <img src="/placeholder.svg" alt="Công thức chế tạo cánh elytra 2" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Công thức chế tạo cánh elytra 1" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/06c2109f-dc51-4aeb-a2d0-f918677ca1d3.png" />
+                <img alt="Công thức chế tạo cánh elytra 2" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/694b3310-8b1b-4091-af92-f530b5238f20.png" />
               </div>
             </CardContent>
           </Card>
@@ -54,7 +51,7 @@ const SpecialItems = () => {
                 Thành phần cơ bản trong các công thức lọ khác.
               </p>
               <div className="flex justify-center mb-6">
-                <img src="/placeholder.svg" alt="Công thức chế tạo lọ rỗng" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Công thức chế tạo lọ rỗng" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/3abc87c1-8d2a-4e1a-9f7c-35bee945e83e.png" />
               </div>
             </CardContent>
           </Card>
@@ -67,7 +64,7 @@ const SpecialItems = () => {
                   Áp dụng 50% giảm hồi máu.
                 </p>
                 <div className="flex justify-center mb-6">
-                  <img src="/placeholder.svg" alt="Công thức chế tạo lọ thối rữa" className="rounded-lg shadow-md max-w-full h-auto" />
+                  <img alt="Công thức chế tạo lọ thối rữa" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/d52659ab-21b8-4e71-b484-fea5c17cf0c6.png" />
                 </div>
               </CardContent>
             </Card>
@@ -79,7 +76,7 @@ const SpecialItems = () => {
                   Áp dụng hiệu ứng Nhiễm độc I (0:30).
                 </p>
                 <div className="flex justify-center mb-6">
-                  <img src="/placeholder.svg" alt="Công thức chế tạo lọ độc dược" className="rounded-lg shadow-md max-w-full h-auto" />
+                  <img alt="Công thức chế tạo lọ độc dược" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/81b68ccc-caf5-4013-93ab-d6650f8f57e3.png" />
                 </div>
               </CardContent>
             </Card>
@@ -91,7 +88,7 @@ const SpecialItems = () => {
                   Gây 6.0 sát thương Bức xạ tức thì.
                 </p>
                 <div className="flex justify-center mb-6">
-                  <img src="/placeholder.svg" alt="Công thức chế tạo lọ thánh thiện" className="rounded-lg shadow-md max-w-full h-auto" />
+                  <img alt="Công thức chế tạo lọ thánh thiện" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/41975f3b-f12c-4923-a97d-909bb37db6e4.png" />
                 </div>
               </CardContent>
             </Card>
@@ -103,15 +100,13 @@ const SpecialItems = () => {
                   Gây 4.0 sát thương Ma thuật tức thì.
                 </p>
                 <div className="flex justify-center mb-6">
-                  <img src="/placeholder.svg" alt="Công thức chế tạo lọ gây hại" className="rounded-lg shadow-md max-w-full h-auto" />
+                  <img alt="Công thức chế tạo lọ gây hại" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/9d5ad659-cb4d-4a98-9fd2-1922d6d74656.png" />
                 </div>
               </CardContent>
             </Card>
           </div>
         </TabsContent>
       </Tabs>
-    </div>
-  );
+    </div>;
 };
-
 export default SpecialItems;
