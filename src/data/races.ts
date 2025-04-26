@@ -1,4 +1,3 @@
-
 export interface Race {
   name: string;
   abilities: string[];
@@ -12,6 +11,67 @@ export interface RaceCategory {
 }
 
 export const races: RaceCategory[] = [
+  {
+    category: "Animal",
+    items: [
+      {
+        name: "Bee",
+        advantages: [
+          "Mỗi 5 giây, có thể đánh trúng mục tiêu để làm nó bị độc",
+          "Nếu ở gần hoa, bạn nhận được hiệu ứng tái tạo máu",
+          "Ong không nổi giận với bạn khi bạn lấy mật ong"
+        ],
+        disadvantages: [
+          "Bạn có ít hơn con người 2 trái tim",
+          "Bạn không thể ăn thịt (nó không cung cấp độ bão hòa và làm bạn bị độc)"
+        ],
+        abilities: []
+      },
+      {
+        name: "Fox",
+        advantages: [
+          "Bạn di chuyển nhanh hơn khi có 3 hoặc nhiều người chơi khác ở gần bạn",
+          "Quả mọng cung cấp nhiều độ bão hòa và điểm đói hơn",
+          "Bụi cây dâu ngọt không gây sát thương cho bạn",
+          "Bạn có thể nhặt vật phẩm từ xa hơn",
+          "Bạn di chuyển nhanh hơn con người"
+        ],
+        disadvantages: [
+          "Bạn có ít hơn con người 2 trái tim"
+        ],
+        abilities: []
+      },
+      {
+        name: "Wolf",
+        advantages: [
+          "Bạn trở nên nhanh hơn, mạnh hơn và có nhiều máu hơn trong đêm trăng tròn",
+          "Chó sói bạn thuần hóa và nhân giống mạnh hơn và có nhiều máu hơn",
+          "Bạn có thể hú để tăng tốc độ và sức mạnh cho bản thân và chó sói gần đó",
+          "Nếu có 4 hoặc nhiều chó sói ở gần, bạn gây thêm sát thương và nhanh hơn"
+        ],
+        disadvantages: [
+          "Bạn có ít hơn con người 2 trái tim",
+          "Bạn chỉ có thể ăn thịt (thực phẩm khác không cung cấp độ bão hòa và làm bạn bị độc)"
+        ],
+        abilities: []
+      },
+      {
+        name: "Feline",
+        advantages: [
+          "Không nhận sát thương khi rơi",
+          "Nhảy cao hơn khi chạy nước rút",
+          "Bước đi không bị sculk sensors hoặc wardens nghe thấy",
+          "Xua đuổi creeper trừ khi bạn đánh chúng trước",
+          "Có tầm nhìn ban đêm khi không ở trong nước"
+        ],
+        disadvantages: [
+          "Chỉ có 9 trái tim",
+          "Không thể phá vỡ đá tự nhiên nếu có nhiều hơn 2 khối đá tự nhiên chạm vào nó"
+        ],
+        abilities: []
+      }
+    ]
+  },
   {
     category: "Monster",
     items: [

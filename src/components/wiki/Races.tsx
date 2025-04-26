@@ -14,7 +14,8 @@ const Races = () => {
       </div>
       
       <Tabs defaultValue="monster" className="w-full">
-        <TabsList className="grid w-full grid-cols-3">
+        <TabsList className="grid w-full grid-cols-4">
+          <TabsTrigger value="animal">Animal</TabsTrigger>
           <TabsTrigger value="monster">Monster</TabsTrigger>
           <TabsTrigger value="nonhuman">Nonhuman</TabsTrigger>
           <TabsTrigger value="human">Human</TabsTrigger>
