@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Axe, Ear, Gear, Droplets, Shield } from "lucide-react";
+import { Axe, Ear, Gear as GearIcon, Droplets, Shield } from "lucide-react";
 import WeaponTypes from "@/components/mechanics/WeaponTypes";
 import LuckSystem from "@/components/mechanics/LuckSystem";
 import BleedingSystem from "@/components/mechanics/BleedingSystem";
@@ -84,7 +84,7 @@ const Mechanics = () => {
             <AccordionItem value="mobstats" className="border rounded-lg p-2">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-2">
-                  <Gear className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
+                  <Ear className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
                   <span className="font-semibold">Chỉ Số Của Quái Vật 🧟‍♂️</span>
                 </div>
               </AccordionTrigger>
