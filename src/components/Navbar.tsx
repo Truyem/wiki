@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,25 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-xl font-bold">TrustTheProcess Wiki</h1>
+              <Link to="/" className="text-xl font-bold">
+                TrustTheProcess Wiki
+              </Link>
+            </div>
+            <div className="hidden md:block ml-10">
+              <div className="flex items-center space-x-4">
+                <Link
+                  to="/skills-and-advancement"
+                  className="text-white hover:bg-[#1e3a2d] px-3 py-2 rounded-md"
+                >
+                  Kỹ năng & Cách thăng cấp
+                </Link>
+                <Link
+                  to="/skills"
+                  className="text-white hover:bg-[#1e3a2d] px-3 py-2 rounded-md"
+                >
+                  Thông tin kỹ năng
+                </Link>
+              </div>
             </div>
           </div>
           <div className="hidden md:block">
@@ -50,6 +69,20 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-[#1e3a2d]">
+            <Link
+              to="/skills-and-advancement"
+              className="text-white hover:bg-[#259e63] block px-3 py-2 rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Kỹ năng & Cách thăng cấp
+            </Link>
+            <Link
+              to="/skills"
+              className="text-white hover:bg-[#259e63] block px-3 py-2 rounded-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Thông tin kỹ năng
+            </Link>
             <Button
               variant="ghost"
               size="icon"
