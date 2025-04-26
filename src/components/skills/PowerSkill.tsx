@@ -1,10 +1,7 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Power } from "lucide-react";
-
 const PowerSkill = () => {
-  return (
-    <Card>
+  return <Card>
       <CardHeader className="flex flex-row items-center gap-4">
         <Power className="w-8 h-8 text-[#259e63] dark:text-[#55FFFF]" />
         <div>
@@ -15,7 +12,7 @@ const PowerSkill = () => {
       <CardContent className="space-y-4">
         <div>
           <h3 className="font-semibold mb-2">Mô tả</h3>
-          <p>Sức Mạnh đại diện cho tổng thể tiến trình của người chơi trong ValhallaMMO.</p>
+          <p>Sức Mạnh đại diện cho tổng thể tiến trình của người chơi trong Server.</p>
         </div>
 
         <div>
@@ -33,8 +30,6 @@ const PowerSkill = () => {
           <p>Kỹ năng Sức Mạnh chủ yếu cung cấp các cải thiện chỉ số chung như May Mắn, Sát Thương, Hồi Máu, v.v.</p>
         </div>
       </CardContent>
-    </Card>
-  );
+    </Card>;
 };
-
 export default PowerSkill;
