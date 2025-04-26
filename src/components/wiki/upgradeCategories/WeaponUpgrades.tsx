@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const WeaponUpgrades = () => {
   const upgrades = [
     { title: "Chảy máu", description: "Tăng +5% cơ hội gây chảy máu.", imagePath: "/lovable-uploads/36_1_1_352647774-6a2c1185-7e8f-41d6-92b5-86fef0cf1bf2.png.a48ee067-a34b-4df9-9127-1275ca59bf11.png" },
-    { title: "Xuyên thấu", description: "Tăng +5% xuyên giáp.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Xuyên thấu", description: "Tăng +5% xuyên giáp.", imagePath: "/lovable-uploads/36_1_1_352647774-6a2c1185-7e8f-41d6-92b5-86fef0cf1bf2.png.a48ee067-a34b-4df9-9127-1275ca59bf11.png" },
     { title: "Dễ bị tổn thương", description: "Tăng +10% giảm khả năng miễn dịch, giúp giảm thời gian kẻ địch miễn nhiễm sát thương sau khi bị tấn công.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
     { title: "Đẩy ra", description: "Tăng +100% cơ hội hất ngã kẻ địch đang cưỡi (như ngựa hoặc nhện).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
     { title: "Săn trộm", description: "Tăng +20% vật phẩm rơi ra từ mob.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
