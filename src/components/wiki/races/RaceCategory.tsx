@@ -9,8 +9,13 @@ interface RaceCategoryProps {
 }
 
 const RaceCategory = ({ category }: RaceCategoryProps) => {
+  // Map category names to tab values
+  const getCategoryTabValue = (categoryName: string) => {
+    return categoryName.toLowerCase();
+  };
+
   return (
-    <TabsContent value={category.category.toLowerCase().split(" ")[0]}>
+    <TabsContent value={getCategoryTabValue(category.category)}>
       <ScrollArea className="h-[600px] rounded-md border p-4">
         <div className="grid grid-cols-1 gap-4">
           {category.items.map((race, index) => (
