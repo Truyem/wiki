@@ -58,7 +58,7 @@ const QualityUpgrades = () => {
                 Vũ khí và công cụ (trừ đá và gỗ) sẽ có thuộc tính "Cùn", có nghĩa là chúng cần được mài để đạt được sát thương tối đa. Mài vũ khí trên đá mài sẽ giúp tăng đáng kể sát thương và mang lại kinh nghiệm Rèn.
               </p>
               <div className="flex justify-center mb-6">
-                <img src="/placeholder.svg" alt="Mài vũ khí" className="rounded-lg shadow-md max-w-full h-auto" />
+                <img alt="Mài vũ khí" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/58306a2f-d281-4c30-a887-dff24384b989.png" />
               </div>
             </CardContent>
           </Card>
