@@ -1,5 +1,7 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+
 const MaterialTiers = () => {
   return <div className="space-y-6">
       <div>
@@ -24,23 +26,38 @@ const MaterialTiers = () => {
               </thead>
               <tbody>
                 <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                  <td className="py-2 px-4 border-b dark:border-gray-600">Gỗ/Vàng</td>
+                  <td className="py-2 px-4 border-b dark:border-gray-600 flex items-center gap-2">
+                    <img src="/lovable-uploads/117f57e4-3a3d-4e63-aed7-b86b654d26c5.png" alt="Vàng" className="w-6 h-6" />
+                    Gỗ/Vàng
+                  </td>
                   <td className="py-2 px-4 border-b dark:border-gray-600">0</td>
                 </tr>
                 <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                  <td className="py-2 px-4 border-b dark:border-gray-600">Đá</td>
+                  <td className="py-2 px-4 border-b dark:border-gray-600 flex items-center gap-2">
+                    <img src="/lovable-uploads/91d0eb2b-7796-426e-afd8-3b33fe9b91ad.png" alt="Sắt" className="w-6 h-6" />
+                    Đá
+                  </td>
                   <td className="py-2 px-4 border-b dark:border-gray-600">1</td>
                 </tr>
                 <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                  <td className="py-2 px-4 border-b dark:border-gray-600">Sắt</td>
+                  <td className="py-2 px-4 border-b dark:border-gray-600 flex items-center gap-2">
+                    <img src="/lovable-uploads/409ec050-653e-45c9-bcc2-c9ce9b6d7e94.png" alt="Kim cương" className="w-6 h-6" />
+                    Sắt
+                  </td>
                   <td className="py-2 px-4 border-b dark:border-gray-600">2</td>
                 </tr>
                 <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                  <td className="py-2 px-4 border-b dark:border-gray-600">Kim cương</td>
+                  <td className="py-2 px-4 border-b dark:border-gray-600 flex items-center gap-2">
+                    <img src="/lovable-uploads/5f70159c-f595-4d25-8773-5d9683d932b4.png" alt="Đồng" className="w-6 h-6" />
+                    Kim cương
+                  </td>
                   <td className="py-2 px-4 border-b dark:border-gray-600">3</td>
                 </tr>
                 <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                  <td className="py-2 px-4 border-b dark:border-gray-600">Netherite</td>
+                  <td className="py-2 px-4 border-b dark:border-gray-600 flex items-center gap-2">
+                    <img src="/lovable-uploads/2303b359-794c-4986-89a4-cda7335efdac.png" alt="Netherite" className="w-6 h-6" />
+                    Netherite
+                  </td>
                   <td className="py-2 px-4 border-b dark:border-gray-600">4</td>
                 </tr>
               </tbody>
@@ -180,4 +197,5 @@ const MaterialTiers = () => {
       </Card>
     </div>;
 };
+
 export default MaterialTiers;
