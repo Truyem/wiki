@@ -1,70 +1,66 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CommonUpgrades from "@/components/wiki/upgradeCategories/CommonUpgrades";
-import ToolUpgrades from "@/components/wiki/upgradeCategories/ToolUpgrades";
-import WeaponUpgrades from "@/components/wiki/upgradeCategories/WeaponUpgrades";
-import ArmorUpgrades from "@/components/wiki/upgradeCategories/ArmorUpgrades";
-const Upgrades = () => {
-  return <div className="space-y-6">
-      <div>
-        <h1 className="text-3xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-2">Chất lượng và nâng cấp</h1>
-        <p className="text-gray-700 dark:text-gray-300 mb-6">
-          Trang bị được chế tạo trong game có các thuộc tính bổ sung:
-        </p>
-      </div>
 
-      <Separator className="my-6" />
+import React from 'react';
 
-      <Card>
-        <CardContent className="pt-6">
-          <h2 className="text-2xl font-bold mb-4 text-[#825432] dark:text-[#FFAA00]">Ô nâng cấp</h2>
-          <p className="mb-4">
-            Mỗi trang bị ban đầu có 3 ô nâng cấp, bạn có thể tùy chỉnh bằng nhiều loại nâng cấp khác nhau. Bạn cũng có thể thêm tối đa 6 lỗ nâng cấp cho mỗi vật phẩm bằng các công thức chế tạo dưới đây.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <h3 className="text-lg font-semibold mb-2 text-center">Nâng cấp: 4</h3>
-              <div className="flex justify-center">
-                <img alt="Nâng cấp 4 ô" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/02348b6b-365e-4888-9511-b82048e6b025.png" />
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-2 text-center">Nâng cấp: 5</h3>
-              <div className="flex justify-center">
-                <img alt="Nâng cấp 5 ô" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/f2f474a1-f6e2-49be-ad57-e340863e2336.png" />
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-2 text-center">Nâng cấp: 6</h3>
-              <div className="flex justify-center">
-                <img alt="Nâng cấp 6 ô" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/9ed52745-6735-4374-b895-0deae47407bc.png" />
-              </div>
-            </div>
+const UpgradeCategory = ({ title, upgrades }: { title: string, upgrades: string[] }) => {
+  return (
+    <div className="bg-gray-100 p-4 rounded-lg">
+      <h2 className="text-xl font-bold mb-4 text-gray-800">{title}</h2>
+      <div className="space-y-2">
+        {upgrades.map((upgrade, index) => (
+          <div 
+            key={index} 
+            className="bg-white p-3 rounded-md shadow-sm hover:shadow-md transition-shadow"
+          >
+            {upgrade}
           </div>
-        </CardContent>
-      </Card>
-
-      <Tabs defaultValue="common" className="w-full">
-        <TabsList className="grid w-full grid-cols-4">
-          <TabsTrigger value="common">Chung</TabsTrigger>
-          <TabsTrigger value="tools">Công cụ</TabsTrigger>
-          <TabsTrigger value="weapons">Vũ khí</TabsTrigger>
-          <TabsTrigger value="armor">Áo giáp</TabsTrigger>
-        </TabsList>
-        <TabsContent value="common">
-          <CommonUpgrades />
-        </TabsContent>
-        <TabsContent value="tools">
-          <ToolUpgrades />
-        </TabsContent>
-        <TabsContent value="weapons">
-          <WeaponUpgrades />
-        </TabsContent>
-        <TabsContent value="armor">
-          <ArmorUpgrades />
-        </TabsContent>
-      </Tabs>
-    </div>;
+        ))}
+      </div>
+    </div>
+  );
 };
+
+const Upgrades = () => {
+  const weaponUpgrades = [
+    "Chấn động: Tăng +5% cơ hội choáng. Lưu ý rằng kẻ địch bị choáng sẽ miễn nhiễm với choáng trong vài giây.",
+    "Kéo dài: Tăng +0.25 khối tầm đánh (chỉ vũ khí cận chiến).",
+    "Tiết kiệm: Giảm -10% tiêu hao đạn (chỉ cung và nỏ)."
+  ];
+
+  const armorUpgrades = [
+    "Miễn dịch: Tăng +1 khả năng miễn dịch, tương đương với 0.05 giây miễn nhiễm sát thương sau khi nhận sát thương.",
+    "Hồi máu: Tăng +5% khả năng hồi máu.",
+    "Tham vọng: Tăng +5% giảm thời gian hồi chiêu của các kỹ năng như Đỡ đòn, Cuồng nộ, Khoan, Đốn cây nhanh, v.v.",
+    "Né tránh: Tăng +2% cơ hội né tránh, vô hiệu hóa hoàn toàn sát thương từ một đòn tấn công.",
+    "Tập sự: Tăng +5% kinh nghiệm kỹ năng, nhưng cũng tăng 10% sát thương nhận vào.",
+    "Nghiện: Tăng +5% nhận quả cầu kinh nghiệm, nhưng cũng tăng 5% sát thương nhận vào.",
+    "Ổn định: Tăng +10% kháng đẩy lùi.",
+    "Cứu rỗi: Tăng +10% kháng chảy máu.",
+    "Nhận thức: Tăng +10% kháng sát thương chí mạng.",
+    "Tiết độ: Tăng +10% kháng choáng, giảm thời gian choáng.",
+    "Lén lút: Tăng +10% tốc độ lén lút (chỉ quần).",
+    "Thể thao: Tăng +10% tốc độ chạy nước rút (chỉ quần).",
+    "Nhảy nhiều lần: Tăng +1 lần nhảy trên không. Có thể áp dụng tối đa 3 lần (chỉ giày).",
+    "Nhảy vọt: Tăng +50% độ cao nhảy (chỉ giày).",
+    "Hỏa ngục: Tăng +20% sát thương lửa (chỉ giáp ngực).",
+    "Ma thuật: Tăng +10% sát thương phép thuật (chỉ giáp ngực).",
+    "Độc hại: Tăng +20% sát thương độc (chỉ giáp ngực).",
+    "Thần thánh: Tăng +20% sát thương bức xạ (chỉ giáp ngực).",
+    "Chết chóc: Tăng +20% sát thương hoại tử (chỉ giáp ngực).",
+    "Cuồng nộ: Tăng +5% sát thương (chỉ giáp ngực).",
+    "Thợ rèn: Tăng +10 kỹ năng rèn (chỉ mũ bảo hiểm).",
+    "Phù phép: Tăng +10 kỹ năng phù phép (chỉ mũ bảo hiểm).",
+    "Nhà giả kim: Tăng +10 kỹ năng giả kim (chỉ mũ bảo hiểm)."
+  ];
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-2xl font-bold mb-6 text-center">Nâng cấp</h1>
+      <div className="grid grid-cols-2 gap-4">
+        <UpgradeCategory title="Vũ Khí" upgrades={weaponUpgrades} />
+        <UpgradeCategory title="Áo Giáp" upgrades={armorUpgrades} />
+      </div>
+    </div>
+  );
+};
+
 export default Upgrades;
