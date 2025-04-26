@@ -1,10 +1,7 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-
 const MaterialTiers = () => {
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-2">Cấp độ vật liệu</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -59,7 +56,7 @@ const MaterialTiers = () => {
             Sát thương vận tốc của Giáo tăng thêm sát thương dựa trên tốc độ di chuyển của người chơi khi tấn công.
           </p>
           <div className="flex justify-center mb-6">
-            <img src="/placeholder.svg" alt="Giáo với sát thương vận tốc" className="rounded-lg shadow-md max-w-full h-auto" />
+            
           </div>
         </CardContent>
       </Card>
@@ -118,8 +115,6 @@ const MaterialTiers = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default MaterialTiers;
