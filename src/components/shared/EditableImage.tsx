@@ -12,7 +12,7 @@ const EditableImage = ({
   onImageChange
 }: EditableImageProps) => {
   return <div className="relative group">
-      <img src={src || "/placeholder.svg"} alt={alt} className="rounded-lg shadow-md max-w-full h-auto mb-4 object-none" />
+      <img src={src || "/placeholder.svg"} alt={alt} className="rounded-lg shadow-md max-w-full h-auto mb-4 object-contain" />
       
     </div>;
 };
