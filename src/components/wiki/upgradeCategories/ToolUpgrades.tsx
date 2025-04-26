@@ -1,9 +1,6 @@
-
 import { Card, CardContent } from "@/components/ui/card";
-
 const ToolUpgrades = () => {
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <h2 className="text-2xl font-bold mb-4 text-[#825432] dark:text-[#FFAA00]">Nâng cấp công cụ</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -11,11 +8,7 @@ const ToolUpgrades = () => {
           <CardContent className="pt-6">
             <div className="flex flex-col items-center">
               <h3 className="text-xl font-bold mb-2 text-center text-[#259e63] dark:text-[#55FFFF]">Năng lượng</h3>
-              <img 
-                alt="Nâng cấp năng lượng" 
-                className="rounded-lg shadow-md max-w-full h-auto mb-4" 
-                src="/lovable-uploads/31_1_1_352643862-fc7d219e-dc2a-4480-8b86-398964980d42.png.133619a6-7eec-411c-a201-7a866cc41a03.png"
-              />
+              <img alt="Nâng cấp năng lượng" className="rounded-lg shadow-md max-w-full h-auto mb-4" src="/lovable-uploads/5c0097df-fd9f-4a9c-a4dc-383b0d2167e2.png" />
               <p className="text-center">
                 Tăng +1 Sức mạnh Khai thác, giúp khai thác khối nhanh hơn.
               </p>
@@ -59,8 +52,6 @@ const ToolUpgrades = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ToolUpgrades;
