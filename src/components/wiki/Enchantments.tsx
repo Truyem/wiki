@@ -16,7 +16,7 @@ const Enchantments = () => {
         <CardContent className="pt-6">
           <h2 className="text-2xl font-bold mb-4 text-[#825432] dark:text-[#FFAA00]">SuperEnchants</h2>
           <p className="mb-6 text-gray-700 dark:text-gray-300">
-            Các enchant này có thể cộng dồn và cung cấp nhiều khả năng đặc biệt. Sử dụng lệnh <span className="bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded font-mono">/eenchants list</span> trong game để xem chi tiết.
+            Các enchant này có thể cộng dồn và cung cấp nhiều khả năng đặc biệt. Sử dụng lệnh  trong game để xem chi tiết.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
