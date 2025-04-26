@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Axe, Ear, Gear as GearIcon, Droplets, Shield } from "lucide-react";
+import { Axe, Ear, Droplets, Shield } from "lucide-react";
 import WeaponTypes from "@/components/mechanics/WeaponTypes";
 import LuckSystem from "@/components/mechanics/LuckSystem";
 import BleedingSystem from "@/components/mechanics/BleedingSystem";
