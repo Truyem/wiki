@@ -2,8 +2,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   Shield, Heart, Clock, Eye, GraduationCap, Award,
-  Activity, ArrowUp, Flame, Magic, Droplets, Star,
-  Skull, Hammer, Wand, FlaskRound
+  Activity, ArrowUp, Flame, Wand, Droplets, Star,
+  Skull, Hammer, FlaskRound
 } from "lucide-react";
 
 const ArmorUpgrades = () => {
@@ -19,10 +19,11 @@ const ArmorUpgrades = () => {
     { title: "Nhảy nhiều lần", description: "Tăng +1 lần nhảy trên không. Có thể áp dụng tối đa 3 lần (chỉ giày).", icon: ArrowUp },
     { title: "Nhảy vọt", description: "Tăng +50% độ cao nhảy (chỉ giày).", icon: ArrowUp },
     { title: "Hỏa ngục", description: "Tăng +20% sát thương lửa (chỉ giáp ngực).", icon: Flame },
-    { title: "Ma thuật", description: "Tăng +10% sát thương phép thuật (chỉ giáp ngực).", icon: Magic },
+    { title: "Ma thuật", description: "Tăng +10% sát thương phép thuật (chỉ giáp ngực).", icon: Wand },
     { title: "Độc hại", description: "Tăng +20% sát thương độc (chỉ giáp ngực).", icon: Droplets },
     { title: "Thần thánh", description: "Tăng +20% sát thương bức xạ (chỉ giáp ngực).", icon: Star },
     { title: "Chết chóc", description: "Tăng +20% sát thương hoại tử (chỉ giáp ngực).", icon: Skull },
+    { title: "Cuồng nộ", description: "Tăng +5% sát thương (chỉ giáp ngực).", icon: Flame },
     { title: "Thợ rèn", description: "Tăng +10 kỹ năng rèn (chỉ mũ bảo hiểm).", icon: Hammer },
     { title: "Phù phép", description: "Tăng +10 kỹ năng phù phép (chỉ mũ bảo hiểm).", icon: Wand },
     { title: "Nhà giả kim", description: "Tăng +10 kỹ năng giả kim (chỉ mũ bảo hiểm).", icon: FlaskRound }
