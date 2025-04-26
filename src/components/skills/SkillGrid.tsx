@@ -35,7 +35,7 @@ const SkillGrid = ({ searchQuery }: SkillGridProps) => {
                       {skill.name}
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-300">
-                      {skill.shortDescription}
+                      {skill.description.substring(0, 60)}...
                     </p>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ const SkillGrid = ({ searchQuery }: SkillGridProps) => {
                 <h4 className="font-semibold text-[#825432] dark:text-[#FFAA00] mb-2">
                   Cách tăng EXP
                 </h4>
-                <p className="text-gray-700 dark:text-gray-300">{skill.howToLevel}</p>
+                <p className="text-gray-700 dark:text-gray-300">{skill.howToGainExp || "Không có thông tin."}</p>
               </div>
 
               {skill.specialNotes && (
@@ -75,7 +75,7 @@ const SkillGrid = ({ searchQuery }: SkillGridProps) => {
                 <h4 className="font-semibold text-[#825432] dark:text-[#FFAA00] mb-2">
                   Đặc quyền
                 </h4>
-                <p className="text-gray-700 dark:text-gray-300">{skill.perks}</p>
+                <p className="text-gray-700 dark:text-gray-300">{skill.perks || "Không có thông tin."}</p>
               </div>
 
               {skill.abilities && (

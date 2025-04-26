@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Gear, Sword, Dice6, Droplets, Shield, Zombie } from "lucide-react";
+import { Axe, Ear, Gear, Droplets, Shield } from "lucide-react";
 import WeaponTypes from "@/components/mechanics/WeaponTypes";
 import LuckSystem from "@/components/mechanics/LuckSystem";
 import BleedingSystem from "@/components/mechanics/BleedingSystem";
@@ -37,7 +37,7 @@ const Mechanics = () => {
             <AccordionItem value="weapons" className="border rounded-lg p-2">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-2">
-                  <Sword className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
+                  <Axe className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
                   <span className="font-semibold">Vũ Khí Tùy Chỉnh 🗡</span>
                 </div>
               </AccordionTrigger>
@@ -49,7 +49,7 @@ const Mechanics = () => {
             <AccordionItem value="luck" className="border rounded-lg p-2">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-2">
-                  <Dice6 className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
+                  <Ear className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
                   <span className="font-semibold">May Mắn 🍀</span>
                 </div>
               </AccordionTrigger>
@@ -85,7 +85,7 @@ const Mechanics = () => {
             <AccordionItem value="mobstats" className="border rounded-lg p-2">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-2">
-                  <Zombie className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
+                  <Gear className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
                   <span className="font-semibold">Chỉ Số Của Quái Vật 🧟‍♂️</span>
                 </div>
               </AccordionTrigger>
@@ -97,7 +97,7 @@ const Mechanics = () => {
             <AccordionItem value="damage" className="border rounded-lg p-2">
               <AccordionTrigger className="hover:no-underline">
                 <div className="flex items-center gap-2">
-                  <Sword className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
+                  <Axe className="w-5 h-5 text-[#825432] dark:text-[#FFAA00]" />
                   <span className="font-semibold">Sát Thương 💥</span>
                 </div>
               </AccordionTrigger>
