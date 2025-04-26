@@ -550,7 +550,6 @@ export const races: RaceCategory[] = [
           "Bạn có giáp tự nhiên"
         ],
         disadvantages: [
-          "Da của bạn làm bằng đá xám xỉn (yêu cầu cài đặt SkinsRestorer)",
           "Bạn đi chậm hơn những người khác",
           "Bạn có thời gian hồi chiêu cho các cuộc tấn công lâu hơn"
         ],
