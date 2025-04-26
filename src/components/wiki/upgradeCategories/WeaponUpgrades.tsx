@@ -80,7 +80,7 @@ const WeaponUpgrades = () => {
           <CardContent className="pt-6">
             <div className="flex flex-col items-center">
               <h3 className="text-xl font-bold mb-2 text-center text-[#259e63] dark:text-[#55FFFF]">Chí mạng</h3>
-              <img src="/placeholder.svg" alt="Nâng cấp chí mạng" className="rounded-lg shadow-md max-w-full h-auto mb-4" />
+              <img alt="Nâng cấp chí mạng" className="rounded-lg shadow-md max-w-full h-auto mb-4" src="/lovable-uploads/d94a42cf-871b-43b4-b595-7b35391396f1.png" />
               <p className="text-center">
                 Tăng +5% cơ hội tấn công chí mạng.
               </p>
@@ -92,7 +92,7 @@ const WeaponUpgrades = () => {
           <CardContent className="pt-6">
             <div className="flex flex-col items-center">
               <h3 className="text-xl font-bold mb-2 text-center text-[#259e63] dark:text-[#55FFFF]">Hút máu</h3>
-              <img src="/placeholder.svg" alt="Nâng cấp hút máu" className="rounded-lg shadow-md max-w-full h-auto mb-4" />
+              <img alt="Nâng cấp hút máu" className="rounded-lg shadow-md max-w-full h-auto mb-4" src="/lovable-uploads/963857e6-a4ad-4eab-849d-c8f45b1dbd17.png" />
               <p className="text-center">
                 Tăng +3% hút máu, chuyển đổi sát thương gây ra thành hồi máu cho bản thân.
               </p>
@@ -104,7 +104,7 @@ const WeaponUpgrades = () => {
           <CardContent className="pt-6">
             <div className="flex flex-col items-center">
               <h3 className="text-xl font-bold mb-2 text-center text-[#259e63] dark:text-[#55FFFF]">Tước vũ khí</h3>
-              <img src="/placeholder.svg" alt="Nâng cấp tước vũ khí" className="rounded-lg shadow-md max-w-full h-auto mb-4" />
+              <img alt="Nâng cấp tước vũ khí" className="rounded-lg shadow-md max-w-full h-auto mb-4" src="/lovable-uploads/580eb74d-b1be-4884-afeb-892506f1a9a6.png" />
               <p className="text-center">
                 Tăng +1 giây tước khiên.
               </p>
