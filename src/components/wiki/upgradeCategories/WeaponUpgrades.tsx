@@ -1,26 +1,21 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import EditableImage from "@/components/shared/EditableImage";
 
 const WeaponUpgrades = () => {
   const upgrades = [
-    { title: "Chảy máu", description: "Tăng +5% cơ hội gây chảy máu.", imagePath: "/placeholder.svg" },
-    { title: "Xuyên thấu", description: "Tăng +5% xuyên giáp.", imagePath: "/placeholder.svg" },
-    { title: "Dễ bị tổn thương", description: "Tăng +10% giảm khả năng miễn dịch, giúp giảm thời gian kẻ địch miễn nhiễm sát thương sau khi bị tấn công.", imagePath: "/placeholder.svg" },
-    { title: "Đẩy ra", description: "Tăng +100% cơ hội hất ngã kẻ địch đang cưỡi (như ngựa hoặc nhện).", imagePath: "/placeholder.svg" },
-    { title: "Săn trộm", description: "Tăng +20% vật phẩm rơi ra từ mob.", imagePath: "/placeholder.svg" },
-    { title: "Sắc bén hơn", description: "Tăng +5% sát thương.", imagePath: "/placeholder.svg" },
-    { title: "Chí mạng", description: "Tăng +5% cơ hội tấn công chí mạng.", imagePath: "/placeholder.svg" },
-    { title: "Hút máu", description: "Tăng +3% hút máu, chuyển đổi sát thương gây ra thành hồi máu cho bản thân.", imagePath: "/placeholder.svg" },
-    { title: "Tước vũ khí", description: "Tăng +1 giây tước khiên.", imagePath: "/placeholder.svg" },
-    { title: "Chấn động", description: "Tăng +5% cơ hội choáng. Lưu ý rằng kẻ địch bị choáng sẽ miễn nhiễm với choáng trong vài giây.", imagePath: "/placeholder.svg" },
-    { title: "Kéo dài", description: "Tăng +0.25 khối tầm đánh (chỉ vũ khí cận chiến).", imagePath: "/placeholder.svg" },
-    { title: "Tiết kiệm", description: "Giảm -10% tiêu hao đạn (chỉ cung và nỏ).", imagePath: "/placeholder.svg" }
+    { title: "Chảy máu", description: "Tăng +5% cơ hội gây chảy máu.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Xuyên thấu", description: "Tăng +5% xuyên giáp.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Dễ bị tổn thương", description: "Tăng +10% giảm khả năng miễn dịch, giúp giảm thời gian kẻ địch miễn nhiễm sát thương sau khi bị tấn công.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Đẩy ra", description: "Tăng +100% cơ hội hất ngã kẻ địch đang cưỡi (như ngựa hoặc nhện).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Săn trộm", description: "Tăng +20% vật phẩm rơi ra từ mob.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Sắc bén hơn", description: "Tăng +5% sát thương.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Chí mạng", description: "Tăng +5% cơ hội tấn công chí mạng.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Hút máu", description: "Tăng +3% hút máu, chuyển đổi sát thương gây ra thành hồi máu cho bản thân.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Tước vũ khí", description: "Tăng +1 giây tước khiên.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Chấn động", description: "Tăng +5% cơ hội choáng. Lưu ý rằng kẻ địch bị choáng sẽ miễn nhiễm với choáng trong vài giây.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Kéo dài", description: "Tăng +0.25 khối tầm đánh (chỉ vũ khí cận chiến).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Tiết kiệm", description: "Giảm -10% tiêu hao đạn (chỉ cung và nỏ).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" }
   ];
-
-  const handleImageChange = (upgradeIndex: number, newPath: string) => {
-    console.log(`Updating image for upgrade ${upgradeIndex} to ${newPath}`);
-  };
 
   return (
     <div className="space-y-6">
@@ -34,10 +29,10 @@ const WeaponUpgrades = () => {
                 <h3 className="text-xl font-bold mb-2 text-center text-[#259e63] dark:text-[#55FFFF]">
                   {upgrade.title}
                 </h3>
-                <EditableImage 
-                  src={upgrade.imagePath}
+                <img 
                   alt={`Nâng cấp ${upgrade.title}`}
-                  onImageChange={(newPath) => handleImageChange(index, newPath)}
+                  className="rounded-lg shadow-md max-w-full h-auto mb-4"
+                  src={upgrade.imagePath}
                 />
                 <p className="text-center mt-4">
                   {upgrade.description}

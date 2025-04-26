@@ -1,33 +1,28 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import EditableImage from "@/components/shared/EditableImage";
 
 const ArmorUpgrades = () => {
   const upgrades = [
-    { title: "Miễn dịch", description: "Tăng +1 khả năng miễn dịch, tương đương với 0.05 giây miễn nhiễm sát thương sau khi nhận sát thương.", imagePath: "/placeholder.svg" },
-    { title: "Hồi máu", description: "Tăng +5% khả năng hồi máu.", imagePath: "/placeholder.svg" },
-    { title: "Tham vọng", description: "Tăng +5% giảm thời gian hồi chiêu của các kỹ năng như Đỡ đòn, Cuồng nộ, Khoan, Đốn cây nhanh, v.v.", imagePath: "/placeholder.svg" },
-    { title: "Né tránh", description: "Tăng +2% cơ hội né tránh, vô hiệu hóa hoàn toàn sát thương từ một đòn tấn công.", imagePath: "/placeholder.svg" },
-    { title: "Tập sự", description: "Tăng +5% kinh nghiệm kỹ năng, nhưng cũng tăng 10% sát thương nhận vào.", imagePath: "/placeholder.svg" },
-    { title: "Nghiện", description: "Tăng +5% nhận quả cầu kinh nghiệm, nhưng cũng tăng 5% sát thương nhận vào.", imagePath: "/placeholder.svg" },
-    { title: "Lén lút", description: "Tăng +10% tốc độ lén lút (chỉ quần).", imagePath: "/placeholder.svg" },
-    { title: "Thể thao", description: "Tăng +10% tốc độ chạy nước rút (chỉ quần).", imagePath: "/placeholder.svg" },
-    { title: "Nhảy nhiều lần", description: "Tăng +1 lần nhảy trên không. Có thể áp dụng tối đa 3 lần (chỉ giày).", imagePath: "/placeholder.svg" },
-    { title: "Nhảy vọt", description: "Tăng +50% độ cao nhảy (chỉ giày).", imagePath: "/placeholder.svg" },
-    { title: "Hỏa ngục", description: "Tăng +20% sát thương lửa (chỉ giáp ngực).", imagePath: "/placeholder.svg" },
-    { title: "Ma thuật", description: "Tăng +10% sát thương phép thuật (chỉ giáp ngực).", imagePath: "/placeholder.svg" },
-    { title: "Độc hại", description: "Tăng +20% sát thương độc (chỉ giáp ngực).", imagePath: "/placeholder.svg" },
-    { title: "Thần thánh", description: "Tăng +20% sát thương bức xạ (chỉ giáp ngực).", imagePath: "/placeholder.svg" },
-    { title: "Chết chóc", description: "Tăng +20% sát thương hoại tử (chỉ giáp ngực).", imagePath: "/placeholder.svg" },
-    { title: "Cuồng nộ", description: "Tăng +5% sát thương (chỉ giáp ngực).", imagePath: "/placeholder.svg" },
-    { title: "Thợ rèn", description: "Tăng +10 kỹ năng rèn (chỉ mũ bảo hiểm).", imagePath: "/placeholder.svg" },
-    { title: "Phù phép", description: "Tăng +10 kỹ năng phù phép (chỉ mũ bảo hiểm).", imagePath: "/placeholder.svg" },
-    { title: "Nhà giả kim", description: "Tăng +10 kỹ năng giả kim (chỉ mũ bảo hiểm).", imagePath: "/placeholder.svg" }
+    { title: "Miễn dịch", description: "Tăng +1 khả năng miễn dịch, tương đương với 0.05 giây miễn nhiễm sát thương sau khi nhận sát thương.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Hồi máu", description: "Tăng +5% khả năng hồi máu.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Tham vọng", description: "Tăng +5% giảm thời gian hồi chiêu của các kỹ năng như Đỡ đòn, Cuồng nộ, Khoan, Đốn cây nhanh, v.v.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Né tránh", description: "Tăng +2% cơ hội né tránh, vô hiệu hóa hoàn toàn sát thương từ một đòn tấn công.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Tập sự", description: "Tăng +5% kinh nghiệm kỹ năng, nhưng cũng tăng 10% sát thương nhận vào.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Nghiện", description: "Tăng +5% nhận quả cầu kinh nghiệm, nhưng cũng tăng 5% sát thương nhận vào.", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Lén lút", description: "Tăng +10% tốc độ lén lút (chỉ quần).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Thể thao", description: "Tăng +10% tốc độ chạy nước rút (chỉ quần).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Nhảy nhiều lần", description: "Tăng +1 lần nhảy trên không. Có thể áp dụng tối đa 3 lần (chỉ giày).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Nhảy vọt", description: "Tăng +50% độ cao nhảy (chỉ giày).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Hỏa ngục", description: "Tăng +20% sát thương lửa (chỉ giáp ngực).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Ma thuật", description: "Tăng +10% sát thương phép thuật (chỉ giáp ngực).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Độc hại", description: "Tăng +20% sát thương độc (chỉ giáp ngực).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Thần thánh", description: "Tăng +20% sát thương bức xạ (chỉ giáp ngực).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Chết chóc", description: "Tăng +20% sát thương hoại tử (chỉ giáp ngực).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Cuồng nộ", description: "Tăng +5% sát thương (chỉ giáp ngực).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Thợ rèn", description: "Tăng +10 kỹ năng rèn (chỉ mũ bảo hiểm).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Phù phép", description: "Tăng +10 kỹ năng phù phép (chỉ mũ bảo hiểm).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" },
+    { title: "Nhà giả kim", description: "Tăng +10 kỹ năng giả kim (chỉ mũ bảo hiểm).", imagePath: "/lovable-uploads/4956e593-f7ff-4d7e-ac73-d8db46e454f7.png" }
   ];
-
-  const handleImageChange = (upgradeIndex: number, newPath: string) => {
-    console.log(`Updating image for upgrade ${upgradeIndex} to ${newPath}`);
-  };
 
   return (
     <div className="space-y-6">
@@ -41,10 +36,10 @@ const ArmorUpgrades = () => {
                 <h3 className="text-xl font-bold mb-2 text-center text-[#259e63] dark:text-[#55FFFF]">
                   {upgrade.title}
                 </h3>
-                <EditableImage 
-                  src={upgrade.imagePath}
+                <img 
                   alt={`Nâng cấp ${upgrade.title}`}
-                  onImageChange={(newPath) => handleImageChange(index, newPath)}
+                  className="rounded-lg shadow-md max-w-full h-auto mb-4"
+                  src={upgrade.imagePath}
                 />
                 <p className="text-center mt-4">
                   {upgrade.description}
