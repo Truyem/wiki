@@ -22,7 +22,7 @@ const TrinketsFlipper: React.FC<TrinketsFlipperProps> = ({
         <h2 className="text-2xl font-bold mb-4 text-[#259e63] dark:text-[#FFAA00]">
           {showUpgraded ? "Bản Nâng Cấp" : "Bản Thường"}
         </h2>
-        <button onClick={toggleTrinketType} className="flex items-center gap-2 px-4 py-2 bg-purple-700 hover:bg-purple-800 text-white rounded-md transition-all">
+        <button onClick={toggleTrinketType} className="flex items-center gap-2 px-4 py-2 text-white rounded-md transition-all bg-green-600 hover:bg-green-500">
           Xem {showUpgraded ? "Bản Thường" : "Bản Nâng Cấp"}
           <ArrowRight className="w-4 h-4" />
         </button>
