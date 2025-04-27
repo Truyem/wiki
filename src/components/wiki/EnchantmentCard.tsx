@@ -10,12 +10,12 @@ interface EnchantmentProps {
 
 const EnchantmentCard = ({ name, description, appliesTo, rarity }: EnchantmentProps) => {
   const rarityColors = {
-    SIMPLE: "text-[#e0e0e0] dark:text-[#e0e0e0]",
-    UNIQUE: "text-[#6cbc64] dark:text-[#6cbc64]",
-    ELITE: "text-[#bcdcee] dark:text-[#bcdcee]",
-    ULTIMATE: "text-[#d7ace0] dark:text-[#d7ace0]",
-    LEGENDARY: "text-[#fccc5c] dark:text-[#fccc5c]",
-    FABLED: "text-[#fc8484] dark:text-[#fc8484]"
+    SIMPLE: "text-[#a0a0a0] dark:text-[#c0c0c0]", // Darker gray
+    UNIQUE: "text-[#4a8c44] dark:text-[#5ec657]", // Darker green
+    ELITE: "text-[#8ab4d0] dark:text-[#a0c8e6]", // Deeper blue
+    ULTIMATE: "text-[#a576b0] dark:text-[#c490d1]", // Deeper purple
+    LEGENDARY: "text-[#cb9f30] dark:text-[#ffd740]", // Deeper gold
+    FABLED: "text-[#c64646] dark:text-[#ff6b6b]"  // Deeper red
   };
 
   return (
