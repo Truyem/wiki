@@ -1,5 +1,5 @@
 
-import { Shield, Bandage, Crosshair, HandMetal, Tube, Heart, Zap, Cross, Flame, Sword, CircleSlash, Reach } from "lucide-react";
+import { Shield, Bandage, Crosshair, HandMetal, ArrowRight, Heart, Zap, Cross, Flame, Sword, CircleSlash, Scale } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 interface TrinketInfo {
@@ -44,7 +44,7 @@ const trinkets: TrinketInfo[] = [
     name: "Ống tên ma thuật",
     effect: "Tăng tốc độ bay, độ chính xác và hiệu quả sử dụng đạn của mũi tên",
     upgrade: "Artemis",
-    icon: <Tube className="w-6 h-6" />
+    icon: <ArrowRight className="w-6 h-6" />
   },
   {
     name: "Bùa sinh lực",
@@ -110,7 +110,7 @@ const trinkets: TrinketInfo[] = [
     name: "Nhẫn tầm với",
     effect: "Tăng tầm tấn công cận chiến",
     upgrade: "Sức mạnh của Gungnir",
-    icon: <Reach className="w-6 h-6" />
+    icon: <Scale className="w-6 h-6" />
   },
 ];
 
