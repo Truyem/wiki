@@ -1,8 +1,11 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import TrinketsList from "./TrinketsList";
+
 const Trinkets = () => {
-  return <div className="space-y-6">
+  return (
+    <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-2">Trinkets</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -11,6 +14,13 @@ const Trinkets = () => {
       </div>
 
       <Separator className="my-6" />
+
+      <Card>
+        <CardContent className="pt-6">
+          <h2 className="text-2xl font-bold mb-4 text-[#825432] dark:text-[#FFAA00]">Danh sách Trinkets</h2>
+          <TrinketsList />
+        </CardContent>
+      </Card>
 
       <Tabs defaultValue="basic-trinkets" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
@@ -75,6 +85,8 @@ const Trinkets = () => {
           </p>
         </CardContent>
       </Card>
-    </div>;
+    </div>
+  );
 };
+
 export default Trinkets;
