@@ -52,7 +52,7 @@ const Trinkets = () => {
               </p>
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex justify-center">
-                  <img alt="Danh sách Trinket đã nâng cấp" src="/lovable-uploads/41db4547-3376-4ed7-b9c3-9067e4813163.png" className="rounded-lg shadow-md max-w-full h-auto object-contain" />
+                  <img alt="Danh sách Trinket đã nâng cấp" className="rounded-lg shadow-md max-w-full h-auto object-contain" src="/lovable-uploads/f3e8425f-8dd6-4dff-9d2e-5d6ea508d500.png" />
                 </div>
                 <div className="flex justify-center">
                   <img alt="Chữ màu hồng" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/92de5b6e-e0d3-4a48-a16d-4be6f5ff8727.png" />
