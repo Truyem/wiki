@@ -24,7 +24,7 @@ const TrinketsFlipper: React.FC<TrinketsFlipperProps> = ({ regularTrinkets, upgr
   return (
     <div className="w-full">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold">
+        <h2 className={`text-2xl font-bold ${showUpgraded ? "text-[#fc54fc]" : "text-yellow-400"}`}>
           {showUpgraded ? "Bản Nâng Cấp" : "Bản Thường"}
         </h2>
         <button 
@@ -40,9 +40,17 @@ const TrinketsFlipper: React.FC<TrinketsFlipperProps> = ({ regularTrinkets, upgr
         {displayedTrinkets.map((trinket, index) => (
           <div 
             key={index} 
-            className="bg-gray-800 border border-gray-700 rounded-lg p-4 hover:border-purple-500 transition-all"
+            className={`bg-gray-800 border rounded-lg p-4 transition-all ${
+              showUpgraded 
+                ? "border-[#fc54fc] hover:border-[#fc54fc]/80" 
+                : "border-yellow-400 hover:border-yellow-400/80"
+            }`}
           >
-            <h3 className="text-lg font-semibold text-white mb-2">{trinket.name}</h3>
+            <h3 className={`text-lg font-semibold mb-2 ${
+              showUpgraded ? "text-[#fc54fc]" : "text-yellow-400"
+            }`}>
+              {trinket.name}
+            </h3>
             <ul className="text-gray-300">
               {trinket.effects.map((effect, idx) => (
                 <li key={idx} className="mb-1">{effect}</li>
