@@ -34,21 +34,21 @@ const MaterialTiers = () => {
                 </tr>
                 <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
                   <td className="py-2 px-4 border-b dark:border-gray-600 flex items-center gap-2">
-                    <img src="/lovable-uploads/91d0eb2b-7796-426e-afd8-3b33fe9b91ad.png" alt="Sắt" className="w-6 h-6" />
-                    Đá
+                    <img src="/lovable-uploads/5f70159c-f595-4d25-8773-5d9683d932b4.png" alt="Đồng" className="w-6 h-6" />
+                    Đá/Đồng
                   </td>
                   <td className="py-2 px-4 border-b dark:border-gray-600">1</td>
                 </tr>
                 <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
                   <td className="py-2 px-4 border-b dark:border-gray-600 flex items-center gap-2">
-                    <img src="/lovable-uploads/409ec050-653e-45c9-bcc2-c9ce9b6d7e94.png" alt="Kim cương" className="w-6 h-6" />
+                    <img src="/lovable-uploads/91d0eb2b-7796-426e-afd8-3b33fe9b91ad.png" alt="Sắt" className="w-6 h-6" />
                     Sắt
                   </td>
                   <td className="py-2 px-4 border-b dark:border-gray-600">2</td>
                 </tr>
                 <tr className="hover:bg-gray-50 dark:hover:bg-gray-700">
                   <td className="py-2 px-4 border-b dark:border-gray-600 flex items-center gap-2">
-                    <img src="/lovable-uploads/5f70159c-f595-4d25-8773-5d9683d932b4.png" alt="Đồng" className="w-6 h-6" />
+                    <img src="/lovable-uploads/409ec050-653e-45c9-bcc2-c9ce9b6d7e94.png" alt="Kim cương" className="w-6 h-6" />
                     Kim cương
                   </td>
                   <td className="py-2 px-4 border-b dark:border-gray-600">3</td>
