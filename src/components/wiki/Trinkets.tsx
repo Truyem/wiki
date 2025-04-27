@@ -2,10 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import TrinketsList from "./TrinketsList";
-
 const Trinkets = () => {
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-2">Trinkets</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -36,7 +34,7 @@ const Trinkets = () => {
               </p>
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex justify-center">
-                  <img alt="Danh sách Trinket chưa nâng cấp" src="/lovable-uploads/e69edda6-4438-489e-befd-01d6fabaf2c0.png" className="rounded-lg shadow-md max-w-full h-auto object-contain" />
+                  <img alt="Danh sách Trinket chưa nâng cấp" className="rounded-lg shadow-md max-w-full h-auto object-contain" src="/lovable-uploads/4199821b-1f80-4539-ba75-26cafe9ce469.png" />
                 </div>
                 <div className="flex justify-center">
                   <img alt="Chữ màu vàng" src="/lovable-uploads/d6b5e36f-e76a-4557-bb69-817dd04f7f7f.png" className="rounded-lg shadow-md max-w-full h-auto object-contain" />
@@ -85,8 +83,6 @@ const Trinkets = () => {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default Trinkets;
