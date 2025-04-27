@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import EnchantmentCard from "./EnchantmentCard";
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { enchantments } from "@/data/enchantments";
 import {
   Select,
@@ -12,6 +11,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
+const equipmentTypes = [
+  "Kiếm", "Rìu", "Cung", "Nỏ", "Đinh ba", "Cuốc chim", "Xẻng", "Cuốc",
+  "Mũ", "Áo", "Quần", "Ủng", "Bộ Giáp", "Elytra", "Cần câu", "Công cụ"
+];
 
 const Enchantments = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -26,6 +30,16 @@ const Enchantments = () => {
     
     return matchesSearch && matchesRarity && matchesType;
   });
+
+  // Group enchantments by rarity for display
+  const enchantmentsByRarity = {
+    SIMPLE: filteredEnchantments.filter((e) => e.rarity === "SIMPLE"),
+    UNIQUE: filteredEnchantments.filter((e) => e.rarity === "UNIQUE"),
+    ELITE: filteredEnchantments.filter((e) => e.rarity === "ELITE"),
+    ULTIMATE: filteredEnchantments.filter((e) => e.rarity === "ULTIMATE"),
+    LEGENDARY: filteredEnchantments.filter((e) => e.rarity === "LEGENDARY"),
+    FABLED: filteredEnchantments.filter((e) => e.rarity === "FABLED")
+  };
 
   return (
     <div className="space-y-6">
@@ -67,29 +81,33 @@ const Enchantments = () => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">Tất cả trang bị</SelectItem>
-                <SelectItem value="Kiếm">Kiếm</SelectItem>
-                <SelectItem value="Rìu">Rìu</SelectItem>
-                <SelectItem value="Cung">Cung</SelectItem>
-                <SelectItem value="Nỏ">Nỏ</SelectItem>
-                <SelectItem value="Đinh ba">Đinh ba</SelectItem>
-                <SelectItem value="Cuốc chim">Cuốc chim</SelectItem>
-                <SelectItem value="Xẻng">Xẻng</SelectItem>
-                <SelectItem value="Mũ">Mũ</SelectItem>
-                <SelectItem value="Áo">Áo</SelectItem>
-                <SelectItem value="Quần">Quần</SelectItem>
-                <SelectItem value="Ủng">Ủng</SelectItem>
-                <SelectItem value="Bộ Giáp">Bộ Giáp</SelectItem>
+                {equipmentTypes.map((type) => (
+                  <SelectItem key={type} value={type}>{type}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
         </CardContent>
       </Card>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredEnchantments.map((enchant, index) => (
-          <EnchantmentCard key={index} {...enchant} />
-        ))}
-      </div>
+      {Object.entries(enchantmentsByRarity).map(([rarity, enchants]) => 
+        enchants.length > 0 && (
+          <div key={rarity}>
+            <h2 className="text-2xl font-bold mb-4">{rarity}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {enchants.map((enchant, index) => (
+                <EnchantmentCard key={index} {...enchant} />
+              ))}
+            </div>
+          </div>
+        )
+      )}
+
+      {Object.values(enchantmentsByRarity).every(group => group.length === 0) && (
+        <div className="text-center py-8">
+          <p className="text-lg text-gray-500 dark:text-gray-400">Không tìm thấy enchantment nào.</p>
+        </div>
+      )}
     </div>
   );
 };

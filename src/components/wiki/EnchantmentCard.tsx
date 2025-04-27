@@ -38,6 +38,11 @@ const EnchantmentCard = ({ name, description, appliesTo, rarity }: EnchantmentPr
               </span>
             ))}
           </div>
+          <div className="mt-2">
+            <span className={`text-xs font-medium ${rarityColors[rarity]}`}>
+              {rarity}
+            </span>
+          </div>
         </div>
       </CardContent>
     </Card>

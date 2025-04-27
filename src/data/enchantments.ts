@@ -1,3 +1,4 @@
+
 interface Enchantment {
   name: string;
   description: string;
@@ -877,4 +878,213 @@ export const enchantments: Enchantment[] = [
     rarity: "LEGENDARY"
   },
   {
-    name: "Minh
+    name: "Minh Mẫn",
+    description: "Cơ hội chữa khỏi mù lòa và nhận hiệu ứng nhìn trong đêm.",
+    appliesTo: ["Bộ Giáp"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Song Đả",
+    description: "Cơ hội tấn công hai lần.",
+    appliesTo: ["Kiếm"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Bánh Răng",
+    description: "Tăng tốc độ khi trang bị.",
+    appliesTo: ["Ủng"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Bốc Cháy",
+    description: "Thiêu đốt tất cả người chơi trong bán kính trong một thời gian ngắn.",
+    appliesTo: ["Rìu"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Hào Quang Sát Thủ",
+    description: "Cơ hội tiêu diệt nhiều quái vật trong bán kính.",
+    appliesTo: ["Kiếm"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Tò Mò",
+    description: "Cơ hội tăng EXP rơi ra từ mob.",
+    appliesTo: ["Kiếm"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Hút Máu",
+    description: "Cơ hội đánh cắp máu khi tấn công.",
+    appliesTo: ["Kiếm"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Quá Tải",
+    description: "Mở khóa thêm trái tim.",
+    appliesTo: ["Bộ Giáp"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Bọc Giáp",
+    description: "Cơ hội giảm sát thương từ kiếm của kẻ địch đi 2% mỗi cấp.",
+    appliesTo: ["Bộ Giáp"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Thợ Rèn",
+    description: "Sửa chữa vũ khí của bạn đổi lại việc gây ít sát thương hơn.",
+    appliesTo: ["Rìu"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Bền Bỉ",
+    description: "Vũ khí với phù phép này trở nên không thể phá vỡ",
+    appliesTo: ["Kiếm", "Cung"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Tước Giáp",
+    description: "Cơ hội gỡ bỏ một mảnh giáp ngẫu nhiên từ đối thủ của bạn.",
+    appliesTo: ["Kiếm"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Bách Phát Bách Trúng",
+    description: "Bắn trúng đầu bằng đinh ba gây sát thương gấp đôi.",
+    appliesTo: ["Đinh ba"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Xung Đột",
+    description: "Tăng sát thương cận chiến của Đinh Ba.",
+    appliesTo: ["Đinh ba"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Phóng",
+    description: "Có cơ hội phóng bản thân bằng cách nhấp chuột phải.",
+    appliesTo: ["Kiếm"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Ná Cao Su",
+    description: "Phóng bản thân vào không trung bằng cách nhấp chuột phải.",
+    appliesTo: ["Elytra"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Loạn Trí",
+    description: "Có cơ hội giáng sét xuống những người chơi gần đó.",
+    appliesTo: ["Kiếm"],
+    rarity: "LEGENDARY"
+  },
+  {
+    name: "Hóa Ngọc",
+    description: "Cơ hội để khối quặng biến thành khối ngọc của nó.",
+    appliesTo: ["Cuốc chim"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Nhanh Nhẹn",
+    description: "Cho phép bạn vung công cụ nhanh hơn.",
+    appliesTo: ["Cuốc chim", "Xẻng", "Rìu"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Phục Hồi",
+    description: "Khi bị hỏng, vật phẩm có một cơ hội mất phù phép này và sửa chữa lại một nửa độ bền của nó.",
+    appliesTo: ["Cuốc chim", "Xẻng", "Rìu"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Bất Tử",
+    description: "Cơ hội ngăn chặn áo giáp của bạn khỏi việc nhận sát thương độ bền.",
+    appliesTo: ["Bộ Giáp"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Không Thể Phá Vỡ",
+    description: "Công cụ với phù phép này trở nên không thể phá vỡ",
+    appliesTo: ["Công cụ"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Linh Hồn Ràng Buộc",
+    description: "Có một cơ hội nhỏ để giữ lại vật phẩm khi chết.",
+    appliesTo: ["Công cụ", "Kiếm", "Cung", "Nỏ"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Vô Hiệu Hóa",
+    description: "Cơ hội tước vũ khí đối thủ.",
+    appliesTo: ["Cung", "Nỏ"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Tước Vũ Khí",
+    description: "Cơ hội tước vũ khí đối thủ.",
+    appliesTo: ["Kiếm"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Phượng Hoàng",
+    description: "Có một cơ hội nhỏ để hồi sinh bản thân khi bị giết.",
+    appliesTo: ["Áo"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Hù Dọa",
+    description: "Cơ hội thay thế mũ bảo hiểm của đối thủ bằng một quả bí ngô trong thời gian ngắn.",
+    appliesTo: ["Kiếm", "Rìu"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Vô Hiệu",
+    description: "Có một cơ hội nhỏ để gây sát thương gấp đôi trong khi khiến kẻ địch bị mù. Tốn 40 souls/kích hoạt",
+    appliesTo: ["Kiếm", "Rìu"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Lao Tới",
+    description: "Cơ hội tăng tốc độ khi cất cánh với elytra. Tốn 10 souls / kích hoạt.",
+    appliesTo: ["Elytra"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Lưỡng Bội",
+    description: "Có cơ hội nhân lên vật phẩm rơi ra từ mob. Tốn 5 souls / kích hoạt.",
+    appliesTo: ["Kiếm"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Nhân Lên",
+    description: "Cơ hội nhân lên vật phẩm rơi ra từ quặng. Tốn 5 souls / kích hoạt.",
+    appliesTo: ["Cuốc chim"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Bậc Thầy Linh Hồn",
+    description: "Có cơ hội nhận thêm souls từ việc giết người chơi.",
+    appliesTo: ["Kiếm"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Rìu Linh Hồn",
+    description: "Cơ hội nhận thêm souls từ việc giết người chơi.",
+    appliesTo: ["Rìu"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Thợ Mỏ Linh Hồn",
+    description: "Có cơ hội nhận souls bằng cách khai thác.",
+    appliesTo: ["Cuốc chim"],
+    rarity: "FABLED"
+  },
+  {
+    name: "Cày Linh Hồn",
+    description: "Cơ hội nhận souls bằng cách giết mob.",
+    appliesTo: ["Kiếm"],
+    rarity: "FABLED"
+  }
+];
