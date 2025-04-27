@@ -37,7 +37,7 @@ const Trinkets = () => {
                   <img alt="Danh sách Trinket chưa nâng cấp" className="rounded-lg shadow-md max-w-full h-auto object-contain" src="/lovable-uploads/4199821b-1f80-4539-ba75-26cafe9ce469.png" />
                 </div>
                 <div className="flex justify-center">
-                  <img alt="Chữ màu vàng" src="/lovable-uploads/d6b5e36f-e76a-4557-bb69-817dd04f7f7f.png" className="rounded-lg shadow-md max-w-full h-auto object-contain" />
+                  <img alt="Chữ màu vàng" className="rounded-lg shadow-md max-w-full h-auto object-contain" src="/lovable-uploads/297157f1-7279-4d6f-8dd4-4b304f4526b7.png" />
                 </div>
               </div>
             </CardContent>
@@ -55,7 +55,7 @@ const Trinkets = () => {
                   <img alt="Danh sách Trinket đã nâng cấp" className="rounded-lg shadow-md max-w-full h-auto object-contain" src="/lovable-uploads/f3e8425f-8dd6-4dff-9d2e-5d6ea508d500.png" />
                 </div>
                 <div className="flex justify-center">
-                  <img alt="Chữ màu hồng" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/92de5b6e-e0d3-4a48-a16d-4be6f5ff8727.png" />
+                  <img alt="Chữ màu hồng" className="rounded-lg shadow-md max-w-full h-auto" src="/lovable-uploads/add6599c-b9be-4541-861e-782f9df62137.png" />
                 </div>
               </div>
             </CardContent>
