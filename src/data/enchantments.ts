@@ -1109,7 +1109,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Rune of Souls",
     description: "Tích lũy linh hồn trên vật phẩm làm nhiên liệu, sau đó dùng cho phù phép.",
-    image: "/lovable-uploads/c818feb4-f9a4-4214-958f-4c86bc572fb6.png"
+    image: "/lovable-uploads/c7a2fe1a-bedc-46e2-970a-f695b011ef44.png"
   },
   {
     name: "Rune of Revelation",
@@ -1174,7 +1174,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Warrior Scroll",
     description: "Theo dõi số lượt hạ gục bằng vũ khí.",
-    image: "/lovable-uploads/3de28979-c303-42bc-939c-9ee36dc78ebd.png"
+    image: "/lovable-uploads/c818feb4-f9a4-4214-958f-4c86bc572fb6.png"
   },
   {
     name: "Slayer Scroll",
