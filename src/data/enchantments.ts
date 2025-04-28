@@ -236,7 +236,7 @@ export const enchantments = [
   },
   {
     name: "Tử Thần",
-    description: "Cơ hội gây hiệu ứng Khô Héo (Wither) và Mù Lòa (Blindness) cho đối thủ khi gây sát thương.",
+    description: "Có cơ hội gây hiệu ứng Khô Héo (Wither) và Mù Lòa (Blindness) cho đối thủ khi gây sát thương.",
     appliesTo: ["Rìu"],
     rarity: "ELITE"
   },
@@ -529,7 +529,7 @@ export const enchantments = [
     rarity: "ULTIMATE"
   },
   {
-    name: "Làm Lệch Mũi Tên",
+    name: "Làm Lệch M��i Tên",
     description: "Cơ hội ngăn chặn mũi tên của kẻ địch gây sát thương.",
     appliesTo: ["Bộ Giáp"],
     rarity: "ULTIMATE"
@@ -896,7 +896,7 @@ export const enchantments = [
   },
   {
     name: "Bốc Cháy",
-    description: "Thiêu đốt tất cả người chơi trong bán kính trong một thời gian ngắn.",
+    description: "Thieu đốt tất cả người chơi trong bán kính trong một thời gian ngắn.",
     appliesTo: ["Rìu"],
     rarity: "LEGENDARY"
   },
@@ -1098,3 +1098,91 @@ export const enchantments = [
     }
   }).flat()
 }));
+
+interface SupportItem {
+  name: string;
+  description: string;
+}
+
+export const supportItems: SupportItem[] = [
+  {
+    name: "Rune of Souls",
+    description: "Tích lũy linh hồn trên vật phẩm làm nhiên liệu, sau đó dùng cho phù phép."
+  },
+  {
+    name: "Rune of Revelation",
+    description: "Sắp xếp các phù phép trên vật phẩm theo thứ tự."
+  },
+  {
+    name: "Rune of Soulbound",
+    description: "Giữ vật phẩm sau khi chết."
+  },
+  {
+    name: "Random Enchantment",
+    description: "Tạo ra sách phù phép ngẫu nhiên."
+  },
+  {
+    name: "Rune of Extraction",
+    description: "Gỡ bỏ ngẫu nhiên một phù phép tùy chỉnh khỏi vật phẩm và tạo ra một sách phù phép tương ứng."
+  },
+  {
+    name: "Rune of Protection",
+    description: "Bảo vệ vật phẩm khỏi bị phá hủy khi cường hóa thất bại."
+  },
+  {
+    name: "Soul Gem",
+    description: "khả năng liên quan đến linh hồn, có thể dùng cho Soul Tracker."
+  },
+  {
+    name: "Rename Quill",
+    description: "Cho phép đổi tên vật phẩm."
+  },
+  {
+    name: "Arcane Bundle",
+    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại."
+  },
+  {
+    name: "Abandon Stone",
+    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại."
+  },
+  {
+    name: "Lucky Gem",
+    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại."
+  },
+  {
+    name: "Miner Scroll",
+    description: "Theo dõi số lượng khối đã khai thác bằng công cụ."
+  },
+  {
+    name: "Fisherman Scroll",
+    description: "Theo dõi số cá bắt được."
+  },
+  {
+    name: "Warrior Scroll",
+    description: "Theo dõi số lượt hạ gục bằng vũ khí."
+  },
+  {
+    name: "Slayer Scroll",
+    description: "Theo dõi số lượng quái vật đã tiêu diệt bằng vật phẩm."
+  },
+  {
+    name: "Tome of Weapon",
+    description: "Tăng số lượng phù phép có thể áp dụng lên vũ khí."
+  },
+  {
+    name: "Tome of Armor",
+    description: "Tăng số lượng phù phép có thể áp dụng lên giáp."
+  },
+  {
+    name: "Tome of Tool",
+    description: "Tăng số lượng phù phép có thể áp dụng lên công cụ."
+  },
+  {
+    name: "Tome of Renewal",
+    description: "Ngẫu nhiên hóa tỉ lệ thành công và phá hủy của sách phù phép tùy chỉnh."
+  },
+  {
+    name: "Universal Tome",
+    description: "Tăng số lượng ô trống có sẵn trên vật phẩm."
+  }
+];
