@@ -1119,7 +1119,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Rune of Soulbound",
     description: "Giữ vật phẩm sau khi chết.",
-    image: "/lovable-uploads/c7a2fe1a-bedc-46e2-970a-f695b011ef44.png"
+    image: "/lovable-uploads/3de28979-c303-42bc-939c-9ee36dc78ebd.png"
   },
   {
     name: "Random Enchantment",
