@@ -53,9 +53,9 @@ const LuckSystem = () => {
       </Card>
 
       <div className="space-y-2">
-        <p>Đối với may mắn âm, tỷ lệ thành công là (cơ hội)|may mắn|+1</p>
-        <p>Đối với may mắn dương, tỷ lệ thành công là 1-(1-cơ hội)may mắn+1</p>
-        <p>Để xem chỉ số nào bị ảnh hưởng bởi may mắn, hãy kiểm tra trang chỉ số (tìm kiếm 🍀)</p>
+        <p>Các chỉ số bị ảnh hưởng bởi may mắn, bao gồm Cơ hội Chảy máu, Cơ hội Phản đòn</p>
+        <p>Cơ hội Buộc xuống ngựa, Cơ hội Gây choáng, Giảm tiêu thụ Cơn đói, Giảm tiêu thụ Đạn dược</p>
+        <p>Giảm tiêu thụ Nguyên liệu, Giảm tiêu thụ Thuốc, Giảm tiêu thụ Lapis</p>
         <p className="font-semibold">Do ảnh hưởng lớn đến nhiều phần khác nhau của trò chơi, May mắn là một trong những chỉ số mạnh nhất cần có.</p>
       </div>
     </div>
