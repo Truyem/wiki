@@ -22,7 +22,7 @@ const PowerSkill = () => {
 
         <div>
           <h3 className="font-semibold mb-2">Lưu ý đặc biệt</h3>
-          <p>Tăng cấp Sức Mạnh là cách duy nhất để nhận Điểm Kỹ Năng, cần thiết để mở khóa các đặc quyền ((trừ khi server của bạn đã triển khai các phương pháp khác để nhận Điểm Kỹ Năng)).</p>
+          <p>Tăng cấp Sức Mạnh là cách duy nhất để nhận Điểm Kỹ Năng, cần thiết để mở khóa các đặc quyền.</p>
         </div>
 
         <div>

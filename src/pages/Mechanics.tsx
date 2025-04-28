@@ -25,7 +25,7 @@ const Mechanics = () => {
                 Các Cơ Chế
               </h1>
               <p className="text-gray-600 dark:text-gray-400 mt-2">
-                Tất cả (hoặc hầu hết) các cơ chế của ValhallaMMO đã được trình bày.
+                Tất cả (hoặc hầu hết) các cơ chế của Server ở đây.
               </p>
             </div>
 
