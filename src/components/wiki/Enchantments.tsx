@@ -13,8 +13,8 @@ import {
 } from "@/components/ui/select";
 
 const equipmentTypes = [
-  "Kiếm", "Rìu", "Cung", "Nỏ", "Đinh ba", "Cuốc chim", "Xẻng", "Cuốc",
-  "Mũ", "Áo", "Quần", "Ủng", "Elytra", "Cần câu"
+  "Rìu", "Ủng", "Cung", "Nỏ", "Áo", "Elytra", "Cần câu", "Mũ", 
+  "Cuốc", "Quần", "Cuốc chim", "Xẻng", "Kiếm", "Đinh ba"
 ];
 
 const Enchantments = () => {
