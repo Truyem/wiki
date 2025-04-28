@@ -6,9 +6,9 @@ const MobStats = () => {
     <div className="space-y-4">
       <Card>
         <CardContent className="space-y-4 pt-4">
-          <h3 className="font-bold text-lg">Sát Thương Rạng Đông (Radiant Damage)</h3>
+          <h3 className="font-bold text-lg">Sát Thương Bức Xạ (Radiant Damage)</h3>
           <p>
-            Có thể xem là sát thương "Smite", mặc dù bùa lợi Smite không gây sát thương rạng đông.
+            Có thể xem là sát thương "Smite", mặc dù bùa lợi Smite không gây sát thương bức xạ.
           </p>
           <p>
             Gây sát thương gấp 2 lần đối với quái vật undead và gấp 1.5 lần đối với quái vật nether, nhưng không gây sát thương đối với mọi thứ khác.
