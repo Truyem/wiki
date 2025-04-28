@@ -1124,7 +1124,6 @@ export const supportItems: SupportItem[] = [
   {
     name: "Random Enchantment",
     description: "Tạo ra sách phù phép ngẫu nhiên."
-    image: "/lovable-uploads/c7a2fe1a-bedc-46e2-970a-f695b011ef44.png"
   },
   {
     name: "Rune of Extraction",
