@@ -1159,7 +1159,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Lucky Gem",
     description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại.",
-    image: "/lovable-uploads/fb5919f8-7572-43f2-84c8-f7c13f7cb85e.png"
+    image: "/lovable-uploads/lucky_gem.png"
   },
   {
     name: "Miner Scroll",
