@@ -77,7 +77,10 @@ const Enchantments = () => {
             />
             {activeTab === "enchantments" && (
               <div className="flex flex-col md:flex-row gap-4">
-                <Select value={rarityFilter} onValueChange={setRarityFilter}>
+                <Select 
+                  value={rarityFilter} 
+                  onValueChange={(value) => setRarityFilter(value as Rarity | "all")}
+                >
                   <SelectTrigger className="w-full md:w-[200px]">
                     <SelectValue placeholder="Chọn độ hiếm" />
                   </SelectTrigger>
@@ -119,7 +122,7 @@ const Enchantments = () => {
                       name={enchant.name} 
                       description={enchant.description} 
                       appliesTo={enchant.appliesTo} 
-                      rarity={enchant.rarity}
+                      rarity={enchant.rarity as Rarity}
                     />
                   ))}
                 </div>
@@ -164,4 +167,3 @@ const Enchantments = () => {
 };
 
 export default Enchantments;
-
