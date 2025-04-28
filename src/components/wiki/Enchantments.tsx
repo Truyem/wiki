@@ -18,9 +18,11 @@ const equipmentTypes = [
   "Cuốc", "Quần", "Cuốc chim", "Xẻng", "Kiếm", "Đinh ba"
 ];
 
+type Rarity = "SIMPLE" | "UNIQUE" | "ELITE" | "ULTIMATE" | "LEGENDARY" | "FABLED";
+
 const Enchantments = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [rarityFilter, setRarityFilter] = useState<string>("all");
+  const [rarityFilter, setRarityFilter] = useState<Rarity | "all">("all");
   const [typeFilter, setTypeFilter] = useState<string>("all");
   const [activeTab, setActiveTab] = useState<"enchantments" | "support">("enchantments");
 
@@ -162,3 +164,4 @@ const Enchantments = () => {
 };
 
 export default Enchantments;
+
