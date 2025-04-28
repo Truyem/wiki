@@ -1129,7 +1129,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Rune of Extraction",
     description: "Gỡ bỏ ngẫu nhiên một phù phép tùy chỉnh khỏi vật phẩm và tạo ra một sách phù phép tương ứng.",
-    image: "/lovable-uploads/8f85dc25-8227-4c3e-9b4c-da8bd97d4041.png"
+    image: "/lovable-uploads/ae0292fd-ae21-4a33-9f77-96b068d0f20c.png"
   },
   {
     name: "Rune of Protection",
@@ -1169,7 +1169,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Fisherman Scroll",
     description: "Theo dõi số cá bắt được.",
-    image: "/lovable-uploads/ae0292fd-ae21-4a33-9f77-96b068d0f20c.png"
+    image: "/lovable-uploads/8f85dc25-8227-4c3e-9b4c-da8bd97d4041.png"
   },
   {
     name: "Warrior Scroll",
