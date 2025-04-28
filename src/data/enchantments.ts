@@ -128,7 +128,7 @@ export const enchantments = [
   },
   {
     name: "Nóng Chảy",
-    description: "Cơ hội đốt ch��y kẻ t���n công bạn.",
+    description: "Cơ hội đốt cháy kẻ tấn công bạn.",
     appliesTo: ["Bộ Giáp"],
     rarity: "UNIQUE"
   },
@@ -392,7 +392,7 @@ export const enchantments = [
   },
   {
     name: "Poseidon",
-    description: "Tăng sát thư����ng gây ra bằng Đinh Ba (Trident).",
+    description: "Tăng sát thương gây ra bằng Đinh Ba (Trident).",
     appliesTo: ["Đinh ba"],
     rarity: "ELITE"
   },
@@ -529,7 +529,7 @@ export const enchantments = [
     rarity: "ULTIMATE"
   },
   {
-    name: "Làm L��ch M��i Tên",
+    name: "Làm Lệch Mũi Tên",
     description: "Cơ hội ngăn chặn mũi tên của kẻ địch gây sát thương.",
     appliesTo: ["Bộ Giáp"],
     rarity: "ULTIMATE"
@@ -656,7 +656,7 @@ export const enchantments = [
   },
   {
     name: "Nặng Nề",
-    description: "Giảm sát thương từ cung của kẻ ��ịch đi 2% m��i cấp.",
+    description: "Giảm sát thương từ cung của kẻ địch đi 2% mỗi cấp.",
     appliesTo: ["Bộ Giáp"],
     rarity: "ULTIMATE"
   },
