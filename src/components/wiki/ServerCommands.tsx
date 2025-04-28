@@ -1,10 +1,7 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-
 const ServerCommands = () => {
-  return (
-    <div className="space-y-6">
+  return <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-2">Lệnh Server</h1>
         <p className="text-gray-700 dark:text-gray-300 mb-6">
@@ -44,10 +41,8 @@ const ServerCommands = () => {
 
         <Card>
           <CardContent className="pt-6">
-            <h2 className="text-xl font-bold mb-4 text-[#825432] dark:text-[#FFAA00]">Lệnh mở danh sách phù phép</h2>
-            <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded font-mono">
-              /eenchants list
-            </div>
+            <h2 className="text-xl font-bold mb-4 text-[#825432] dark:text-[#FFAA00]">Lệnh cửa hàng phù phép</h2>
+            <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded font-mono">/enchanter</div>
           </CardContent>
         </Card>
 
@@ -83,8 +78,6 @@ const ServerCommands = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default ServerCommands;
