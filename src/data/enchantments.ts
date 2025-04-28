@@ -128,7 +128,7 @@ export const enchantments = [
   },
   {
     name: "Nóng Chảy",
-    description: "Cơ hội đốt ch��y kẻ tấn công bạn.",
+    description: "Cơ hội đốt ch��y kẻ t���n công bạn.",
     appliesTo: ["Bộ Giáp"],
     rarity: "UNIQUE"
   },
@@ -392,7 +392,7 @@ export const enchantments = [
   },
   {
     name: "Poseidon",
-    description: "Tăng sát thư��ng gây ra bằng Đinh Ba (Trident).",
+    description: "Tăng sát thư����ng gây ra bằng Đinh Ba (Trident).",
     appliesTo: ["Đinh ba"],
     rarity: "ELITE"
   },
@@ -529,7 +529,7 @@ export const enchantments = [
     rarity: "ULTIMATE"
   },
   {
-    name: "Làm Lệch M��i Tên",
+    name: "Làm L��ch M��i Tên",
     description: "Cơ hội ngăn chặn mũi tên của kẻ địch gây sát thương.",
     appliesTo: ["Bộ Giáp"],
     rarity: "ULTIMATE"
@@ -656,7 +656,7 @@ export const enchantments = [
   },
   {
     name: "Nặng Nề",
-    description: "Giảm sát thương từ cung của kẻ địch đi 2% m��i cấp.",
+    description: "Giảm sát thương từ cung của kẻ ��ịch đi 2% m��i cấp.",
     appliesTo: ["Bộ Giáp"],
     rarity: "ULTIMATE"
   },
@@ -1102,20 +1102,24 @@ export const enchantments = [
 interface SupportItem {
   name: string;
   description: string;
+  image?: string;
 }
 
 export const supportItems: SupportItem[] = [
   {
     name: "Rune of Souls",
-    description: "Tích lũy linh hồn trên vật phẩm làm nhiên liệu, sau đó dùng cho phù phép."
+    description: "Tích lũy linh hồn trên vật phẩm làm nhiên liệu, sau đó dùng cho phù phép.",
+    image: "/lovable-uploads/c818feb4-f9a4-4214-958f-4c86bc572fb6.png"
   },
   {
     name: "Rune of Revelation",
-    description: "Sắp xếp các phù phép trên vật phẩm theo thứ tự."
+    description: "Sắp xếp các phù phép trên vật phẩm theo thứ tự.",
+    image: "/lovable-uploads/4ee45b77-5d72-425b-9e98-59acdd719edd.png"
   },
   {
     name: "Rune of Soulbound",
-    description: "Giữ vật phẩm sau khi chết."
+    description: "Giữ vật phẩm sau khi chết.",
+    image: "/lovable-uploads/c7a2fe1a-bedc-46e2-970a-f695b011ef44.png"
   },
   {
     name: "Random Enchantment",
@@ -1123,66 +1127,82 @@ export const supportItems: SupportItem[] = [
   },
   {
     name: "Rune of Extraction",
-    description: "Gỡ bỏ ngẫu nhiên một phù phép tùy chỉnh khỏi vật phẩm và tạo ra một sách phù phép tương ứng."
+    description: "Gỡ bỏ ngẫu nhiên một phù phép tùy chỉnh khỏi vật phẩm và tạo ra một sách phù phép tương ứng.",
+    image: "/lovable-uploads/8f85dc25-8227-4c3e-9b4c-da8bd97d4041.png"
   },
   {
     name: "Rune of Protection",
-    description: "Bảo vệ vật phẩm khỏi bị phá hủy khi cường hóa thất bại."
+    description: "Bảo vệ vật phẩm khỏi bị phá hủy khi cường hóa thất bại.",
+    image: "/lovable-uploads/519c818e-354c-4caa-b1bb-daa6189cefff.png"
   },
   {
     name: "Soul Gem",
-    description: "khả năng liên quan đến linh hồn, có thể dùng cho Soul Tracker."
+    description: "khả năng liên quan đến linh hồn, có thể dùng cho Soul Tracker.",
+    image: "/lovable-uploads/a5fb01f9-75f1-469c-b504-d308ea205dc6.png"
   },
   {
     name: "Rename Quill",
-    description: "Cho phép đổi tên vật phẩm."
+    description: "Cho phép đổi tên vật phẩm.",
+    image: "/lovable-uploads/04b93934-d42a-4b9f-870f-5fd6852573ed.png"
   },
   {
     name: "Arcane Bundle",
-    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại."
+    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại.",
+    image: "/lovable-uploads/5ecca8e7-6336-48a8-ab77-ce2e3f3c9703.png"
   },
   {
     name: "Abandon Stone",
-    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại."
+    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại.",
+    image: "/lovable-uploads/ebf9649e-1f66-4191-a565-57b2e899fbca.png"
   },
   {
     name: "Lucky Gem",
-    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại."
+    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại.",
+    image: "/lovable-uploads/fb5919f8-7572-43f2-84c8-f7c13f7cb85e.png"
   },
   {
     name: "Miner Scroll",
-    description: "Theo dõi số lượng khối đã khai thác bằng công cụ."
+    description: "Theo dõi số lượng khối đã khai thác bằng công cụ.",
+    image: "/lovable-uploads/f41b9feb-5239-4895-b536-b60721214198.png"
   },
   {
     name: "Fisherman Scroll",
-    description: "Theo dõi số cá bắt được."
+    description: "Theo dõi số cá bắt được.",
+    image: "/lovable-uploads/ae0292fd-ae21-4a33-9f77-96b068d0f20c.png"
   },
   {
     name: "Warrior Scroll",
-    description: "Theo dõi số lượt hạ gục bằng vũ khí."
+    description: "Theo dõi số lượt hạ gục bằng vũ khí.",
+    image: "/lovable-uploads/3de28979-c303-42bc-939c-9ee36dc78ebd.png"
   },
   {
     name: "Slayer Scroll",
-    description: "Theo dõi số lượng quái vật đã tiêu diệt bằng vật phẩm."
+    description: "Theo dõi số lượng quái vật đã tiêu diệt bằng vật phẩm.",
+    image: "/lovable-uploads/7b57f4ec-e11d-4b5a-afdf-5737b33c8ca5.png"
   },
   {
     name: "Tome of Weapon",
-    description: "Tăng số lượng phù phép có thể áp dụng lên vũ khí."
+    description: "Tăng số lượng phù phép có thể áp dụng lên vũ khí.",
+    image: "/lovable-uploads/c818feb4-f9a4-4214-958f-4c86bc572fb6.png"
   },
   {
     name: "Tome of Armor",
-    description: "Tăng số lượng phù phép có thể áp dụng lên giáp."
+    description: "Tăng số lượng phù phép có thể áp dụng lên giáp.",
+    image: "/lovable-uploads/8a36d262-0cf4-4991-9dc3-eeeef44a5b82.png"
   },
   {
     name: "Tome of Tool",
-    description: "Tăng số lượng phù phép có thể áp dụng lên công cụ."
+    description: "Tăng số lượng phù phép có thể áp dụng lên công cụ.",
+    image: "/lovable-uploads/d875f39c-0efa-4bcc-9131-3248e268c569.png"
   },
   {
     name: "Tome of Renewal",
-    description: "Ngẫu nhiên hóa tỉ lệ thành công và phá hủy của sách phù phép tùy chỉnh."
+    description: "Ngẫu nhiên hóa tỉ lệ thành công và phá hủy của sách phù phép tùy chỉnh.",
+    image: "/lovable-uploads/1cf72a1f-5c68-4966-9820-3c6703683bcc.png"
   },
   {
     name: "Universal Tome",
-    description: "Tăng số lượng ô trống có sẵn trên vật phẩm."
+    description: "Tăng số lượng ô trống có sẵn trên vật phẩm.",
+    image: "/lovable-uploads/e5dd443b-c80f-40eb-b464-f24902d5a7ea.png"
   }
 ];

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import EnchantmentCard from "./EnchantmentCard";
@@ -40,7 +39,6 @@ const Enchantments = () => {
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Group enchantments by rarity for display
   const enchantmentsByRarity = {
     SIMPLE: filteredEnchantments.filter((e) => e.rarity === "SIMPLE"),
     UNIQUE: filteredEnchantments.filter((e) => e.rarity === "UNIQUE"),
@@ -144,10 +142,21 @@ const Enchantments = () => {
             {filteredSupportItems.map((item, index) => (
               <Card key={index}>
                 <CardContent className="p-4">
-                  <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    {item.description}
-                  </p>
+                  <div className="flex items-start space-x-4">
+                    {item.image && (
+                      <img 
+                        src={item.image} 
+                        alt={item.name}
+                        className="w-12 h-12 object-contain"
+                      />
+                    )}
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">{item.name}</h3>
+                      <p className="text-gray-700 dark:text-gray-300 text-sm">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
