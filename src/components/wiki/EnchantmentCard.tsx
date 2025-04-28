@@ -1,21 +1,85 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Axe, 
-  Boots, 
-  Bow, 
-  Crossbow,
-  Shirt,
-  Elytra as ElytraIcon,
-  FishingRod,
-  Hat,
-  Pickaxe,
-  Pants,
-  Pickaxe2,
-  Shovel,
-  Sword,
-  Trident
-} from "lucide-react";
+import { Axe, Pickaxe, Shovel, Sword } from "lucide-react";
+
+// Custom icon components for items that don't exist in lucide-react
+const Boots = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 14c0-4 3-4 3-4h12s1 0 1 1v5h-4l-1 4h-6l-1-4H3v-2z"/>
+    <path d="M7 10V4h10v6"/>
+  </svg>
+);
+
+const Bow = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M7 2c-1.5 1-3 3.5-3 6s1.5 5 3 6"/>
+    <path d="M17 2c1.5 1 3 3.5 3 6s-1.5 5-3 6"/>
+    <path d="M11.5 3h1"/>
+    <path d="M11.5 21h1"/>
+    <line x1="17" y1="8" x2="7" y2="16"/>
+  </svg>
+);
+
+const Crossbow = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M4 12h9l3-7"/>
+    <path d="M7 15h9l3-7"/>
+    <path d="M19 5l-3 7h-6"/>
+    <path d="m18 10-2 7-6 2"/>
+  </svg>
+);
+
+const Shirt = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 4l-8 2v6l3 1v7h10v-7l3-1V6l-8-2z"/>
+    <path d="m8 6 4 5 4-5"/>
+  </svg>
+);
+
+const Elytra = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2c-5.5 0-9.3 2.8-10 8.5 2 3.5 5 6.2 10 7.5 5-1.3 8-4 10-7.5-.7-5.7-4.5-8.5-10-8.5z"/>
+    <path d="M12 13c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
+  </svg>
+);
+
+const FishingRod = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2v9c0 1.1-.9 2-2 2H4"/>
+    <path d="m4 13 5 9"/>
+    <circle cx="4" cy="13" r="2"/>
+  </svg>
+);
+
+const Hat = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 15v2c0 3 4.5 4 9 4s9-1 9-4v-2"/>
+    <path d="M12 4c-4.5 0-9 1-9 4s4.5 4 9 4 9-1 9-4-4.5-4-9-4z"/>
+  </svg>
+);
+
+const Pants = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M6 4h12l-2 16h-8L6 4z"/>
+    <path d="M12 4v16"/>
+  </svg>
+);
+
+const Pickaxe2 = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="m14 18 7-7"/>
+    <path d="M10 6 3.35 12.65a2 2 0 0 0 0 2.83L6.17 18.3a2 2 0 0 0 2.83 0L16 12"/>
+  </svg>
+);
+
+const Trident = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 2v10l-2 4"/>
+    <path d="M12 2v10l2 4"/>
+    <path d="M12 16v6"/>
+    <path d="M8 12h8"/>
+  </svg>
+);
 
 interface EnchantmentProps {
   name: string;
@@ -30,7 +94,7 @@ const iconMap = {
   "Cung": Bow,
   "Nỏ": Crossbow,
   "Áo": Shirt,
-  "Elytra": ElytraIcon,
+  "Elytra": Elytra,
   "Cần câu": FishingRod,
   "Mũ": Hat,
   "Cuốc": Pickaxe,

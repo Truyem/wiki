@@ -14,7 +14,7 @@ import {
 
 const equipmentTypes = [
   "Kiếm", "Rìu", "Cung", "Nỏ", "Đinh ba", "Cuốc chim", "Xẻng", "Cuốc",
-  "Mũ", "Áo", "Quần", "Ủng", "Bộ Giáp", "Elytra", "Cần câu", "Công cụ"
+  "Mũ", "Áo", "Quần", "Ủng", "Elytra", "Cần câu"
 ];
 
 const Enchantments = () => {
@@ -96,7 +96,13 @@ const Enchantments = () => {
             <h2 className="text-2xl font-bold mb-4">{rarity}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {enchants.map((enchant, index) => (
-                <EnchantmentCard key={index} {...enchant} />
+                <EnchantmentCard 
+                  key={index} 
+                  name={enchant.name} 
+                  description={enchant.description} 
+                  appliesTo={enchant.appliesTo} 
+                  rarity={enchant.rarity as "SIMPLE" | "UNIQUE" | "ELITE" | "ULTIMATE" | "LEGENDARY" | "FABLED"}
+                />
               ))}
             </div>
           </div>
