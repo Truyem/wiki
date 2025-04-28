@@ -1,4 +1,3 @@
-
 interface Enchantment {
   name: string;
   description: string;
@@ -6,7 +5,7 @@ interface Enchantment {
   rarity: "SIMPLE" | "UNIQUE" | "ELITE" | "ULTIMATE" | "LEGENDARY" | "FABLED";
 }
 
-export const enchantments: Enchantment[] = [
+export const enchantments = [
   {
     name: "Sét Đánh",
     description: "Cơ hội giáng sét vào đối thủ.",
@@ -93,7 +92,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Cuồng Nộ",
-    description: "Cơ hội nhận được sức mạnh và mệt mỏi khi đào.",
+    description: "Có cơ hội nhận được sức mạnh và mệt mỏi khi đào.",
     appliesTo: ["Kiếm", "Rìu"],
     rarity: "UNIQUE"
   },
@@ -129,7 +128,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Nóng Chảy",
-    description: "Cơ hội đốt cháy kẻ tấn công bạn.",
+    description: "Cơ hội đốt ch��y kẻ tấn công bạn.",
     appliesTo: ["Bộ Giáp"],
     rarity: "UNIQUE"
   },
@@ -218,7 +217,7 @@ export const enchantments: Enchantment[] = [
     rarity: "ELITE"
   },
   {
-    name: "Thiêu Đốt",
+    name: "Thieu Đốt",
     description: "Tăng sát thương gây ra cho Nhện.",
     appliesTo: ["Kiếm", "Rìu"],
     rarity: "ELITE"
@@ -345,7 +344,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Ma Cà Rồng",
-    description: "Cơ hội hồi máu cho bạn lên đến 3 máu vài giây sau khi bạn tấn công.",
+    description: "Có cơ hội hồi máu cho bạn lên đến 3 máu vài giây sau khi bạn tấn công.",
     appliesTo: ["Kiếm"],
     rarity: "ELITE"
   },
@@ -393,7 +392,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Poseidon",
-    description: "Tăng sát thương gây ra bằng Đinh Ba (Trident).",
+    description: "Tăng sát thư��ng gây ra bằng Đinh Ba (Trident).",
     appliesTo: ["Đinh ba"],
     rarity: "ELITE"
   },
@@ -501,7 +500,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Đốn Gỗ",
-    description: "Cơ hội chặt đổ cả cây chỉ bằng một nhát",
+    description: "Có cơ hội chặt đổ cả cây chỉ bằng một nhát",
     appliesTo: ["Rìu"],
     rarity: "ULTIMATE"
   },
@@ -573,7 +572,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Đào Hào",
-    description: "Cơ hội phá vỡ trong khu vực 3x3.",
+    description: "Có cơ hội phá vỡ trong khu vực 3x3.",
     appliesTo: ["Cuốc chim", "Xẻng"],
     rarity: "ULTIMATE"
   },
@@ -645,7 +644,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Tan Rã",
-    description: "Cơ hội gây thêm sát thương độ bền cho tất cả áo giáp của kẻ địch với mỗi đòn tấn công.",
+    description: "Có cơ hội gây thêm sát thương độ bền cho tất cả áo giáp của kẻ địch với mỗi đòn tấn công.",
     appliesTo: ["Kiếm"],
     rarity: "ULTIMATE"
   },
@@ -657,7 +656,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Nặng Nề",
-    description: "Giảm sát thương từ cung của kẻ địch đi 2% mỗi cấp.",
+    description: "Giảm sát thương từ cung của kẻ địch đi 2% m��i cấp.",
     appliesTo: ["Bộ Giáp"],
     rarity: "ULTIMATE"
   },
@@ -675,7 +674,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Xe Tăng",
-    description: "Cơ hội giảm sát thương từ rìu của kẻ địch đi 2% mỗi cấp.",
+    description: "Có cơ hội giảm sát thương từ rìu của kẻ địch đi 2% mỗi cấp.",
     appliesTo: ["Bộ Giáp"],
     rarity: "ULTIMATE"
   },
@@ -716,7 +715,7 @@ export const enchantments: Enchantment[] = [
     rarity: "ULTIMATE"
   },
   {
-    name: "Thiêu Rụi",
+    name: "Thieu Rụi",
     description: "Đốt cháy tất cả mob trong bán kính.",
     appliesTo: ["Kiếm"],
     rarity: "ULTIMATE"
@@ -813,8 +812,8 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Lôi Thần",
-    description: "Giáng sét lên quái vật sau mỗi 3 đòn đánh liên tiếp.",
-    appliesTo: ["Rìu", "Kiếm"],
+    description: "Giáng sét xuống những người chơi gần đó.",
+    appliesTo: ["Kiếm"],
     rarity: "LEGENDARY"
   },
   {
@@ -873,19 +872,19 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Dã Man",
-    description: "Cơ hội gây thêm sát thương bằng rìu.",
+    description: "Có cơ hội gây thêm sát thương bằng rìu.",
     appliesTo: ["Rìu"],
     rarity: "LEGENDARY"
   },
   {
     name: "Minh Mẫn",
-    description: "Cơ hội chữa khỏi mù lòa và nhận hiệu ứng nhìn trong đêm.",
+    description: "Có cơ hội chữa khỏi mù lòa và nhận hiệu ứng nhìn trong đêm.",
     appliesTo: ["Bộ Giáp"],
     rarity: "LEGENDARY"
   },
   {
     name: "Song Đả",
-    description: "Cơ hội tấn công hai lần.",
+    description: "Có cơ hội tấn công hai lần.",
     appliesTo: ["Kiếm"],
     rarity: "LEGENDARY"
   },
@@ -909,13 +908,13 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Tò Mò",
-    description: "Cơ hội tăng EXP rơi ra từ mob.",
+    description: "Có cơ hội tăng EXP rơi ra từ mob.",
     appliesTo: ["Kiếm"],
     rarity: "LEGENDARY"
   },
   {
     name: "Hút Máu",
-    description: "Cơ hội đánh cắp máu khi tấn công.",
+    description: "Có cơ hội đánh cắp máu khi tấn công.",
     appliesTo: ["Kiếm"],
     rarity: "LEGENDARY"
   },
@@ -981,7 +980,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Hóa Ngọc",
-    description: "Cơ hội để khối quặng biến thành khối ngọc của nó.",
+    description: "Có cơ hội để khối quặng biến thành khối ngọc của nó.",
     appliesTo: ["Cuốc chim"],
     rarity: "FABLED"
   },
@@ -1035,7 +1034,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Hù Dọa",
-    description: "Cơ hội thay thế mũ bảo hiểm của đối thủ bằng một quả bí ngô trong thời gian ngắn.",
+    description: "Có một cơ hội thay thế mũ bảo hiểm của đối thủ bằng một quả bí ngô trong thời gian ngắn.",
     appliesTo: ["Kiếm", "Rìu"],
     rarity: "FABLED"
   },
@@ -1047,7 +1046,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Lao Tới",
-    description: "Cơ hội tăng tốc độ khi cất cánh với elytra. Tốn 10 souls / kích hoạt.",
+    description: "Có cơ hội tăng tốc độ khi cất cánh với elytra. Tốn 10 souls / kích hoạt.",
     appliesTo: ["Elytra"],
     rarity: "FABLED"
   },
@@ -1059,7 +1058,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Nhân Lên",
-    description: "Cơ hội nhân lên vật phẩm rơi ra từ quặng. Tốn 5 souls / kích hoạt.",
+    description: "Có cơ hội nhân lên vật phẩm rơi ra từ quặng. Tốn 5 souls / kích hoạt.",
     appliesTo: ["Cuốc chim"],
     rarity: "FABLED"
   },
@@ -1071,7 +1070,7 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Rìu Linh Hồn",
-    description: "Cơ hội nhận thêm souls từ việc giết người chơi.",
+    description: "Có cơ hội nhận thêm souls từ việc giết người chơi.",
     appliesTo: ["Rìu"],
     rarity: "FABLED"
   },
@@ -1083,8 +1082,19 @@ export const enchantments: Enchantment[] = [
   },
   {
     name: "Cày Linh Hồn",
-    description: "Cơ hội nhận souls bằng cách giết mob.",
+    description: "Có cơ hội nhận souls bằng cách giết mob.",
     appliesTo: ["Kiếm"],
     rarity: "FABLED"
   }
-];
+].map(enchant => ({
+  ...enchant,
+  appliesTo: enchant.appliesTo.map(item => {
+    if (item === "Bộ Giáp") {
+      return ["Áo", "Quần", "Mũ", "Ủng"];
+    } else if (item === "Công cụ") {
+      return ["Cuốc", "Xẻng", "Cuốc chim", "Rìu"];
+    } else {
+      return [item];
+    }
+  }).flat()
+}));

@@ -1,5 +1,21 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { 
+  Axe, 
+  Boots, 
+  Bow, 
+  Crossbow,
+  Shirt,
+  Elytra as ElytraIcon,
+  FishingRod,
+  Hat,
+  Pickaxe,
+  Pants,
+  Pickaxe2,
+  Shovel,
+  Sword,
+  Trident
+} from "lucide-react";
 
 interface EnchantmentProps {
   name: string;
@@ -7,6 +23,23 @@ interface EnchantmentProps {
   appliesTo: string[];
   rarity: "SIMPLE" | "UNIQUE" | "ELITE" | "ULTIMATE" | "LEGENDARY" | "FABLED";
 }
+
+const iconMap = {
+  "Rìu": Axe,
+  "Ủng": Boots,
+  "Cung": Bow,
+  "Nỏ": Crossbow,
+  "Áo": Shirt,
+  "Elytra": ElytraIcon,
+  "Cần câu": FishingRod,
+  "Mũ": Hat,
+  "Cuốc": Pickaxe,
+  "Quần": Pants,
+  "Cuốc chim": Pickaxe2,
+  "Xẻng": Shovel,
+  "Kiếm": Sword,
+  "Đinh ba": Trident,
+};
 
 const EnchantmentCard = ({ name, description, appliesTo, rarity }: EnchantmentProps) => {
   const rarityColors = {
@@ -47,15 +80,19 @@ const EnchantmentCard = ({ name, description, appliesTo, rarity }: EnchantmentPr
           <p className="text-gray-700 dark:text-gray-300 text-sm">
             {description}
           </p>
-          <div className="flex flex-wrap gap-1">
-            {appliesTo.map((item, index) => (
-              <span 
-                key={index}
-                className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full"
-              >
-                {item}
-              </span>
-            ))}
+          <div className="flex flex-wrap gap-2">
+            {appliesTo.map((item, index) => {
+              const IconComponent = iconMap[item];
+              return (
+                <div 
+                  key={index}
+                  className="text-gray-600 dark:text-gray-400"
+                  title={item}
+                >
+                  {IconComponent && <IconComponent className="h-5 w-5" />}
+                </div>
+              );
+            })}
           </div>
           <div className="mt-2">
             <img 
