@@ -1,5 +1,7 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+
 const ServerCommands = () => {
   return <div className="space-y-6">
       <div>
@@ -71,6 +73,11 @@ const ServerCommands = () => {
       <Card className="mt-8">
         <CardContent className="pt-6">
           <div className="text-center">
+            <img 
+              src="/lovable-uploads/3779311a-bc00-4b10-b64c-82c13cd8357b.png" 
+              alt="Tiến Hóa Huy Hoàng"
+              className="w-full max-w-3xl mx-auto mb-6 rounded-lg shadow-lg"
+            />
             <blockquote className="italic text-lg text-gray-700 dark:text-gray-300 mb-2">
               "Nhân loại trốn tránh khỏi sự hoàn hảo vì họ không thể hiểu được nó. Vậy thì hãy để ta làm việc đó"
             </blockquote>
@@ -80,4 +87,5 @@ const ServerCommands = () => {
       </Card>
     </div>;
 };
+
 export default ServerCommands;
