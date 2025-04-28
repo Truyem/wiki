@@ -1114,7 +1114,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Rune of Revelation",
     description: "Sắp xếp các phù phép trên vật phẩm theo thứ tự.",
-    image: "/lovable-uploads/4ee45b77-5d72-425b-9e98-59acdd719edd.png"
+    image: "/lovable-uploads/e5dd443b-c80f-40eb-b464-f24902d5a7ea.png"
   },
   {
     name: "Rune of Soulbound",
@@ -1134,7 +1134,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Rune of Protection",
     description: "Bảo vệ vật phẩm khỏi bị phá hủy khi cường hóa thất bại.",
-    image: "/lovable-uploads/519c818e-354c-4caa-b1bb-daa6189cefff.png"
+    image: "/lovable-uploads/fb5919f8-7572-43f2-84c8-f7c13f7cb85e.png"
   },
   {
     name: "Soul Gem",
@@ -1144,7 +1144,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Rename Quill",
     description: "Cho phép đổi tên vật phẩm.",
-    image: "/lovable-uploads/04b93934-d42a-4b9f-870f-5fd6852573ed.png"
+    image: "/lovable-uploads/1cf72a1f-5c68-4966-9820-3c6703683bcc.png"
   },
   {
     name: "Arcane Bundle",
@@ -1174,7 +1174,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Warrior Scroll",
     description: "Theo dõi số lượt hạ gục bằng vũ khí.",
-    image: "/lovable-uploads/c818feb4-f9a4-4214-958f-4c86bc572fb6.png"
+    image: "/lovable-uploads/04b93934-d42a-4b9f-870f-5fd6852573ed.png"
   },
   {
     name: "Slayer Scroll",
@@ -1189,7 +1189,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Tome of Armor",
     description: "Tăng số lượng phù phép có thể áp dụng lên giáp.",
-    image: "/lovable-uploads/8a36d262-0cf4-4991-9dc3-eeeef44a5b82.png"
+    image: "/lovable-uploads/4ee45b77-5d72-425b-9e98-59acdd719edd.png"
   },
   {
     name: "Tome of Tool",
@@ -1199,11 +1199,11 @@ export const supportItems: SupportItem[] = [
   {
     name: "Tome of Renewal",
     description: "Ngẫu nhiên hóa tỉ lệ thành công và phá hủy của sách phù phép tùy chỉnh.",
-    image: "/lovable-uploads/1cf72a1f-5c68-4966-9820-3c6703683bcc.png"
+    image: "/lovable-uploads/8a36d262-0cf4-4991-9dc3-eeeef44a5b82.png"
   },
   {
     name: "Universal Tome",
     description: "Tăng số lượng ô trống có sẵn trên vật phẩm.",
-    image: "/lovable-uploads/e5dd443b-c80f-40eb-b464-f24902d5a7ea.png"
+    image: "/lovable-uploads/519c818e-354c-4caa-b1bb-daa6189cefff.png"
   }
 ];
