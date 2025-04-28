@@ -20,7 +20,7 @@ export const skillsData: Skill[] = [
     icon: "💥",
     description: "Sức Mạnh đại diện cho tổng thể tiến trình của người chơi trong Server.",
     howToGainExp: "Tăng cấp bất kỳ kỹ năng nào khác ngoài Sức Mạnh sẽ cho bạn một lượng kinh nghiệm Sức Mạnh.",
-    specialNotes: "Tăng cấp Sức Mạnh là cách duy nhất để nhận Điểm Kỹ Năng, cần thiết để mở khóa các đặc quyền ((trừ khi server của bạn đã triển khai các phương pháp khác để nhận Điểm Kỹ Năng)).",
+    specialNotes: "Tăng cấp Sức Mạnh là cách duy nhất để nhận Điểm Kỹ Năng, cần thiết để mở khóa các đặc quyền.",
     perks: "Kỹ năng Sức Mạnh chủ yếu cung cấp các cải thiện chỉ số chung như May Mắn, Sát Thương, Hồi Máu, v.v."
   },
   {
