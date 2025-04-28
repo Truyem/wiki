@@ -1139,7 +1139,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Soul Gem",
     description: "khả năng liên quan đến linh hồn, có thể dùng cho Soul Tracker.",
-    image: "/lovable-uploads/a5fb01f9-75f1-469c-b504-d308ea205dc6.png"
+    image: "/lovable-uploads/d875f39c-0efa-4bcc-9131-3248e268c569.png"
   },
   {
     name: "Rename Quill",
@@ -1194,7 +1194,7 @@ export const supportItems: SupportItem[] = [
   {
     name: "Tome of Tool",
     description: "Tăng số lượng phù phép có thể áp dụng lên công cụ.",
-    image: "/lovable-uploads/d875f39c-0efa-4bcc-9131-3248e268c569.png"
+    image: "/lovable-uploads/a5fb01f9-75f1-469c-b504-d308ea205dc6.png"
   },
   {
     name: "Tome of Renewal",
