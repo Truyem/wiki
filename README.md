@@ -1,73 +1,41 @@
-# Welcome to your Lovable project
+# Truyem Server Wiki
 
-## Project info
+## Giới thiệu
 
-**URL**: https://lovable.dev/projects/f5d9bd61-913d-4117-8186-3b0bea7f4b28
+Đây là trang web wiki chính thức của Truyem Server, cung cấp thông tin chi tiết về:
 
-## How can I edit this code?
+- Kỹ năng và cách thăng cấp
+- Cơ chế chiến đấu và gameplay
+- Hệ thống chủng tộc
+- Hệ thống phù phép và nâng cấp
+- Hướng dẫn chế tạo và trang bị
+- Và nhiều thông tin hữu ích khác
 
-There are several ways of editing your application.
+## Tính năng chính
 
-**Use Lovable**
+### Kỹ năng
+- Hệ thống kỹ năng đa dạng: Rèn, Phù phép, Giả kim, Khai thác, Chặt gỗ, và nhiều hơn nữa
+- Hệ thống New Game+ cho phép reset kỹ năng để nhận thêm chỉ số
+- Hướng dẫn chi tiết cách thăng cấp và tối ưu hóa kỹ năng
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f5d9bd61-913d-4117-8186-3b0bea7f4b28) and start prompting.
+### Cơ chế
+- Hệ thống chiến đấu với nhiều loại vũ khí khác nhau
+- Cơ chế may mắn và chảy máu
+- Hệ thống đỡ đòn và sát thương
+- Cơ chế chống farm để cân bằng gameplay
 
-Changes made via Lovable will be committed automatically to this repo.
+### Chủng tộc
+- Nhiều chủng tộc để lựa chọn: Animal, Monster, Nonhuman, Human
+- Mỗi chủng tộc có ưu và nhược điểm riêng
+- Khả năng đặc biệt cho từng chủng tộc
 
-**Use your preferred IDE**
+### Phù phép & Nâng cấp
+- Hệ thống phù phép đa dạng với nhiều cấp độ
+- Cơ chế nâng cấp trang bị
+- Trinkets và vật phẩm đặc biệt
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Tác giả
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Vũ Đình Trung © 2025. All rights reserved.
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f5d9bd61-913d-4117-8186-3b0bea7f4b28) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+> "Nhân loại trốn tránh khỏi sự hoàn hảo vì họ không thể hiểu được nó. Vậy thì hãy để ta làm việc đó"
