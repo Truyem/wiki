@@ -34,7 +34,7 @@ const Trinkets = () => {
               </p>
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex justify-center">
-                  <img alt="Danh sách Trinket chưa nâng cấp" className="rounded-lg shadow-md max-w-full h-auto object-contain" src="/lovable-uploads/4199821b-1f80-4539-ba75-26cafe9ce469.png" />
+                  <img alt="Danh sách Trinket chưa nâng cấp" className="rounded-lg shadow-md max-w-full h-auto object-contain" src="/lovable-uploads/d06f8b79-718e-4e48-93d6-e3df0d8f4693.png" />
                 </div>
                 <div className="flex justify-center">
                   <img alt="Chữ màu vàng" className="rounded-lg shadow-md max-w-full h-auto object-contain" src="/lovable-uploads/297157f1-7279-4d6f-8dd4-4b304f4526b7.png" />
