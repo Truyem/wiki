@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import BasicCrafting from "@/components/wiki/BasicCrafting";
@@ -11,9 +11,21 @@ import ServerCommands from "@/components/wiki/ServerCommands";
 import Footer from "@/components/Footer";
 import Upgrades from "@/components/wiki/Upgrades";
 import Races from "@/components/wiki/Races";
+import { cn } from "@/lib/utils";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("basic-crafting");
+  const [isContentVisible, setIsContentVisible] = useState(false);
+  
+  useEffect(() => {
+    // Add animation when section changes
+    setIsContentVisible(false);
+    const timer = setTimeout(() => {
+      setIsContentVisible(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, [activeSection]);
 
   const renderContent = () => {
     switch (activeSection) {
@@ -46,7 +58,14 @@ const Index = () => {
       <div className="flex flex-col md:flex-row flex-grow">
         <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
         <main className="flex-grow px-4 py-6 md:px-8 md:py-8 overflow-y-auto">
-          <div className="max-w-4xl mx-auto bg-white dark:bg-[#1e1e1e] rounded-lg shadow-md p-6 mb-10">
+          <div 
+            className={cn(
+              "max-w-4xl mx-auto bg-white dark:bg-[#1e1e1e] rounded-lg shadow-md p-6 mb-10 transition-all duration-500 ease-in-out",
+              isContentVisible 
+                ? "opacity-100 transform translate-y-0" 
+                : "opacity-0 transform translate-y-4"
+            )}
+          >
             {renderContent()}
           </div>
         </main>
