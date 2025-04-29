@@ -812,7 +812,7 @@ export const enchantments = [
   },
   {
     name: "Lôi Thần",
-    description: "Giáng sét xuống những người chơi gần đó.",
+    description: "Giáng sét lên quái vật sau mỗi 3 đòn đánh liên tiếp.",
     appliesTo: ["Kiếm"],
     rarity: "LEGENDARY"
   },
