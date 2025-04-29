@@ -1,31 +1,38 @@
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import SkillsAndAdvancement from "./pages/SkillsAndAdvancement";
-import Mechanics from "./pages/Mechanics";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import Index from './pages/Index';
+import Mechanics from './pages/Mechanics';
+import SkillsAndAdvancement from './pages/SkillsAndAdvancement';
+import Wiki from './pages/Wiki';
+import NotFound from './pages/NotFound';
+import { Toaster } from './components/ui/toaster';
+import './App.css';
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
+function App() {
+  return (
+    <Router>
+      <div className="flex flex-col min-h-screen bg-gray-950 text-gray-100">
+        <Navbar />
+        <Sidebar />
+        
+        <main className="flex-grow container mx-auto px-4 py-8 relative">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/mechanics" element={<Mechanics />} />
+            <Route path="/skills" element={<SkillsAndAdvancement />} />
+            <Route path="/wiki" element={<Wiki />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        
+        <Footer />
+      </div>
       <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/skills-and-advancement" element={<SkillsAndAdvancement />} />
-          <Route path="/mechanics" element={<Mechanics />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+    </Router>
+  );
+}
 
 export default App;
