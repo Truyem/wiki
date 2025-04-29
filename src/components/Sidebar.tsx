@@ -1,116 +1,98 @@
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { MoveVertical } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { useIsMobile } from '../hooks/use-mobile';
-import { Menu } from 'lucide-react';
+interface SidebarProps {
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+}
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const isMobile = useIsMobile();
-  
-  // Close sidebar when route changes on mobile
-  useEffect(() => {
-    if (isMobile) {
-      setIsOpen(false);
-    }
-  }, [location.pathname, isMobile]);
+const Sidebar = ({ activeSection, setActiveSection }: SidebarProps) => {
+  const [isDragging, setIsDragging] = useState(false);
+  const [position, setPosition] = useState(0);
+  const dragRef = useRef<HTMLDivElement>(null);
+  const startYRef = useRef(0);
+  const startPositionRef = useRef(0);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+  const sections = [
+    { id: "basic-crafting", name: "Chế tạo cơ bản" },
+    { id: "upgrades", name: "Nâng cấp" },
+    { id: "quality-upgrades", name: "Cải thiện trang bị" },
+    { id: "material-tiers", name: "Cấp độ vật liệu" },
+    { id: "special-items", name: "Vật phẩm đặc biệt" },
+    { id: "races", name: "Tộc" },
+    { id: "enchantments", name: "Enchantments" },
+    { id: "trinkets", name: "Trinkets" },
+    { id: "server-commands", name: "Lệnh Server" },
+  ];
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    startYRef.current = e.clientY;
+    startPositionRef.current = position;
   };
 
-  const sidebarClasses = `
-    transition-all duration-300 ease-in-out
-    ${isOpen || (!isMobile && isOpen) ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}
-    ${isMobile ? 'fixed z-50 left-0' : 'fixed z-50 left-1/2 -translate-x-1/2'}
-    top-16 bottom-16 bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-xl
-    w-64 py-8 px-4 overflow-y-auto
-  `;
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging) return;
 
-  const toggleButtonClasses = `
-    fixed z-[60] top-5 left-5 p-2 rounded-full
-    bg-gray-800/80 text-white shadow-lg hover:bg-gray-700
-    transition-all duration-200 ease-in-out
-  `;
+      const deltaY = e.clientY - startYRef.current;
+      const newPosition = Math.max(0, startPositionRef.current + deltaY);
+      
+      const maxDrag = window.innerHeight - (dragRef.current?.clientHeight || 0);
+      setPosition(Math.min(newPosition, maxDrag));
+    };
 
-  const hoverTriggerClasses = `
-    hidden md:block fixed z-10 left-1/2 top-16 -translate-x-1/2
-    w-20 h-20 bg-transparent cursor-pointer
-  `;
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    if (isDragging) {
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+    }
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isDragging]);
 
   return (
-    <>
-      {/* Mobile toggle button */}
-      {isMobile && (
-        <button 
-          className={toggleButtonClasses} 
-          onClick={toggleSidebar}
-          aria-label="Toggle Sidebar"
-        >
-          <Menu size={24} />
-        </button>
-      )}
-
-      {/* Desktop hover trigger zone */}
-      {!isMobile && (
-        <div 
-          className={hoverTriggerClasses}
-          onMouseEnter={() => setIsOpen(true)}
-        />
-      )}
-
-      {/* Sidebar content */}
+    <aside 
+      ref={dragRef}
+      className="w-full md:w-56 md:min-w-56 bg-[#f0f0f0] dark:bg-[#1a1a1a] md:h-auto overflow-y-auto fixed rounded-lg mx-2 shadow-lg"
+      style={{ top: `${position}px` }}
+    >
       <div 
-        className={sidebarClasses}
-        onMouseLeave={() => !isMobile && setIsOpen(false)}
+        className={cn(
+          "p-3 cursor-move border-b border-gray-200 dark:border-gray-800 flex items-center justify-between rounded-t-lg",
+          isDragging && "select-none"
+        )}
+        onMouseDown={handleMouseDown}
       >
-        <nav>
-          <ul className="flex flex-col space-y-2">
-            <li>
-              <Link 
-                to="/" 
-                className={`block px-4 py-2 rounded-md transition ${location.pathname === '/' ? 'bg-blue-700 text-white' : 'hover:bg-gray-800 text-gray-300'}`}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/mechanics" 
-                className={`block px-4 py-2 rounded-md transition ${location.pathname === '/mechanics' ? 'bg-blue-700 text-white' : 'hover:bg-gray-800 text-gray-300'}`}
-              >
-                Game Mechanics
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/skills" 
-                className={`block px-4 py-2 rounded-md transition ${location.pathname.includes('/skills') ? 'bg-blue-700 text-white' : 'hover:bg-gray-800 text-gray-300'}`}
-              >
-                Skills & Advancement
-              </Link>
-            </li>
-            <li>
-              <Link 
-                to="/wiki" 
-                className={`block px-4 py-2 rounded-md transition ${location.pathname === '/wiki' ? 'bg-blue-700 text-white' : 'hover:bg-gray-800 text-gray-300'}`}
-              >
-                Crafting & Items Wiki
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <h2 className="text-lg font-bold text-[#259e63] dark:text-[#55FFFF]">Mục lục</h2>
+        <MoveVertical className="h-4 w-4 text-gray-500" />
       </div>
-
-      {/* Backdrop overlay for mobile */}
-      {isMobile && isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-40"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
-    </>
+      <div className="space-y-1.5 p-3">
+        {sections.map((section) => (
+          <Button
+            key={section.id}
+            variant="ghost"
+            className={cn(
+              "w-full justify-start text-left text-sm",
+              activeSection === section.id
+                ? "bg-[#1e3a2d] text-white dark:bg-[#259e63]"
+                : "text-gray-700 dark:text-gray-300 hover:bg-[#e0e0e0] dark:hover:bg-[#252525]"
+            )}
+            onClick={() => setActiveSection(section.id)}
+          >
+            {section.name}
+          </Button>
+        ))}
+      </div>
+    </aside>
   );
 };
 
