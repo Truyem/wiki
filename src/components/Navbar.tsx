@@ -1,9 +1,15 @@
 
 import { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = ({ activeSection, setActiveSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,21 +49,34 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             </div>
           </div>
           
-          <div className="hidden lg:flex items-center space-x-0.5 overflow-x-auto">
-            {sections.map((section) => (
-              <Button
-                key={section.id}
-                variant="ghost"
-                className={cn(
-                  "text-white hover:bg-[#1e3a2d] px-1.5 py-1.5 text-xs rounded-md transition-all duration-200 transform hover:scale-105",
-                  activeSection === section.id && "bg-[#1e3a2d] scale-105"
-                )}
-                onClick={() => setActiveSection(section.id)}
-              >
-                {section.name}
-              </Button>
-            ))}
-            <div className="ml-2 border-l border-white/30 pl-2">
+          <div className="hidden lg:flex items-center space-x-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-white hover:bg-[#1e3a2d] px-3 py-1.5 text-xs rounded-md transition-all duration-200 flex items-center gap-1">
+                  <Home size={16} />
+                  Trang chủ
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-white dark:bg-[#1e3a2d] border-[#259e63] dark:border-[#55FFFF]/20">
+                {sections.map((section) => (
+                  <DropdownMenuItem key={section.id} onSelect={() => {
+                    setActiveSection(section.id);
+                    if (location.pathname !== '/') {
+                      // Navigate to home if not already there
+                      window.location.href = '/';
+                    }
+                  }}
+                  className={cn(
+                    "cursor-pointer hover:bg-[#e6f7ef] dark:hover:bg-[#259e63]/30 text-gray-700 dark:text-white text-sm",
+                    activeSection === section.id && "bg-[#e6f7ef] dark:bg-[#259e63]/30 font-medium"
+                  )}>
+                    {section.name}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
+            <div className="border-l border-white/30 pl-2">
               <Link to="/skills-and-advancement" className="text-white hover:bg-[#1e3a2d] px-2 py-1.5 text-xs rounded-md transition-all duration-200 transform hover:scale-105 inline-block">
                 Kỹ năng
               </Link>
@@ -86,22 +105,32 @@ const Navbar = ({ activeSection, setActiveSection }) => {
       {isMenuOpen && (
         <div className="lg:hidden bg-[#1e3a2d] overflow-y-auto max-h-[70vh]">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="px-3 py-2 font-medium border-b border-white/10 flex items-center gap-2">
+              <Home size={16} />
+              <span>Trang chủ</span>
+            </div>
+            
             {sections.map((section) => (
               <Button
                 key={section.id}
                 variant="ghost"
                 className={cn(
-                  "w-full text-white hover:bg-[#259e63] block px-3 py-2 rounded-md text-left transition-all duration-200",
+                  "w-full text-white hover:bg-[#259e63] block px-3 py-2 rounded-md text-left transition-all duration-200 pl-6",
                   activeSection === section.id && "bg-[#259e63]"
                 )}
                 onClick={() => {
                   setActiveSection(section.id);
                   setIsMenuOpen(false);
+                  if (location.pathname !== '/') {
+                    // Navigate to home if not already there
+                    window.location.href = '/';
+                  }
                 }}
               >
                 {section.name}
               </Button>
             ))}
+            
             <div className="pt-2 mt-2 border-t border-white/20">
               <Link 
                 to="/skills-and-advancement" 
