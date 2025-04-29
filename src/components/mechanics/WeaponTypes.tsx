@@ -15,7 +15,7 @@ interface WeaponType {
 const WeaponTypes = () => {
   const weapons = [
     {
-      name: "Kiếm Lưỡi Mỏng (nhẹ)",
+      name: "Kiếm rapier (nhẹ)",
       details: {
         pros: [
           "Tốc độ tấn công rất cao",
@@ -41,7 +41,7 @@ const WeaponTypes = () => {
       }
     },
     {
-      name: "Chùy (nhẹ)",
+      name: "Chùy sao (nhẹ)",
       details: {
         pros: [
           "Tỷ lệ choáng"

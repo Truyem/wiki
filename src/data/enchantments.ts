@@ -217,7 +217,7 @@ export const enchantments = [
     rarity: "ELITE"
   },
   {
-    name: "Thieu Đốt",
+    name: "Thiêu Đốt",
     description: "Tăng sát thương gây ra cho Nhện.",
     appliesTo: ["Kiếm", "Rìu"],
     rarity: "ELITE"
@@ -715,7 +715,7 @@ export const enchantments = [
     rarity: "ULTIMATE"
   },
   {
-    name: "Thieu Rụi",
+    name: "Thiêu Rụi",
     description: "Đốt cháy tất cả mob trong bán kính.",
     appliesTo: ["Kiếm"],
     rarity: "ULTIMATE"
@@ -896,7 +896,7 @@ export const enchantments = [
   },
   {
     name: "Bốc Cháy",
-    description: "Thieu đốt tất cả người chơi trong bán kính trong một thời gian ngắn.",
+    description: "Thiêu đốt tất cả người chơi trong bán kính trong một thời gian ngắn.",
     appliesTo: ["Rìu"],
     rarity: "LEGENDARY"
   },
@@ -1148,12 +1148,12 @@ export const supportItems: SupportItem[] = [
   },
   {
     name: "Arcane Bundle",
-    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại.",
+    description: "Một gói đồ bí ẩn có thể chứa một Lucky Gem nếu bạn đủ may mắn.",
     image: "/lovable-uploads/5ecca8e7-6336-48a8-ab77-ce2e3f3c9703.png"
   },
   {
     name: "Abandon Stone",
-    description: "Tăng tỉ lệ thành công của sách phù phép, đồng thời giảm tỉ lệ thất bại.",
+    description: "Một hòn đá vô dụng.",
     image: "/lovable-uploads/ebf9649e-1f66-4191-a565-57b2e899fbca.png"
   },
   {
