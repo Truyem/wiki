@@ -1,3 +1,5 @@
+
+import { useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
@@ -13,9 +15,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Mechanics = () => {
+  const [activeSection, setActiveSection] = useState("basic-crafting");
+  
   return (
     <div className="min-h-screen bg-[#f5f5f5] dark:bg-[#121212] flex flex-col">
-      <Navbar />
+      <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
       <div className="min-h-screen bg-[#f5f5f5] dark:bg-[#121212] p-4 md:p-8">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-6">

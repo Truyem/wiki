@@ -19,6 +19,7 @@ import Footer from '@/components/Footer';
 
 const SkillsAndAdvancement = () => {
   const [searchQuery, setSearchQuery] = useState('');
+  const [activeSection, setActiveSection] = useState("basic-crafting");
   
   const filteredSkills = skillsData.filter(skill => 
     skill.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -127,7 +128,7 @@ const SkillsAndAdvancement = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      <Navbar activeSection={activeSection} setActiveSection={setActiveSection} />
       <main className="flex-grow container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-[#259e63] dark:text-[#55FFFF] mb-6">
           Kỹ năng & Cách thăng cấp
