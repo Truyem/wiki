@@ -1,6 +1,15 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Sword, Axe, Ranger, FlaskRound, Hammer, Mining, Farmer, Terraformer } from "lucide-react";
+import { 
+  Sword, 
+  Axe, 
+  Bow, 
+  FlaskRound, 
+  Hammer, 
+  Pickaxe, 
+  Wheat, 
+  Trees 
+} from "lucide-react";
 
 interface ProfessionProps {
   name: string;
@@ -75,7 +84,7 @@ const Professions = () => {
         "+2 Độ Chính Xác",
         "+10% Sát Thương Tầm Xa"
       ],
-      icon: <Ranger size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Bow size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
     },
     {
       name: "Nhà Giả Kim",
@@ -115,7 +124,7 @@ const Professions = () => {
         "+30% Tốc Độ Đào Mỏ",
         "+10% Phần Thưởng Đào Mỏ"
       ],
-      icon: <Mining size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Pickaxe size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
     },
     {
       name: "Nông Dân-Ngư Phủ",
@@ -126,7 +135,7 @@ const Professions = () => {
         "+30% Phần Thưởng Trồng Trọt",
         "+20% Tốc Độ Câu Cá"
       ],
-      icon: <Farmer size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Wheat size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
     },
     {
       name: "Người Kiến Tạo Địa Hình",
@@ -136,7 +145,7 @@ const Professions = () => {
         "+50% Phần Thưởng Đốn Gỗ",
         "+30% Tốc Độ Đốn Gỗ và Đào Đất"
       ],
-      icon: <Terraformer size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Trees size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
     }
   ];
 
