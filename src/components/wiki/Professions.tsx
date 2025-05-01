@@ -148,7 +148,7 @@ const Professions = () => {
         "+25 Chất Lượng Phù Phép",
         "+20% Kinh Nghiệm Phù Phép"
       ],
-      icon: <FlaskRound size={24} />,
+      icon: <Wand size={24} />,
       category: "specialist"
     },
     {
