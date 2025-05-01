@@ -3,12 +3,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { 
   Sword, 
   Axe, 
-  Bow, 
+  Target, 
   FlaskRound, 
   Hammer, 
   Pickaxe, 
   Wheat, 
-  Trees 
+  TreePine 
 } from "lucide-react";
 
 interface ProfessionProps {
@@ -84,7 +84,7 @@ const Professions = () => {
         "+2 Độ Chính Xác",
         "+10% Sát Thương Tầm Xa"
       ],
-      icon: <Bow size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Target size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
     },
     {
       name: "Nhà Giả Kim",
@@ -145,7 +145,7 @@ const Professions = () => {
         "+50% Phần Thưởng Đốn Gỗ",
         "+30% Tốc Độ Đốn Gỗ và Đào Đất"
       ],
-      icon: <Trees size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <TreePine size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
     }
   ];
 
