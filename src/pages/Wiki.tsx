@@ -10,6 +10,8 @@ import SpecialItems from "@/components/wiki/SpecialItems";
 import Trinkets from "@/components/wiki/Trinkets";
 import ServerCommands from "@/components/wiki/ServerCommands";
 import NewUpgrades from "@/components/wiki/NewUpgrades";
+import Professions from "@/components/wiki/Professions";
+import CraftingSkillsDetail from "@/components/wiki/CraftingSkillsDetail";
 
 const Wiki = () => {
   return (
@@ -17,8 +19,10 @@ const Wiki = () => {
       <h1 className="text-4xl font-bold mb-8 text-center">Wiki</h1>
       
       <Tabs defaultValue="races" className="w-full">
-        <TabsList className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 mb-8">
+        <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-11 mb-8">
           <TabsTrigger value="races">Chủng tộc</TabsTrigger>
+          <TabsTrigger value="professions">Nghề Nghiệp</TabsTrigger>
+          <TabsTrigger value="crafting-skills">Kỹ Năng Chế Tạo</TabsTrigger>
           <TabsTrigger value="materials">Vật liệu</TabsTrigger>
           <TabsTrigger value="crafting">Chế tạo cơ bản</TabsTrigger>
           <TabsTrigger value="enchantments">Phù phép</TabsTrigger>
@@ -31,6 +35,12 @@ const Wiki = () => {
         
         <TabsContent value="races">
           <Races />
+        </TabsContent>
+        <TabsContent value="professions">
+          <Professions />
+        </TabsContent>
+        <TabsContent value="crafting-skills">
+          <CraftingSkillsDetail />
         </TabsContent>
         <TabsContent value="materials">
           <MaterialTiers />
