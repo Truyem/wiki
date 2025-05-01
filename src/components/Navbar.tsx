@@ -24,7 +24,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     { id: "special-items", name: "Vật phẩm đặc biệt" },
     { id: "races", name: "Tộc" },
     { id: "professions", name: "Nghề nghiệp" },
-    { id: "crafting-skills", name: "Kỹ Năng Chế Tạo" },
+    { id: "crafting-skills", name: "Giải Thích Kỹ Năng" },
     { id: "enchantments", name: "Enchantments" },
     { id: "trinkets", name: "Trinkets" },
     { id: "server-commands", name: "Lệnh Server" },
