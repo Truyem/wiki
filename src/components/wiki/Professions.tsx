@@ -1,5 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { 
   Sword, 
   Axe, 
@@ -17,31 +18,69 @@ interface ProfessionProps {
   description: string;
   abilities: string[];
   icon: React.ReactNode;
+  category: "combat" | "specialist" | "harvester";
 }
 
 const ProfessionCard = ({ profession }: { profession: ProfessionProps }) => {
+  // Define category-specific colors
+  const categoryColors = {
+    combat: {
+      bg: "bg-[#fff1f2] dark:bg-[#ea384c]/20",
+      border: "border-[#ea384c]",
+      text: "text-[#ea384c]",
+      icon: "text-[#ea384c]"
+    },
+    specialist: {
+      bg: "bg-[#E5DEFF] dark:bg-[#9b87f5]/20",
+      border: "border-[#9b87f5]",
+      text: "text-[#7E69AB] dark:text-[#9b87f5]",
+      icon: "text-[#7E69AB] dark:text-[#9b87f5]"
+    },
+    harvester: {
+      bg: "bg-[#FEF7CD] dark:bg-[#eab308]/20",
+      border: "border-[#eab308]",
+      text: "text-amber-600 dark:text-amber-400",
+      icon: "text-amber-600 dark:text-amber-400"
+    }
+  };
+
+  const colors = categoryColors[profession.category];
+  
   return (
-    <Card className="mb-6 bg-white dark:bg-gray-800 border-[#259e63] dark:border-[#55FFFF]/20">
+    <Card className={`mb-6 bg-white dark:bg-gray-800 ${colors.border} dark:border-opacity-20`}>
       <CardContent className="pt-6">
         <div className="flex items-start gap-4">
-          <div className="p-2 bg-[#e6f7ef] dark:bg-[#259e63]/30 rounded-lg">
-            {profession.icon}
+          <div className={`p-2 ${colors.bg} rounded-lg`}>
+            {React.cloneElement(profession.icon as React.ReactElement, {
+              className: colors.icon
+            })}
           </div>
           <div>
-            <h3 className="text-lg font-bold flex items-center gap-2 text-[#259e63] dark:text-[#55FFFF]">
-              {profession.name} 
-              <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
-                ({profession.englishName})
-              </span>
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className={`text-lg font-bold flex items-center gap-2 ${colors.text}`}>
+                {profession.name} 
+                <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
+                  ({profession.englishName})
+                </span>
+              </h3>
+              <Badge className={`${
+                profession.category === "combat" ? "bg-[#ea384c]/80 hover:bg-[#ea384c]" :
+                profession.category === "specialist" ? "bg-[#9b87f5]/80 hover:bg-[#9b87f5]" :
+                "bg-amber-500/80 hover:bg-amber-500"
+              }`}>
+                {profession.category === "combat" ? "Chiến Đấu" :
+                 profession.category === "specialist" ? "Chuyên Gia" :
+                 "Thu Hoạch"}
+              </Badge>
+            </div>
             <p className="mt-2 mb-4 text-sm dark:text-gray-300">{profession.description}</p>
             
             <div>
-              <h4 className="text-sm font-semibold mb-2 text-[#259e63] dark:text-[#55FFFF]">Khả năng:</h4>
+              <h4 className={`text-sm font-semibold mb-2 ${colors.text}`}>Khả năng:</h4>
               <ul className="list-none pl-0 space-y-1">
                 {profession.abilities.map((ability, index) => (
                   <li key={index} className="flex items-center gap-2 text-sm">
-                    <span className="text-yellow-500">✦</span>
+                    <span className={colors.text}>✦</span>
                     {ability}
                   </li>
                 ))}
@@ -64,7 +103,8 @@ const Professions = () => {
         "+10% Giáp",
         "+5% Sát Thương Cận Chiến"
       ],
-      icon: <Sword size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Sword size={24} />,
+      category: "combat"
     },
     {
       name: "Sơn Tặc",
@@ -74,7 +114,8 @@ const Professions = () => {
         "+20% Kháng Hiệu Ứng Đẩy Lùi",
         "+10% Sát Thương Cận Chiến"
       ],
-      icon: <Axe size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Axe size={24} />,
+      category: "combat"
     },
     {
       name: "Lính Gác Rừng",
@@ -84,7 +125,8 @@ const Professions = () => {
         "+2 Độ Chính Xác",
         "+10% Sát Thương Tầm Xa"
       ],
-      icon: <Target size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Target size={24} />,
+      category: "combat"
     },
     {
       name: "Nhà Giả Kim",
@@ -94,7 +136,8 @@ const Professions = () => {
         "+25 Chất Lượng Thuốc",
         "+50% Tốc Độ Pha Chế"
       ],
-      icon: <FlaskRound size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <FlaskRound size={24} />,
+      category: "specialist"
     },
     {
       name: "Phù Thuỷ",
@@ -104,7 +147,8 @@ const Professions = () => {
         "+25 Chất Lượng Phù Phép",
         "+20% Kinh Nghiệm Phù Phép"
       ],
-      icon: <FlaskRound size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <FlaskRound size={24} />,
+      category: "specialist"
     },
     {
       name: "Thợ Rèn",
@@ -114,7 +158,8 @@ const Professions = () => {
         "+25 Chất Lượng Rèn Đúc",
         "-20% Độ Bền Bị Giảm Ít Hơn"
       ],
-      icon: <Hammer size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Hammer size={24} />,
+      category: "specialist"
     },
     {
       name: "Thợ Mỏ",
@@ -124,7 +169,8 @@ const Professions = () => {
         "+30% Tốc Độ Đào Mỏ",
         "+10% Phần Thưởng Đào Mỏ"
       ],
-      icon: <Pickaxe size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Pickaxe size={24} />,
+      category: "harvester"
     },
     {
       name: "Nông Dân-Ngư Phủ",
@@ -135,7 +181,8 @@ const Professions = () => {
         "+30% Phần Thưởng Trồng Trọt",
         "+20% Tốc Độ Câu Cá"
       ],
-      icon: <Wheat size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <Wheat size={24} />,
+      category: "harvester"
     },
     {
       name: "Người Kiến Tạo Địa Hình",
@@ -145,9 +192,15 @@ const Professions = () => {
         "+50% Phần Thưởng Đốn Gỗ",
         "+30% Tốc Độ Đốn Gỗ và Đào Đất"
       ],
-      icon: <TreePine size={24} className="text-[#259e63] dark:text-[#55FFFF]" />
+      icon: <TreePine size={24} />,
+      category: "harvester"
     }
   ];
+
+  // Group professions by category
+  const combatProfessions = professions.filter(p => p.category === "combat");
+  const specialistProfessions = professions.filter(p => p.category === "specialist");
+  const harvesterProfessions = professions.filter(p => p.category === "harvester");
 
   return (
     <div>
@@ -156,10 +209,45 @@ const Professions = () => {
         Chọn một nghề nghiệp phù hợp với phong cách chơi của bạn. Mỗi nghề nghiệp cung cấp những khả năng độc đáo để giúp bạn trong hành trình của mình.
       </p>
       
-      <div className="space-y-6">
-        {professions.map((profession) => (
-          <ProfessionCard key={profession.name} profession={profession} />
-        ))}
+      <div className="p-4 bg-amber-50 border border-amber-200 rounded-md mb-6 dark:bg-amber-900/20 dark:border-amber-800">
+        <p className="text-amber-800 dark:text-amber-300 font-medium">
+          <strong>Lưu ý:</strong> Bạn được phép chọn 3 nghề nghiệp, mỗi lớp từ một nhánh lối chơi khác nhau: Chiến Đấu (Combat), Chuyên Gia (Specialist), và Thu Hoạch (Harvester).
+        </p>
+      </div>
+      
+      <div className="space-y-8">
+        <div>
+          <h3 className="text-xl font-bold mb-4 text-[#ea384c] border-b border-[#ea384c]/30 pb-2">
+            Nghề Nghiệp Chiến Đấu (Combat)
+          </h3>
+          <div className="space-y-6">
+            {combatProfessions.map((profession) => (
+              <ProfessionCard key={profession.name} profession={profession} />
+            ))}
+          </div>
+        </div>
+        
+        <div>
+          <h3 className="text-xl font-bold mb-4 text-[#7E69AB] dark:text-[#9b87f5] border-b border-[#9b87f5]/30 pb-2">
+            Nghề Nghiệp Chuyên Gia (Specialist)
+          </h3>
+          <div className="space-y-6">
+            {specialistProfessions.map((profession) => (
+              <ProfessionCard key={profession.name} profession={profession} />
+            ))}
+          </div>
+        </div>
+        
+        <div>
+          <h3 className="text-xl font-bold mb-4 text-amber-600 dark:text-amber-400 border-b border-amber-200 pb-2">
+            Nghề Nghiệp Thu Hoạch (Harvester)
+          </h3>
+          <div className="space-y-6">
+            {harvesterProfessions.map((profession) => (
+              <ProfessionCard key={profession.name} profession={profession} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
