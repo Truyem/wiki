@@ -69,9 +69,9 @@ const CraftingSkillsDetail = () => {
           </Card>
 
           <div>
-            <h4 className="text-lg font-semibold mb-3 text-[#825432] dark:text-[#FFAA00]">Chất Lượng Trung Tính</h4>
+            <h4 className="text-lg font-semibold mb-3 text-[#825432] dark:text-[#FFAA00]">Chất lượng Cơ bản</h4>
             <p className="mb-3 text-gray-700 dark:text-gray-300">
-              Mỗi trang bị có một chất lượng "trung tính". Nó định nghĩa chú giải chất lượng hiển thị trên trang bị và xác định khi nào chỉ số của trang bị bằng với chỉ số trong phiên bản gốc (vanilla).
+              Mỗi trang bị có một chất lượng "cơ bản". Nó định nghĩa chú giải chất lượng hiển thị trên trang bị và xác định khi nào chỉ số của trang bị bằng với chỉ số trong phiên bản gốc (vanilla).
             </p>
 
             <div className="overflow-x-auto mb-6">
@@ -79,7 +79,7 @@ const CraftingSkillsDetail = () => {
                 <thead>
                   <tr className="bg-gray-100 dark:bg-gray-700">
                     <th className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-left">Loại vật liệu</th>
-                    <th className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">Chất lượng Trung tính</th>
+                    <th className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">Chất lượng Cơ bản</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -101,7 +101,7 @@ const CraftingSkillsDetail = () => {
             <div className="overflow-x-auto mb-6">
               <h4 className="text-lg font-semibold mb-3 text-[#825432] dark:text-[#FFAA00]">Chú Giải Chất Lượng</h4>
               <p className="mb-3 text-gray-700 dark:text-gray-300">
-                Chú giải chất lượng được xác định dựa trên sự chênh lệch chất lượng của trang bị so với chất lượng trung tính của nó.
+                Chú giải chất lượng được xác định dựa trên sự chênh lệch chất lượng của trang bị so với chất lượng cơ bản của nó.
               </p>
               <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
                 <thead>
@@ -134,52 +134,52 @@ const CraftingSkillsDetail = () => {
               <li><span className="text-[#825432] dark:text-[#FFAA00]">✦</span> Nghề Thợ Rèn: +25 chất lượng Rèn</li>
             </ul>
 
-            <div className="bg-[#FEF7CD]/30 dark:bg-[#FFAA00]/10 p-4 rounded-md border border-[#FFAA00]/30">
+            <div className="bg-[#FEF7CD]/30 dark:bg-[#FFAA00]/10 p-4 rounded-md border border-[#FFAA00]/30 mb-6"> {/* Added mb-6 here */}
               <h4 className="text-lg font-semibold mb-2 text-[#825432] dark:text-[#FFAA00]">Ảnh hưởng của chất lượng Rèn lên trang bị</h4>
               <div className="overflow-x-auto text-gray-700 dark:text-gray-300">
                 <table className="min-w-full">
                   <thead>
                     <tr>
                       <th className="py-2 px-4 text-left">Chỉ số</th>
-                      <th className="py-2 px-4 text-left">Thang đo (từ trung tính đến 300)</th>
+                      <th className="py-2 px-4 text-left">Thang đo (từ cơ bản đến 300)</th>
                       <th className="py-2 px-4 text-left">Ngoại lệ</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                     <tr>
-                      <td className="py-2 px-4">Giáp (Armor)</td>
-                      <td className="py-2 px-4">1-1.5 lần giáp</td>
-                      <td className="py-2 px-4">-300 chất lượng</td>
+                      <td className="py-2 px-4">Giáp</td>
+                      <td className="py-2 px-4">1-1.5 lần giáp từ chất lượng cơ bản đến 300</td>
+                      <td className="py-2 px-4"></td>
                     </tr>
                     <tr>
-                      <td className="py-2 px-4">Độ bền giáp (Toughness)</td>
-                      <td className="py-2 px-4">1-2 lần độ bền giáp</td>
-                      <td className="py-2 px-4">-300 chất lượng</td>
+                      <td className="py-2 px-4">Độ bền giáp</td>
+                      <td className="py-2 px-4">1-2 lần độ bền giáp từ chất lượng cơ bản đến 300</td>
+                      <td className="py-2 px-4"></td>
                     </tr>
                     <tr>
                       <td className="py-2 px-4">Sát thương tấn công</td>
-                      <td className="py-2 px-4">+0-4 sát thương</td>
-                      <td className="py-2 px-4">Đối với kiếm lưỡi mỏng (rapiers) là +0-2 và đối với rìu lớn (greataxes) là +0-6</td>
+                      <td className="py-2 px-4">+0-4 sát thương từ chất lượng cơ bản đến 300</td>
+                      <td className="py-2 px-4">Đối với kiếm lưỡi mỏng là +0-2 và đối với rìu lớn là +0-6. Xem Vũ khí tùy chỉnh</td>
                     </tr>
                     <tr>
                       <td className="py-2 px-4">Tốc độ tấn công</td>
-                      <td className="py-2 px-4">+0-0.2 tốc độ tấn công</td>
+                      <td className="py-2 px-4">+0-0.2 tốc độ tấn công từ chất lượng cơ bản đến 300</td>
                       <td className="py-2 px-4">Đối với rìu lớn là +0-0.1, và kiếm lưỡi mỏng không có thang đo tốc độ tấn công</td>
                     </tr>
                     <tr>
                       <td className="py-2 px-4">Tốc độ đào</td>
-                      <td className="py-2 px-4">+0-50% tốc độ đào</td>
-                      <td className="py-2 px-4">-300 chất lượng</td>
+                      <td className="py-2 px-4">+0-50% tốc độ đào từ chất lượng cơ bản đến 300</td>
+                      <td className="py-2 px-4"></td>
                     </tr>
                     <tr>
                       <td className="py-2 px-4">Sát thương vật cùn</td>
-                      <td className="py-2 px-4">+0-3.5 sát thương</td>
-                      <td className="py-2 px-4">Đối với búa chiến (warhammers) là +0-4</td>
+                      <td className="py-2 px-4">+0-3.5 sát thương từ chất lượng cơ bản đến 300</td>
+                      <td className="py-2 px-4">Đối với búa chiến là +0-4</td>
                     </tr>
                     <tr>
                       <td className="py-2 px-4">Kháng bật lùi</td>
-                      <td className="py-2 px-4">1-2 lần kháng bật lùi</td>
-                      <td className="py-2 px-4">-300 chất lượng</td>
+                      <td className="py-2 px-4">1-2 lần kháng từ chất lượng cơ bản đến 300</td>
+                      <td className="py-2 px-4"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -188,7 +188,7 @@ const CraftingSkillsDetail = () => {
 
             <div className="bg-[#FEF7CD]/30 dark:bg-[#FFAA00]/10 p-4 rounded-md border border-[#FFAA00]/30 text-[#825432] dark:text-[#FFAA00] italic">
               <p>
-                Với cấu hình mặc định, bạn có thể tích lũy tổng cộng 450 chất lượng Rèn. Plugin này được cân bằng dựa trên mức tối đa giả định là 300, vì vậy bạn có thể tạo ra một số trang bị khá bá đạo khi thực hiện điều này.
+                Với cấu hình mặc định, bạn có thể tích lũy tổng cộng 425 chất lượng Rèn. Plugin này được cân bằng dựa trên mức tối đa giả định là 300, vì vậy bạn có thể tạo ra một số trang bị khá bá đạo khi thực hiện điều này.
               </p>
             </div>
           </div>
@@ -458,8 +458,8 @@ const CraftingSkillsDetail = () => {
               <li><span className="text-purple-600 dark:text-purple-400">✦</span> Nghề Nhà Giả Kim: +25 chất lượng Giả Kim Thuật</li>
             </ul>
 
-            <div className="bg-purple-100/30 dark:bg-purple-900/10 p-4 rounded-md border border-purple-500/30 text-purple-700 dark:text-purple-400 italic">
-              <p>
+            <div className="bg-purple-100/30 dark:bg-purple-900/10 p-4 rounded-md border border-purple-500/30 mb-6"> {/* Added mb-6 here */}
+              <p className="italic text-purple-700 dark:text-purple-400">
                 Với cấu hình mặc định, bạn có thể tích lũy tổng cộng 425 chất lượng Giả Kim Thuật. Plugin này được cân bằng dựa trên mức tối đa giả định là 300, vì vậy bạn có thể tạo ra một số loại thuốc khá bá đạo khi thực hiện điều này.
               </p>
             </div>
@@ -495,6 +495,8 @@ const CraftingSkillsDetail = () => {
                 <li>Emerald Block &gt; Diamond Block &gt; Emerald Block</li>
               </ul>
             </div>
+
+
           </div>
         </TabsContent>
       </Tabs>
