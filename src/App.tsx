@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SkillsAndAdvancement from "./pages/SkillsAndAdvancement";
 import Mechanics from "./pages/Mechanics";
+import Wiki from "./pages/Wiki";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/skills-and-advancement" element={<SkillsAndAdvancement />} />
           <Route path="/mechanics" element={<Mechanics />} />
+          <Route path="/wiki" element={<Wiki />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

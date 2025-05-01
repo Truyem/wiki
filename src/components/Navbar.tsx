@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon, Home } from "lucide-react";
+import { Menu, X, Sun, Moon, Home, Book } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -24,6 +24,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     { id: "special-items", name: "Vật phẩm đặc biệt" },
     { id: "races", name: "Tộc" },
     { id: "professions", name: "Nghề nghiệp" },
+    { id: "crafting-skills", name: "Kỹ Năng Chế Tạo" },
     { id: "enchantments", name: "Enchantments" },
     { id: "trinkets", name: "Trinkets" },
     { id: "server-commands", name: "Lệnh Server" },
@@ -83,6 +84,10 @@ const Navbar = ({ activeSection, setActiveSection }) => {
               </Link>
               <Link to="/mechanics" className="text-white hover:bg-[#1e3a2d] px-2 py-1.5 text-xs rounded-md ml-1 transition-all duration-200 transform hover:scale-105 inline-block">
                 Cơ Chế
+              </Link>
+              <Link to="/wiki" className="text-white hover:bg-[#1e3a2d] px-2 py-1.5 text-xs rounded-md ml-1 transition-all duration-200 transform hover:scale-105 inline-block flex items-center">
+                <Book size={14} className="mr-1" />
+                Wiki
               </Link>
             </div>
           </div>
@@ -146,6 +151,14 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Các Cơ Chế
+              </Link>
+              <Link 
+                to="/wiki" 
+                className="text-white hover:bg-[#259e63] block px-3 py-2 rounded-md mt-1 transition-all duration-200 transform hover:translate-x-1 flex items-center" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Book size={16} className="mr-2" />
+                Wiki
               </Link>
             </div>
             <Button 
