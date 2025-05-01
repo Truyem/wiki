@@ -1,17 +1,16 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Sword, 
-  Axe, 
-  Target, 
+import {
+  Sword,
+  Axe,
+  Target,
   FlaskRound,
-  Wand, 
-  Hammer, 
-  Pickaxe, 
-  Wheat, 
-  TreePine 
+  Wand,
+  Hammer,
+  Pickaxe,
+  Wheat,
+  TreePine
 } from "lucide-react";
 
 interface ProfessionProps {
@@ -24,7 +23,7 @@ interface ProfessionProps {
 }
 
 const ProfessionCard = ({ profession }: { profession: ProfessionProps }) => {
-  // Define category-specific colors
+  // Define category-specific base colors
   const categoryColors = {
     combat: {
       bg: "bg-[#fff1f2] dark:bg-[#ea384c]/20",
@@ -32,7 +31,7 @@ const ProfessionCard = ({ profession }: { profession: ProfessionProps }) => {
       text: "text-[#ea384c]",
       icon: "text-[#ea384c]"
     },
-    specialist: {
+    specialist: { // Default specialist color (will be overridden for specific professions)
       bg: "bg-[#E5DEFF] dark:bg-[#9b87f5]/20",
       border: "border-[#9b87f5]",
       text: "text-[#7E69AB] dark:text-[#9b87f5]",
@@ -46,8 +45,46 @@ const ProfessionCard = ({ profession }: { profession: ProfessionProps }) => {
     }
   };
 
-  const colors = categoryColors[profession.category];
-  
+  // Define specific colors for individual specialist professions
+  const specialistSpecificColors = {
+    Alchemist: { // Keep purple
+      bg: "bg-[#E5DEFF] dark:bg-[#9b87f5]/20",
+      border: "border-[#9b87f5]",
+      text: "text-[#7E69AB] dark:text-[#9b87f5]",
+      icon: "text-[#7E69AB] dark:text-[#9b87f5]"
+    },
+    Enchanter: { // Blue
+      bg: "bg-blue-100 dark:bg-blue-900/20",
+      border: "border-blue-500",
+      text: "text-blue-700 dark:text-blue-400",
+      icon: "text-blue-700 dark:text-blue-400"
+    },
+    Blacksmith: { // Green
+      bg: "bg-green-100 dark:bg-green-900/20",
+      border: "border-green-500",
+      text: "text-green-700 dark:text-green-400",
+      icon: "text-green-700 dark:text-green-400"
+    }
+  };
+
+  // Determine the colors to use based on category and specific profession for specialists
+  const colors = profession.category === "specialist"
+    ? specialistSpecificColors[profession.englishName as keyof typeof specialistSpecificColors] || categoryColors.specialist // Fallback to default specialist if not specifically defined
+    : categoryColors[profession.category];
+
+  // Determine the badge color
+  const badgeColorClass =
+    profession.category === "combat"
+      ? "bg-[#ea384c]/80 hover:bg-[#ea384c]"
+      : profession.category === "specialist"
+        ? profession.englishName === "Enchanter"
+          ? "bg-blue-500/80 hover:bg-blue-500" // Blue badge for Enchanter
+          : profession.englishName === "Blacksmith"
+            ? "bg-green-500/80 hover:bg-green-500" // Green badge for Blacksmith
+            : "bg-[#9b87f5]/80 hover:bg-[#9b87f5]" // Purple badge for Alchemist (and other specialists)
+        : "bg-amber-500/80 hover:bg-amber-500";
+
+
   return (
     <Card className={`mb-6 bg-white dark:bg-gray-800 ${colors.border} dark:border-opacity-20`}>
       <CardContent className="pt-6">
@@ -60,28 +97,24 @@ const ProfessionCard = ({ profession }: { profession: ProfessionProps }) => {
           <div>
             <div className="flex items-center gap-2">
               <h3 className={`text-lg font-bold flex items-center gap-2 ${colors.text}`}>
-                {profession.name} 
+                {profession.name}
                 <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
                   ({profession.englishName})
                 </span>
               </h3>
-              <Badge className={`${
-                profession.category === "combat" ? "bg-[#ea384c]/80 hover:bg-[#ea384c]" :
-                profession.category === "specialist" ? "bg-[#9b87f5]/80 hover:bg-[#9b87f5]" :
-                "bg-amber-500/80 hover:bg-amber-500"
-              }`}>
+              <Badge className={badgeColorClass}>
                 {profession.category === "combat" ? "Chiến Đấu" :
-                 profession.category === "specialist" ? "Chuyên Gia" :
-                 "Thu Hoạch"}
+                  profession.category === "specialist" ? "Chuyên Gia" :
+                    "Thu Hoạch"}
               </Badge>
             </div>
             <p className="mt-2 mb-4 text-sm dark:text-gray-300">{profession.description}</p>
-            
+
             <div>
               <h4 className={`text-sm font-semibold mb-2 ${colors.text}`}>Khả năng:</h4>
               <ul className="list-none pl-0 space-y-1">
                 {profession.abilities.map((ability, index) => (
-                  <li key={index} className="flex items-center gap-2 text-sm">
+                  <li key={index} className="flex items-center gap-2 text-sm dark:text-gray-300">
                     <span className={colors.text}>✦</span>
                     {ability}
                   </li>
@@ -210,13 +243,13 @@ const Professions = () => {
       <p className="mb-6 text-gray-700 dark:text-gray-300">
         Chọn một nghề nghiệp phù hợp với phong cách chơi của bạn. Mỗi nghề nghiệp cung cấp những khả năng độc đáo để giúp bạn trong hành trình của mình.
       </p>
-      
+
       <div className="p-4 bg-amber-50 border border-amber-200 rounded-md mb-6 dark:bg-amber-900/20 dark:border-amber-800">
         <p className="text-amber-800 dark:text-amber-300 font-medium">
           <strong>Lưu ý:</strong> Bạn được phép chọn 3 nghề nghiệp, mỗi lớp từ một nhánh lối chơi khác nhau: Chiến Đấu (Combat), Chuyên Gia (Specialist), và Thu Hoạch (Harvester).
         </p>
       </div>
-      
+
       <div className="space-y-8">
         <div>
           <h3 className="text-xl font-bold mb-4 text-[#ea384c] border-b border-[#ea384c]/30 pb-2">
@@ -224,29 +257,29 @@ const Professions = () => {
           </h3>
           <div className="space-y-6">
             {combatProfessions.map((profession) => (
-              <ProfessionCard key={profession.name} profession={profession} />
+              <ProfessionCard key={profession.englishName} profession={profession} />
             ))}
           </div>
         </div>
-        
+
         <div>
           <h3 className="text-xl font-bold mb-4 text-[#7E69AB] dark:text-[#9b87f5] border-b border-[#9b87f5]/30 pb-2">
             Nghề Nghiệp Chuyên Gia (Specialist)
           </h3>
           <div className="space-y-6">
             {specialistProfessions.map((profession) => (
-              <ProfessionCard key={profession.name} profession={profession} />
+              <ProfessionCard key={profession.englishName} profession={profession} />
             ))}
           </div>
         </div>
-        
+
         <div>
           <h3 className="text-xl font-bold mb-4 text-amber-600 dark:text-amber-400 border-b border-amber-200 pb-2">
             Nghề Nghiệp Thu Hoạch (Harvester)
           </h3>
           <div className="space-y-6">
             {harvesterProfessions.map((profession) => (
-              <ProfessionCard key={profession.name} profession={profession} />
+              <ProfessionCard key={profession.englishName} profession={profession} />
             ))}
           </div>
         </div>
