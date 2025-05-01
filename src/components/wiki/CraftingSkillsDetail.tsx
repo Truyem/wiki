@@ -6,7 +6,8 @@ import {
   Hammer,
   Sword, 
   FlaskRound,
-  Wand
+  Wand,
+  Potion
 } from "lucide-react";
 
 const CraftingSkillsDetail = () => {
@@ -128,38 +129,62 @@ const CraftingSkillsDetail = () => {
               <li>Nghề Thợ Rèn: +25 chất lượng Rèn</li>
             </ul>
 
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-md border border-gray-200 dark:border-gray-700">
+            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-md border border-gray-200 dark:border-gray-700 mb-6">
               <h4 className="text-lg font-semibold mb-2">Ảnh hưởng của chất lượng Rèn lên trang bị</h4>
-              <table className="min-w-full">
-                <thead>
-                  <tr>
-                    <th className="py-2 px-4 text-left">Chỉ số</th>
-                    <th className="py-2 px-4 text-left">Thang đo (từ trung tính đến 300)</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-                  <tr>
-                    <td className="py-2 px-4">Giáp (Armor)</td>
-                    <td className="py-2 px-4">1-1.5 lần giáp</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 px-4">Độ bền giáp (Toughness)</td>
-                    <td className="py-2 px-4">1-2 lần độ bền giáp</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 px-4">Sát thương tấn công</td>
-                    <td className="py-2 px-4">+0-4 sát thương</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 px-4">Tốc độ tấn công</td>
-                    <td className="py-2 px-4">+0-0.2 tốc độ tấn công</td>
-                  </tr>
-                  <tr>
-                    <td className="py-2 px-4">Tốc độ đào</td>
-                    <td className="py-2 px-4">+0-50% tốc độ đào</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-x-auto">
+                <table className="min-w-full">
+                  <thead>
+                    <tr>
+                      <th className="py-2 px-4 text-left">Chỉ số</th>
+                      <th className="py-2 px-4 text-left">Thang đo (từ trung tính đến 300)</th>
+                      <th className="py-2 px-4 text-left">Ngoại lệ</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                    <tr>
+                      <td className="py-2 px-4">Giáp (Armor)</td>
+                      <td className="py-2 px-4">1-1.5 lần giáp</td>
+                      <td className="py-2 px-4">-300 chất lượng</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-4">Độ bền giáp (Toughness)</td>
+                      <td className="py-2 px-4">1-2 lần độ bền giáp</td>
+                      <td className="py-2 px-4">-300 chất lượng</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-4">Sát thương tấn công</td>
+                      <td className="py-2 px-4">+0-4 sát thương</td>
+                      <td className="py-2 px-4">Đối với kiếm lưỡi mỏng (rapiers) là +0-2 và đối với rìu lớn (greataxes) là +0-6</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-4">Tốc độ tấn công</td>
+                      <td className="py-2 px-4">+0-0.2 tốc độ tấn công</td>
+                      <td className="py-2 px-4">Đối với rìu lớn là +0-0.1, và kiếm lưỡi mỏng không có thang đo tốc độ tấn công</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-4">Tốc độ đào</td>
+                      <td className="py-2 px-4">+0-50% tốc độ đào</td>
+                      <td className="py-2 px-4">-300 chất lượng</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-4">Sát thương vật cùn</td>
+                      <td className="py-2 px-4">+0-3.5 sát thương</td>
+                      <td className="py-2 px-4">Đối với búa chiến (warhammers) là +0-4</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2 px-4">Kháng bật lùi</td>
+                      <td className="py-2 px-4">1-2 lần kháng bật lùi</td>
+                      <td className="py-2 px-4">-300 chất lượng</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="bg-[#FEF7CD]/30 dark:bg-[#FFAA00]/10 p-4 rounded-md border border-[#FFAA00]/30">
+              <p className="italic text-[#825432] dark:text-[#FFAA00]">
+                Với cấu hình mặc định, bạn có thể tích lũy tổng cộng 450 chất lượng Rèn. Plugin này được cân bằng dựa trên mức tối đa giả định là 300, vì vậy bạn có thể tạo ra một số trang bị khá bá đạo khi thực hiện điều này.
+              </p>
             </div>
           </div>
         </TabsContent>
@@ -214,6 +239,28 @@ const CraftingSkillsDetail = () => {
                   <tr><td className="py-1.5 px-3">Depth Strider</td><td className="py-1.5 px-3 text-center">-2</td><td className="py-1.5 px-3 text-center">60</td></tr>
                   <tr><td className="py-1.5 px-3">Efficiency</td><td className="py-1.5 px-3 text-center">-2</td><td className="py-1.5 px-3 text-center">60</td></tr>
                   <tr><td className="py-1.5 px-3">Unbreaking</td><td className="py-1.5 px-3 text-center">-2</td><td className="py-1.5 px-3 text-center">60</td></tr>
+                  <tr><td className="py-1.5 px-3">Fire Aspect</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Frost Walker</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Impaling</td><td className="py-1.5 px-3 text-center">-2</td><td className="py-1.5 px-3 text-center">60</td></tr>
+                  <tr><td className="py-1.5 px-3">Knockback</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Fortune</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Looting</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Loyalty</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Luck of the Sea</td><td className="py-1.5 px-3 text-center">-2</td><td className="py-1.5 px-3 text-center">60</td></tr>
+                  <tr><td className="py-1.5 px-3">Lure</td><td className="py-1.5 px-3 text-center">-2</td><td className="py-1.5 px-3 text-center">60</td></tr>
+                  <tr><td className="py-1.5 px-3">Respiration</td><td className="py-1.5 px-3 text-center">-2</td><td className="py-1.5 px-3 text-center">60</td></tr>
+                  <tr><td className="py-1.5 px-3">Piercing</td><td className="py-1.5 px-3 text-center">-2</td><td className="py-1.5 px-3 text-center">60</td></tr>
+                  <tr><td className="py-1.5 px-3">Protection</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Projectile Protection</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Blast Protection</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Fire Protection</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Feather Falling</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Quick Charge</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Riptide</td><td className="py-1.5 px-3 text-center">-2</td><td className="py-1.5 px-3 text-center">60</td></tr>
+                  <tr><td className="py-1.5 px-3">Soul Speed</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Sweeping Edge</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Thorns</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
+                  <tr><td className="py-1.5 px-3">Swift Sneak</td><td className="py-1.5 px-3 text-center">-1</td><td className="py-1.5 px-3 text-center">120</td></tr>
                 </tbody>
               </table>
             </div>
@@ -228,7 +275,7 @@ const CraftingSkillsDetail = () => {
             </ul>
 
             <div className="bg-[#E5DEFF]/30 dark:bg-[#9b87f5]/10 p-4 rounded-md border border-[#9b87f5]/30">
-              <p className="italic">
+              <p className="italic text-[#7E69AB] dark:text-[#9b87f5]">
                 Với cấu hình mặc định, bạn có thể tích lũy tối đa 425 chất lượng Phù phép. Hệ thống được cân bằng dựa trên mức 300, vì vậy vượt qua con số này sẽ giúp bạn tạo ra các phù phép cực kỳ mạnh.
               </p>
             </div>
@@ -259,52 +306,137 @@ const CraftingSkillsDetail = () => {
               Phạm vi thời gian hiệu lực và cường độ hiệu quả sẽ luôn từ 0-300 chất lượng.
             </p>
             
-            <div className="overflow-x-auto">
-              <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+            <h4 className="text-lg font-semibold mt-4">Hiệu quả Thuốc theo Chất lượng</h4>
+            <div className="overflow-x-auto mb-6">
+              <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm">
                 <thead>
                   <tr className="bg-gray-100 dark:bg-gray-700">
-                    <th className="py-2 px-3 border-b border-gray-200 dark:border-gray-600 text-left">Thuốc</th>
-                    <th className="py-2 px-3 border-b border-gray-200 dark:border-gray-600 text-center">Cơ bản</th>
-                    <th className="py-2 px-3 border-b border-gray-200 dark:border-gray-600 text-center">Kéo dài</th>
-                    <th className="py-2 px-3 border-b border-gray-200 dark:border-gray-600 text-center">Cường hóa</th>
-                    <th className="py-2 px-3 border-b border-gray-200 dark:border-gray-600 text-center">Ghi chú</th>
+                    <th className="py-2 px-2 border-b border-gray-200 dark:border-gray-600 text-left">Thuốc</th>
+                    <th className="py-2 px-2 border-b border-gray-200 dark:border-gray-600 text-left">Cơ bản</th>
+                    <th className="py-2 px-2 border-b border-gray-200 dark:border-gray-600 text-left">Kéo dài</th>
+                    <th className="py-2 px-2 border-b border-gray-200 dark:border-gray-600 text-left">Cường hóa</th>
+                    <th className="py-2 px-2 border-b border-gray-200 dark:border-gray-600 text-left">Ghi chú</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                   <tr>
-                    <td className="py-1.5 px-3">Nhảy Cao 🥾</td>
-                    <td className="py-1.5 px-3 text-center">Cấp I-II 2:00-6:00</td>
-                    <td className="py-1.5 px-3 text-center">Cấp I-II 6:00-18:00</td>
-                    <td className="py-1.5 px-3 text-center">Cấp II-IV 1:00-3:00</td>
-                    <td className="py-1.5 px-3 text-center"></td>
+                    <td className="py-1.5 px-2">Nhảy Cao 🥾</td>
+                    <td className="py-1.5 px-2">Cấp I-II 2:00-6:00</td>
+                    <td className="py-1.5 px-2">Cấp I-II 6:00-18:00</td>
+                    <td className="py-1.5 px-2">Cấp II-IV 1:00-3:00</td>
+                    <td className="py-1.5 px-2"></td>
                   </tr>
                   <tr>
-                    <td className="py-1.5 px-3">Tốc Độ 🏃‍♂️</td>
-                    <td className="py-1.5 px-3 text-center">Cấp I-II 2:00-6:00</td>
-                    <td className="py-1.5 px-3 text-center">Cấp I-II 6:00-18:00</td>
-                    <td className="py-1.5 px-3 text-center">Cấp II-IV 1:00-3:00</td>
-                    <td className="py-1.5 px-3 text-center"></td>
+                    <td className="py-1.5 px-2">Tốc Độ 🏃‍♂️</td>
+                    <td className="py-1.5 px-2">Cấp I-II 2:00-6:00</td>
+                    <td className="py-1.5 px-2">Cấp I-II 6:00-18:00</td>
+                    <td className="py-1.5 px-2">Cấp II-IV 1:00-3:00</td>
+                    <td className="py-1.5 px-2"></td>
                   </tr>
                   <tr>
-                    <td className="py-1.5 px-3">Kháng Lửa 🔥</td>
-                    <td className="py-1.5 px-3 text-center">2:00-6:00</td>
-                    <td className="py-1.5 px-3 text-center">6:00-18:00</td>
-                    <td className="py-1.5 px-3 text-center">N/A</td>
-                    <td className="py-1.5 px-3 text-center"></td>
+                    <td className="py-1.5 px-2">Kháng Lửa 🔥</td>
+                    <td className="py-1.5 px-2">2:00-6:00</td>
+                    <td className="py-1.5 px-2">6:00-18:00</td>
+                    <td className="py-1.5 px-2">N/A</td>
+                    <td className="py-1.5 px-2"></td>
                   </tr>
                   <tr>
-                    <td className="py-1.5 px-3">Sức Mạnh ⚔</td>
-                    <td className="py-1.5 px-3 text-center">Cấp I-II 1:30-4:00</td>
-                    <td className="py-1.5 px-3 text-center">Cấp I-II 4:00-12:00</td>
-                    <td className="py-1.5 px-3 text-center">Cấp II-IV 0:45-2:00</td>
-                    <td className="py-1.5 px-3 text-center"></td>
+                    <td className="py-1.5 px-2">Thở Dưới Nước 🤿</td>
+                    <td className="py-1.5 px-2">2:00-6:00</td>
+                    <td className="py-1.5 px-2">6:00-18:00</td>
+                    <td className="py-1.5 px-2">N/A</td>
+                    <td className="py-1.5 px-2"></td>
                   </tr>
                   <tr>
-                    <td className="py-1.5 px-3">Nhanh Nhẹn ⛏</td>
-                    <td className="py-1.5 px-3 text-center">Cấp I-II 1:30-4:00</td>
-                    <td className="py-1.5 px-3 text-center">Cấp I-II 4:00-12:00</td>
-                    <td className="py-1.5 px-3 text-center">Cấp II-IV 0:45-2:00</td>
-                    <td className="py-1.5 px-3 text-center">Pha chế với: <br/> - Thạch Anh Nether <br/> - Thuốc Trống</td>
+                    <td className="py-1.5 px-2">Nhìn Đêm 👁</td>
+                    <td className="py-1.5 px-2">2:00-6:00</td>
+                    <td className="py-1.5 px-2">6:00-18:00</td>
+                    <td className="py-1.5 px-2">N/A</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Sức Mạnh ⚔</td>
+                    <td className="py-1.5 px-2">Cấp I-II 1:30-4:00</td>
+                    <td className="py-1.5 px-2">Cấp I-II 4:00-12:00</td>
+                    <td className="py-1.5 px-2">Cấp II-IV 0:45-2:00</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Nhanh Nhẹn ⛏</td>
+                    <td className="py-1.5 px-2">Cấp I-II 1:30-4:00</td>
+                    <td className="py-1.5 px-2">Cấp I-II 4:00-12:00</td>
+                    <td className="py-1.5 px-2">Cấp II-IV 0:45-2:00</td>
+                    <td className="py-1.5 px-2">Pha chế với: <br/> - Thạch Anh Nether <br/> - Thuốc Trống</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Tăng Máu 💖</td>
+                    <td className="py-1.5 px-2">Cấp I-II 1:30-4:00</td>
+                    <td className="py-1.5 px-2">Cấp I-II 4:00-12:00</td>
+                    <td className="py-1.5 px-2">Cấp II-IV 0:45-2:00</td>
+                    <td className="py-1.5 px-2">Pha chế với: <br/> - Quả Mọng Ngọt <br/> - Thuốc Trống</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Tàng Hình 🕶</td>
+                    <td className="py-1.5 px-2">1:30-4:00</td>
+                    <td className="py-1.5 px-2">4:00-12:00</td>
+                    <td className="py-1.5 px-2">N/A</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Chậm Chạp ❄</td>
+                    <td className="py-1.5 px-2">Cấp I-II 1:00-3:00</td>
+                    <td className="py-1.5 px-2">Cấp I-II 3:00-8:00</td>
+                    <td className="py-1.5 px-2">N/A</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Yếu Ớt 🚬</td>
+                    <td className="py-1.5 px-2">Cấp I-II 1:00-2:00</td>
+                    <td className="py-1.5 px-2">Cấp I-II 1:30-4:30</td>
+                    <td className="py-1.5 px-2">N/A</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Rơi Chậm 🍂</td>
+                    <td className="py-1.5 px-2">1:00-2:00</td>
+                    <td className="py-1.5 px-2">1:30-4:30</td>
+                    <td className="py-1.5 px-2">N/A</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Hồi Máu 💓</td>
+                    <td className="py-1.5 px-2">Cấp I-II 0:30-0:45</td>
+                    <td className="py-1.5 px-2">Cấp I-II 1:00-2:30</td>
+                    <td className="py-1.5 px-2">Cấp II-IV 0:30-0:40</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Độc ☠</td>
+                    <td className="py-1.5 px-2">Cấp I-II 0:30-0:45</td>
+                    <td className="py-1.5 px-2">Cấp I-II 1:00-2:30</td>
+                    <td className="py-1.5 px-2">Cấp II-IV 0:30-0:40</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Thạc Sĩ Rùa 🐢</td>
+                    <td className="py-1.5 px-2">Chậm Chạp IV 0:30-0:40 <br/> Kháng Cự III 0:30-0:40</td>
+                    <td className="py-1.5 px-2">Chậm Chạp IV 1:00-1:20 <br/> Kháng Cự III 1:00-1:20</td>
+                    <td className="py-1.5 px-2">Chậm Chạp VI 0:20-0:30 <br/> Kháng Cự IV 0:20-0:30</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Hồi Phục ❤</td>
+                    <td className="py-1.5 px-2">Cấp I-II</td>
+                    <td className="py-1.5 px-2">N/A</td>
+                    <td className="py-1.5 px-2">Cấp II-III</td>
+                    <td className="py-1.5 px-2"></td>
+                  </tr>
+                  <tr>
+                    <td className="py-1.5 px-2">Gây Sát Thương 💜</td>
+                    <td className="py-1.5 px-2">Cấp I-II</td>
+                    <td className="py-1.5 px-2">N/A</td>
+                    <td className="py-1.5 px-2">Cấp II-III</td>
+                    <td className="py-1.5 px-2"></td>
                   </tr>
                 </tbody>
               </table>
@@ -319,14 +451,42 @@ const CraftingSkillsDetail = () => {
               <li>Nghề Nhà Giả Kim: +25 chất lượng Giả Kim Thuật</li>
             </ul>
 
+            <div className="bg-purple-50 dark:bg-purple-900/10 p-4 rounded-md border border-purple-200 dark:border-purple-800 mb-6">
+              <p className="italic text-purple-700 dark:text-purple-400">
+                Với cấu hình mặc định, bạn có thể tích lũy tổng cộng 425 chất lượng Giả Kim Thuật. Plugin này được cân bằng dựa trên mức tối đa giả định là 300, vì vậy bạn có thể tạo ra một số loại thuốc khá bá đạo khi thực hiện điều này.
+              </p>
+            </div>
+
             <div className="bg-purple-50 dark:bg-purple-900/10 p-4 rounded-md border border-purple-200 dark:border-purple-800">
-              <h4 className="font-semibold mb-2 text-purple-700 dark:text-purple-300">Chuyển Đổi Vật Chất (Transmutation)</h4>
+              <h4 className="font-semibold mb-2 text-purple-700 dark:text-purple-300 flex items-center">
+                <Potion className="mr-2 h-5 w-5" /> Chuyển Đổi Vật Chất (Transmutation)
+              </h4>
               <p className="mb-3">
                 Chuyển Đổi Vật Chất được thực hiện bằng cách pha chế Thuốc Của Midas (Draught of Midas), loại thuốc này được pha chế bằng cách sử dụng Sao Nether (Nether Star) + Thuốc Trống (Awkward Potion).
               </p>
-              <p>
+              <p className="mb-3">
                 Đây là một loại thuốc ném (splash potion) làm thay đổi vật liệu của khối khi ném ra. Nó chuyển đổi mọi thứ trong bán kính 2 khối và chỉ chuyển đổi các khối đang tiếp xúc với không khí.
               </p>
+              <h5 className="font-medium mb-2">Các Phản Ứng:</h5>
+              <ul className="text-sm grid grid-cols-1 md:grid-cols-2 gap-2">
+                <li>Oak Log > Birch Log > Spruce Log > Dark Oak Log > Jungle Log > Acacia Log > Oak Log</li>
+                <li>Crimson Stem > Warped Stem > Crimson Stem</li>
+                <li>Stone > Copper Ore > Iron Ore</li>
+                <li>Redstone Block > Lapis Lazuli Block > Redstone Block</li>
+                <li>Brown Mushroom > Red Mushroom > Brown Mushroom</li>
+                <li>Crimson Fungus > Warped Fungus > Crimson Fungus</li>
+                <li>Wheat > Potatoes > Carrots > Beetroots > Wheat</li>
+                <li>Melon > Pumpkin > Melon</li>
+                <li>Dirt > Sand > Red Sand > Gravel > Clay > Dirt</li>
+                <li>Grass Block > Mycelium > Grass Block</li>
+                <li>Grass > Warped Roots > Crimson roots > Grass</li>
+                <li>Netherrack > Coarse Dirt > Netherrack</li>
+                <li>Cobblestone > Mossy Cobblestone > Cobblestone</li>
+                <li>Obsidian > Crying Obsidian > Obsidian</li>
+                <li>Torch > Soul Torch > Torch</li>
+                <li>Copper Block > Iron Block > Gold Block</li>
+                <li>Emerald Block > Diamond Block > Emerald Block</li>
+              </ul>
             </div>
           </div>
         </TabsContent>
