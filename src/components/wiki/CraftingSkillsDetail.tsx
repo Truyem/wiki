@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   Hammer,
   Sword,
-  FlaskRound, // Keep FlaskRound
+  FlaskRound,
   Wand,
   // Removed Potion as it's not exported
 } from "lucide-react";
@@ -31,22 +31,26 @@ const CraftingSkillsDetail = () => {
 
       <Tabs defaultValue="smithing">
         <TabsList className="w-full grid grid-cols-3">
-          <TabsTrigger value="smithing" className="flex gap-2 items-center">
+          {/* Smithing Tab Trigger (Green/Brown) */}
+          <TabsTrigger value="smithing" className="flex gap-2 items-center data-[state=active]:bg-[#FEF7CD] data-[state=active]:text-[#825432] dark:data-[state=active]:bg-[#eab308]/30 dark:data-[state=active]:text-[#FFAA00]">
             <Hammer size={16} className="text-[#825432] dark:text-[#FFAA00]" />
             Rèn
           </TabsTrigger>
-          <TabsTrigger value="enchanting" className="flex gap-2 items-center">
-            <Wand size={16} className="text-[#7E69AB] dark:text-[#9b87f5]" />
+          {/* Enchanting Tab Trigger (Blue) */}
+          <TabsTrigger value="enchanting" className="flex gap-2 items-center data-[state=active]:bg-blue-100 data-[state=active]:text-blue-700 dark:data-[state=active]:bg-blue-900/30 dark:data-[state=active]:text-blue-400">
+            <Wand size={16} className="text-blue-700 dark:text-blue-400" />
             Phù Phép
           </TabsTrigger>
-          <TabsTrigger value="alchemy" className="flex gap-2 items-center">
+          {/* Alchemy Tab Trigger (Purple) */}
+          <TabsTrigger value="alchemy" className="flex gap-2 items-center data-[state=active]:bg-purple-100 data-[state=active]:text-purple-700 dark:data-[state=active]:bg-purple-900/30 dark:data-[state=active]:text-purple-400">
             <FlaskRound size={16} className="text-purple-600 dark:text-purple-400" />
             Giả Kim
           </TabsTrigger>
         </TabsList>
 
+        {/* Smithing Content (Green/Brown Theme) */}
         <TabsContent value="smithing" className="mt-4 space-y-4">
-          <Card>
+          <Card className="border-[#825432] dark:border-[#FFAA00] dark:border-opacity-50">
             <CardContent className="p-6">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-[#FEF7CD] dark:bg-[#eab308]/20 rounded-lg">
@@ -65,8 +69,8 @@ const CraftingSkillsDetail = () => {
           </Card>
 
           <div>
-            <h4 className="text-lg font-semibold mb-3">Chất Lượng Trung Tính</h4>
-            <p className="mb-3">
+            <h4 className="text-lg font-semibold mb-3 text-[#825432] dark:text-[#FFAA00]">Chất Lượng Trung Tính</h4>
+            <p className="mb-3 text-gray-700 dark:text-gray-300">
               Mỗi trang bị có một chất lượng "trung tính". Nó định nghĩa chú giải chất lượng hiển thị trên trang bị và xác định khi nào chỉ số của trang bị bằng với chỉ số trong phiên bản gốc (vanilla).
             </p>
 
@@ -79,24 +83,24 @@ const CraftingSkillsDetail = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Gỗ</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">50</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Da</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">50</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Đá</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">80</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Giáp Xích</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">80</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Cung</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">80</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Vàng</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">110</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Sắt</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">110</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Kim Cương</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">140</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Hải Thạch</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">155</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Netherite</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">170</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Enderic</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right">185</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Gỗ</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">50</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Da</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">50</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Đá</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">80</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Giáp Xích</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">80</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Cung</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">80</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Vàng</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">110</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Sắt</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">110</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Kim Cương</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">140</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Hải Thạch</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">155</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Netherite</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">170</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Enderic</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-right text-gray-700 dark:text-gray-300">185</td></tr>
                 </tbody>
               </table>
             </div>
 
             <div className="overflow-x-auto mb-6">
-              <h4 className="text-lg font-semibold mb-3">Chú Giải Chất Lượng</h4>
-              <p className="mb-3">
+              <h4 className="text-lg font-semibold mb-3 text-[#825432] dark:text-[#FFAA00]">Chú Giải Chất Lượng</h4>
+              <p className="mb-3 text-gray-700 dark:text-gray-300">
                 Chú giải chất lượng được xác định dựa trên sự chênh lệch chất lượng của trang bị so với chất lượng trung tính của nó.
               </p>
               <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
@@ -107,32 +111,32 @@ const CraftingSkillsDetail = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">-50</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Tệ hại</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">-60</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Kém chất lượng</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">-30</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Khá</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">0</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Tốt</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">30</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Tuyệt vời</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">60</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Hoàn hảo</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">90</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Bậc thầy</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">120</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Huyền thoại</td></tr>
-                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">150</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600">Vô song</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">-50</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Tệ hại</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">-60</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Kém chất lượng</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">-30</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Khá</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">0</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Tốt</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">30</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Tuyệt vời</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">60</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Hoàn hảo</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">90</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Bậc thầy</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">120</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Huyền thoại</td></tr>
+                  <tr><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">150</td><td className="py-2 px-4 border-b border-gray-200 dark:border-gray-600 text-gray-700 dark:text-gray-300">Vô song</td></tr>
                 </tbody>
               </table>
             </div>
 
-            <h4 className="text-lg font-semibold mb-3">Cách tăng chất lượng Rèn</h4>
-            <ul className="list-disc pl-5 space-y-2 mb-6">
-              <li>Lên cấp: 1.5 chất lượng mỗi cấp, tối đa 150 ở cấp 100</li>
-              <li>Cây kỹ năng: +50 chất lượng cho mỗi loại vật liệu cụ thể</li>
-              <li>Đặc quyền cuối: +50 cho tất cả vật liệu</li>
-              <li>NewGame+: +50 chất lượng mỗi vòng chơi lại (tối đa +100)</li>
-              <li>Táo Pha Lê: +50 chất lượng trong 30 giây</li>
-              <li>Nghề Thợ Rèn: +25 chất lượng Rèn</li>
+            <h4 className="text-lg font-semibold mb-3 text-[#825432] dark:text-[#FFAA00]">Cách tăng chất lượng Rèn</h4>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+              <li><span className="text-[#825432] dark:text-[#FFAA00]">✦</span> Lên cấp: 1.5 chất lượng mỗi cấp, tối đa 150 ở cấp 100</li>
+              <li><span className="text-[#825432] dark:text-[#FFAA00]">✦</span> Cây kỹ năng: +50 chất lượng cho mỗi loại vật liệu cụ thể</li>
+              <li><span className="text-[#825432] dark:text-[#FFAA00]">✦</span> Đặc quyền cuối: +50 cho tất cả vật liệu</li>
+              <li><span className="text-[#825432] dark:text-[#FFAA00]">✦</span> NewGame+: +50 chất lượng mỗi vòng chơi lại (tối đa +100)</li>
+              <li><span className="text-[#825432] dark:text-[#FFAA00]">✦</span> Táo Pha Lê: +50 chất lượng trong 30 giây</li>
+              <li><span className="text-[#825432] dark:text-[#FFAA00]">✦</span> Nghề Thợ Rèn: +25 chất lượng Rèn</li>
             </ul>
 
-            <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-md border border-gray-200 dark:border-gray-700 mb-6">
-              <h4 className="text-lg font-semibold mb-2">Ảnh hưởng của chất lượng Rèn lên trang bị</h4>
-              <div className="overflow-x-auto">
+            <div className="bg-[#FEF7CD]/30 dark:bg-[#FFAA00]/10 p-4 rounded-md border border-[#FFAA00]/30">
+              <h4 className="text-lg font-semibold mb-2 text-[#825432] dark:text-[#FFAA00]">Ảnh hưởng của chất lượng Rèn lên trang bị</h4>
+              <div className="overflow-x-auto text-gray-700 dark:text-gray-300">
                 <table className="min-w-full">
                   <thead>
                     <tr>
@@ -182,23 +186,24 @@ const CraftingSkillsDetail = () => {
               </div>
             </div>
 
-            <div className="bg-[#FEF7CD]/30 dark:bg-[#FFAA00]/10 p-4 rounded-md border border-[#FFAA00]/30">
-              <p className="italic text-[#825432] dark:text-[#FFAA00]">
+            <div className="bg-[#FEF7CD]/30 dark:bg-[#FFAA00]/10 p-4 rounded-md border border-[#FFAA00]/30 text-[#825432] dark:text-[#FFAA00] italic">
+              <p>
                 Với cấu hình mặc định, bạn có thể tích lũy tổng cộng 450 chất lượng Rèn. Plugin này được cân bằng dựa trên mức tối đa giả định là 300, vì vậy bạn có thể tạo ra một số trang bị khá bá đạo khi thực hiện điều này.
               </p>
             </div>
           </div>
         </TabsContent>
 
+        {/* Enchanting Content (Blue Theme) */}
         <TabsContent value="enchanting" className="mt-4 space-y-4">
-          <Card>
+          <Card className="border-blue-500 dark:border-blue-900 dark:border-opacity-50">
             <CardContent className="p-6">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-[#E5DEFF] dark:bg-[#9b87f5]/20 rounded-lg">
-                  <Wand className="h-8 w-8 text-[#7E69AB] dark:text-[#9b87f5]" />
+                <div className="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-lg">
+                  <Wand className="h-8 w-8 text-blue-700 dark:text-blue-400" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-[#7E69AB] dark:text-[#9b87f5]">
+                  <h3 className="text-xl font-bold text-blue-700 dark:text-blue-400">
                     Kỹ Năng Chuyên Sâu: Phù Phép
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
@@ -210,20 +215,20 @@ const CraftingSkillsDetail = () => {
           </Card>
 
           <div className="space-y-4">
-            <div className="flex items-center gap-2 mb-2">
-              <Sword className="text-[#7E69AB] dark:text-[#9b87f5]" size={18} />
+            <div className="flex items-center gap-2 mb-2 text-gray-700 dark:text-gray-300">
+              <Sword className="text-blue-700 dark:text-blue-400" size={18} />
               <p className="font-medium">
                 Ở 120 chất lượng, tất cả phù phép trở lại sức mạnh gốc (của Minecraft vanilla).
               </p>
             </div>
 
-            <p>
+            <p className="text-gray-700 dark:text-gray-300">
               Mức điều chỉnh cấp độ phù phép theo chất lượng được tính theo công thức: 2/120 × chất lượng - 2.
             </p>
 
-            <h4 className="text-lg font-semibold mt-4">Điều chỉnh cấp độ phù phép theo chất lượng</h4>
+            <h4 className="text-lg font-semibold mt-4 text-blue-700 dark:text-blue-400">Điều chỉnh cấp độ phù phép theo chất lượng</h4>
             <div className="overflow-x-auto">
-              <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+              <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-300">
                 <thead>
                   <tr className="bg-gray-100 dark:bg-gray-700">
                     <th className="py-2 px-3 border-b border-gray-200 dark:border-gray-600 text-left">Phù phép</th>
@@ -266,25 +271,26 @@ const CraftingSkillsDetail = () => {
               </table>
             </div>
 
-            <h4 className="text-lg font-semibold mt-6 mb-3">Cách tăng chất lượng Phù phép</h4>
-            <ul className="list-disc pl-5 space-y-2 mb-6">
-              <li>Lên cấp: 1.5 chất lượng mỗi cấp, tối đa 150 ở cấp 100</li>
-              <li>Cây kỹ năng: Tổng cộng +150 chất lượng từ các đặc quyền</li>
-              <li>NewGame+: +50 chất lượng mỗi vòng chơi lại (tối đa +100)</li>
-              <li>Táo Pha Lê: +50 chất lượng trong 30 giây</li>
-              <li>Nghề Phù Thuỷ: +25 chất lượng Phù phép</li>
+            <h4 className="text-lg font-semibold mt-6 mb-3 text-blue-700 dark:text-blue-400">Cách tăng chất lượng Phù phép</h4>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+              <li><span className="text-blue-700 dark:text-blue-400">✦</span> Lên cấp: 1.5 chất lượng mỗi cấp, tối đa 150 ở cấp 100</li>
+              <li><span className="text-blue-700 dark:text-blue-400">✦</span> Cây kỹ năng: Tổng cộng +150 chất lượng từ các đặc quyền</li>
+              <li><span className="text-blue-700 dark:text-blue-400">✦</span> NewGame+: +50 chất lượng mỗi vòng chơi lại (tối đa +100)</li>
+              <li><span className="text-blue-700 dark:text-blue-400">✦</span> Táo Pha Lê: +50 chất lượng trong 30 giây</li>
+              <li><span className="text-blue-700 dark:text-blue-400">✦</span> Nghề Phù Thuỷ: +25 chất lượng Phù phép</li>
             </ul>
 
-            <div className="bg-[#E5DEFF]/30 dark:bg-[#9b87f5]/10 p-4 rounded-md border border-[#9b87f5]/30">
-              <p className="italic text-[#7E69AB] dark:text-[#9b87f5]">
+            <div className="bg-blue-100/30 dark:bg-blue-900/10 p-4 rounded-md border border-blue-500/30 text-blue-700 dark:text-blue-400 italic">
+              <p>
                 Với cấu hình mặc định, bạn có thể tích lũy tối đa 425 chất lượng Phù phép. Hệ thống được cân bằng dựa trên mức 300, vì vậy vượt qua con số này sẽ giúp bạn tạo ra các phù phép cực kỳ mạnh.
               </p>
             </div>
           </div>
         </TabsContent>
 
+        {/* Alchemy Content (Purple Theme) */}
         <TabsContent value="alchemy" className="mt-4 space-y-4">
-          <Card>
+          <Card className="border-purple-500 dark:border-purple-900 dark:border-opacity-50">
             <CardContent className="p-6">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-purple-100 dark:bg-purple-900/20 rounded-lg">
@@ -303,13 +309,13 @@ const CraftingSkillsDetail = () => {
           </Card>
 
           <div className="space-y-4">
-            <p>
+            <p className="text-gray-700 dark:text-gray-300">
               Phạm vi thời gian hiệu lực và cường độ hiệu quả sẽ luôn từ 0-300 chất lượng.
             </p>
 
-            <h4 className="text-lg font-semibold mt-4">Hiệu quả Thuốc theo Chất lượng</h4>
+            <h4 className="text-lg font-semibold mt-4 text-purple-600 dark:text-purple-400">Hiệu quả Thuốc theo Chất lượng</h4>
             <div className="overflow-x-auto mb-6">
-              <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm">
+              <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-300">
                 <thead>
                   <tr className="bg-gray-100 dark:bg-gray-700">
                     <th className="py-2 px-2 border-b border-gray-200 dark:border-gray-600 text-left">Thuốc</th>
@@ -443,33 +449,33 @@ const CraftingSkillsDetail = () => {
               </table>
             </div>
 
-            <h4 className="text-lg font-semibold mt-6 mb-3">Cách tăng chất lượng Giả Kim Thuật</h4>
-            <ul className="list-disc pl-5 space-y-2 mb-6">
-              <li>Lên cấp: 1.5 chất lượng mỗi cấp, tối đa 150 ở cấp 100</li>
-              <li>Cây kỹ năng: +50 chất lượng chung và +100 cho thuốc có lợi/thuốc độc</li>
-              <li>NewGame+: +50 chất lượng mỗi vòng chơi lại (tối đa +100)</li>
-              <li>Táo Pha Lê: +50 chất lượng trong 30 giây</li>
-              <li>Nghề Nhà Giả Kim: +25 chất lượng Giả Kim Thuật</li>
+            <h4 className="text-lg font-semibold mt-6 mb-3 text-purple-600 dark:text-purple-400">Cách tăng chất lượng Giả Kim Thuật</h4>
+            <ul className="list-disc pl-5 space-y-2 mb-6 text-gray-700 dark:text-gray-300">
+              <li><span className="text-purple-600 dark:text-purple-400">✦</span> Lên cấp: 1.5 chất lượng mỗi cấp, tối đa 150 ở cấp 100</li>
+              <li><span className="text-purple-600 dark:text-purple-400">✦</span> Cây kỹ năng: +50 chất lượng chung và +100 cho thuốc có lợi/thuốc độc</li>
+              <li><span className="text-purple-600 dark:text-purple-400">✦</span> NewGame+: +50 chất lượng mỗi vòng chơi lại (tối đa +100)</li>
+              <li><span className="text-purple-600 dark:text-purple-400">✦</span> Táo Pha Lê: +50 chất lượng trong 30 giây</li>
+              <li><span className="text-purple-600 dark:text-purple-400">✦</span> Nghề Nhà Giả Kim: +25 chất lượng Giả Kim Thuật</li>
             </ul>
 
-            <div className="bg-purple-50 dark:bg-purple-900/10 p-4 rounded-md border border-purple-200 dark:border-purple-800 mb-6">
-              <p className="italic text-purple-700 dark:text-purple-400">
+            <div className="bg-purple-100/30 dark:bg-purple-900/10 p-4 rounded-md border border-purple-500/30 text-purple-700 dark:text-purple-400 italic">
+              <p>
                 Với cấu hình mặc định, bạn có thể tích lũy tổng cộng 425 chất lượng Giả Kim Thuật. Plugin này được cân bằng dựa trên mức tối đa giả định là 300, vì vậy bạn có thể tạo ra một số loại thuốc khá bá đạo khi thực hiện điều này.
               </p>
             </div>
 
-            <div className="bg-purple-50 dark:bg-purple-900/10 p-4 rounded-md border border-purple-200 dark:border-purple-800">
-              <h4 className="font-semibold mb-2 text-purple-700 dark:text-purple-300 flex items-center">
-                <FlaskRound className="mr-2 h-5 w-5" /> {/* Changed Potion to FlaskRound */} Chuyển Đổi Vật Chất (Transmutation)
+            <div className="bg-purple-100/30 dark:bg-purple-900/10 p-4 rounded-md border border-purple-500/30">
+              <h4 className="font-semibold mb-2 text-purple-700 dark:text-purple-400 flex items-center">
+                <FlaskRound className="mr-2 h-5 w-5 text-purple-600 dark:text-purple-400" /> Chuyển Đổi Vật Chất (Transmutation)
               </h4>
-              <p className="mb-3">
+              <p className="mb-3 text-gray-700 dark:text-gray-300">
                 Chuyển Đổi Vật Chất được thực hiện bằng cách pha chế Thuốc Của Midas (Draught of Midas), loại thuốc này được pha chế bằng cách sử dụng Sao Nether (Nether Star) + Thuốc Trống (Awkward Potion).
               </p>
-              <p className="mb-3">
+              <p className="mb-3 text-gray-700 dark:text-gray-300">
                 Đây là một loại thuốc ném (splash potion) làm thay đổi vật liệu của khối khi ném ra. Nó chuyển đổi mọi thứ trong bán kính 2 khối và chỉ chuyển đổi các khối đang tiếp xúc với không khí.
               </p>
-              <h5 className="font-medium mb-2">Các Phản Ứng:</h5>
-              <ul className="text-sm grid grid-cols-1 md:grid-cols-2 gap-2">
+              <h5 className="font-medium mb-2 text-purple-600 dark:text-purple-400">Các Phản Ứng:</h5>
+              <ul className="text-sm grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700 dark:text-gray-300">
                 <li>Oak Log &gt; Birch Log &gt; Spruce Log &gt; Dark Oak Log &gt; Jungle Log &gt; Acacia Log &gt; Oak Log</li>
                 <li>Crimson Stem &gt; Warped Stem &gt; Crimson Stem</li>
                 <li>Stone &gt; Copper Ore &gt; Iron Ore</li>
