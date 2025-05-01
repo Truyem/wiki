@@ -11,6 +11,7 @@ import ServerCommands from "@/components/wiki/ServerCommands";
 import Footer from "@/components/Footer";
 import Upgrades from "@/components/wiki/Upgrades";
 import Races from "@/components/wiki/Races";
+import Professions from "@/components/wiki/Professions";
 import { cn } from "@/lib/utils";
 
 const Index = () => {
@@ -41,6 +42,8 @@ const Index = () => {
         return <SpecialItems />;
       case "races":
         return <Races />;
+      case "professions":
+        return <Professions />;
       case "enchantments":
         return <Enchantments />;
       case "trinkets":
