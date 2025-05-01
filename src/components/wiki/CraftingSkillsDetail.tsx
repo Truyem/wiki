@@ -1,14 +1,15 @@
-
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
+import {
   Hammer,
-  Sword, 
-  FlaskRound,
+  Sword,
+  FlaskRound, // Keep FlaskRound
   Wand,
-  Potion
+  // Removed Potion as it's not exported
 } from "lucide-react";
+// Import Potion separately if it exists under a different name or from a different library
+// Example if it was named GlassBottle: import { GlassBottle } from "lucide-react";
 
 const CraftingSkillsDetail = () => {
   return (
@@ -20,7 +21,7 @@ const CraftingSkillsDetail = () => {
         <p className="text-gray-700 dark:text-gray-300">
           Chi tiết chuyên sâu về ba kỹ năng chế tạo quan trọng: Rèn, Phù Phép và Giả Kim.
         </p>
-        
+
         <div className="p-4 bg-amber-50 border border-amber-200 rounded-md my-4 dark:bg-amber-900/20 dark:border-amber-800">
           <p className="text-amber-800 dark:text-amber-300 font-medium">
             <strong>Lưu ý:</strong> Mỗi kỹ năng tăng theo cấp độ, cung cấp lên đến 150 điểm chất lượng ở cấp 100. Kỹ năng càng cao, vật phẩm chế tạo càng mạnh.
@@ -215,7 +216,7 @@ const CraftingSkillsDetail = () => {
                 Ở 120 chất lượng, tất cả phù phép trở lại sức mạnh gốc (của Minecraft vanilla).
               </p>
             </div>
-            
+
             <p>
               Mức điều chỉnh cấp độ phù phép theo chất lượng được tính theo công thức: 2/120 × chất lượng - 2.
             </p>
@@ -305,7 +306,7 @@ const CraftingSkillsDetail = () => {
             <p>
               Phạm vi thời gian hiệu lực và cường độ hiệu quả sẽ luôn từ 0-300 chất lượng.
             </p>
-            
+
             <h4 className="text-lg font-semibold mt-4">Hiệu quả Thuốc theo Chất lượng</h4>
             <div className="overflow-x-auto mb-6">
               <table className="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm">
@@ -419,9 +420,9 @@ const CraftingSkillsDetail = () => {
                   </tr>
                   <tr>
                     <td className="py-1.5 px-2">Thạc Sĩ Rùa 🐢</td>
-                    <td className="py-1.5 px-2">Chậm Chạp IV 0:30-0:40 <br/> Kháng Cự III 0:30-0:40</td>
-                    <td className="py-1.5 px-2">Chậm Chạp IV 1:00-1:20 <br/> Kháng Cự III 1:00-1:20</td>
-                    <td className="py-1.5 px-2">Chậm Chạp VI 0:20-0:30 <br/> Kháng Cự IV 0:20-0:30</td>
+                    <td className="py-1.5 px-2">Chậm Chạp IV 0:30-0:40 <br /> Kháng Cự III 0:30-0:40</td>
+                    <td className="py-1.5 px-2">Chậm Chạp IV 1:00-1:20 <br /> Kháng Cự III 1:00-1:20</td>
+                    <td className="py-1.5 px-2">Chậm Chạp VI 0:20-0:30 <br /> Kháng Cự IV 0:20-0:30</td>
                     <td className="py-1.5 px-2"></td>
                   </tr>
                   <tr>
@@ -459,7 +460,7 @@ const CraftingSkillsDetail = () => {
 
             <div className="bg-purple-50 dark:bg-purple-900/10 p-4 rounded-md border border-purple-200 dark:border-purple-800">
               <h4 className="font-semibold mb-2 text-purple-700 dark:text-purple-300 flex items-center">
-                <Potion className="mr-2 h-5 w-5" /> Chuyển Đổi Vật Chất (Transmutation)
+                <FlaskRound className="mr-2 h-5 w-5" /> {/* Changed Potion to FlaskRound */} Chuyển Đổi Vật Chất (Transmutation)
               </h4>
               <p className="mb-3">
                 Chuyển Đổi Vật Chất được thực hiện bằng cách pha chế Thuốc Của Midas (Draught of Midas), loại thuốc này được pha chế bằng cách sử dụng Sao Nether (Nether Star) + Thuốc Trống (Awkward Potion).
@@ -469,23 +470,23 @@ const CraftingSkillsDetail = () => {
               </p>
               <h5 className="font-medium mb-2">Các Phản Ứng:</h5>
               <ul className="text-sm grid grid-cols-1 md:grid-cols-2 gap-2">
-                <li>Oak Log > Birch Log > Spruce Log > Dark Oak Log > Jungle Log > Acacia Log > Oak Log</li>
-                <li>Crimson Stem > Warped Stem > Crimson Stem</li>
-                <li>Stone > Copper Ore > Iron Ore</li>
-                <li>Redstone Block > Lapis Lazuli Block > Redstone Block</li>
-                <li>Brown Mushroom > Red Mushroom > Brown Mushroom</li>
-                <li>Crimson Fungus > Warped Fungus > Crimson Fungus</li>
-                <li>Wheat > Potatoes > Carrots > Beetroots > Wheat</li>
-                <li>Melon > Pumpkin > Melon</li>
-                <li>Dirt > Sand > Red Sand > Gravel > Clay > Dirt</li>
-                <li>Grass Block > Mycelium > Grass Block</li>
-                <li>Grass > Warped Roots > Crimson roots > Grass</li>
-                <li>Netherrack > Coarse Dirt > Netherrack</li>
-                <li>Cobblestone > Mossy Cobblestone > Cobblestone</li>
-                <li>Obsidian > Crying Obsidian > Obsidian</li>
-                <li>Torch > Soul Torch > Torch</li>
-                <li>Copper Block > Iron Block > Gold Block</li>
-                <li>Emerald Block > Diamond Block > Emerald Block</li>
+                <li>Oak Log &gt; Birch Log &gt; Spruce Log &gt; Dark Oak Log &gt; Jungle Log &gt; Acacia Log &gt; Oak Log</li>
+                <li>Crimson Stem &gt; Warped Stem &gt; Crimson Stem</li>
+                <li>Stone &gt; Copper Ore &gt; Iron Ore</li>
+                <li>Redstone Block &gt; Lapis Lazuli Block &gt; Redstone Block</li>
+                <li>Brown Mushroom &gt; Red Mushroom &gt; Brown Mushroom</li>
+                <li>Crimson Fungus &gt; Warped Fungus &gt; Crimson Fungus</li>
+                <li>Wheat &gt; Potatoes &gt; Carrots &gt; Beetroots &gt; Wheat</li>
+                <li>Melon &gt; Pumpkin &gt; Melon</li>
+                <li>Dirt &gt; Sand &gt; Red Sand &gt; Gravel &gt; Clay &gt; Dirt</li>
+                <li>Grass Block &gt; Mycelium &gt; Grass Block</li>
+                <li>Grass &gt; Warped Roots &gt; Crimson roots &gt; Grass</li>
+                <li>Netherrack &gt; Coarse Dirt &gt; Netherrack</li>
+                <li>Cobblestone &gt; Mossy Cobblestone &gt; Cobblestone</li>
+                <li>Obsidian &gt; Crying Obsidian &gt; Obsidian</li>
+                <li>Torch &gt; Soul Torch &gt; Torch</li>
+                <li>Copper Block &gt; Iron Block &gt; Gold Block</li>
+                <li>Emerald Block &gt; Diamond Block &gt; Emerald Block</li>
               </ul>
             </div>
           </div>
