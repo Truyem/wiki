@@ -28,8 +28,6 @@ const Navbar = ({ activeSection, setActiveSection }) => {
     { id: "enchantments", name: "Enchantments" },
     { id: "trinkets", name: "Trinkets" },
     { id: "server-commands", name: "Lệnh Server" },
-    { id: "mechanics", name: "Cơ Chế" },
-    { id: "skills", name: "Kỹ Năng" },
   ];
 
   const toggleDarkMode = () => {
@@ -53,12 +51,12 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             </div>
           </div>
           
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center space-x-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="text-white hover:bg-[#1e3a2d] px-3 py-1.5 text-xs rounded-md transition-all duration-200 flex items-center gap-1">
                   <Home size={16} />
-                  Wiki
+                  Trang chủ
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 bg-white dark:bg-[#1e3a2d] border-[#259e63] dark:border-[#55FFFF]/20">
@@ -79,6 +77,15 @@ const Navbar = ({ activeSection, setActiveSection }) => {
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
+            
+            <div className="border-l border-white/30 pl-2">
+              <Link to="/skills-and-advancement" className="text-white hover:bg-[#1e3a2d] px-2 py-1.5 text-xs rounded-md transition-all duration-200 transform hover:scale-105 inline-block">
+                Kỹ năng
+              </Link>
+              <Link to="/mechanics" className="text-white hover:bg-[#1e3a2d] px-2 py-1.5 text-xs rounded-md ml-1 transition-all duration-200 transform hover:scale-105 inline-block">
+                Cơ Chế
+              </Link>
+            </div>
           </div>
           
           <div className="hidden lg:block">
@@ -102,7 +109,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <div className="px-3 py-2 font-medium border-b border-white/10 flex items-center gap-2">
               <Home size={16} />
-              <span>Wiki</span>
+              <span>Trang chủ</span>
             </div>
             
             {sections.map((section) => (
@@ -127,15 +134,29 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             ))}
             
             <div className="pt-2 mt-2 border-t border-white/20">
-              <Button 
-                variant="ghost" 
-                onClick={toggleDarkMode} 
-                className="w-full text-white hover:bg-[#259e63] flex items-center px-3 py-2 rounded-md"
+              <Link 
+                to="/skills-and-advancement" 
+                className="text-white hover:bg-[#259e63] block px-3 py-2 rounded-md transition-all duration-200 transform hover:translate-x-1" 
+                onClick={() => setIsMenuOpen(false)}
               >
-                {isDarkMode ? <Sun size={18} className="mr-2" /> : <Moon size={18} className="mr-2" />}
-                {isDarkMode ? "Chế độ sáng" : "Chế độ tối"}
-              </Button>
+                Kỹ năng & Cách thăng cấp
+              </Link>
+              <Link 
+                to="/mechanics" 
+                className="text-white hover:bg-[#259e63] block px-3 py-2 rounded-md mt-1 transition-all duration-200 transform hover:translate-x-1" 
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Các Cơ Chế
+              </Link>
             </div>
+            <Button 
+              variant="ghost" 
+              onClick={toggleDarkMode} 
+              className="w-full text-white hover:bg-[#259e63] flex items-center px-3 py-2 rounded-md"
+            >
+              {isDarkMode ? <Sun size={18} className="mr-2" /> : <Moon size={18} className="mr-2" />}
+              {isDarkMode ? "Chế độ sáng" : "Chế độ tối"}
+            </Button>
           </div>
         </div>
       )}

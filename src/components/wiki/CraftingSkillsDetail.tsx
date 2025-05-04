@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,7 +6,10 @@ import {
   Sword,
   FlaskRound,
   Wand,
+  // Removed Potion as it's not exported
 } from "lucide-react";
+// Import Potion separately if it exists under a different name or from a different library
+// Example if it was named GlassBottle: import { GlassBottle } from "lucide-react";
 
 const CraftingSkillsDetail = () => {
   return (
@@ -132,7 +134,7 @@ const CraftingSkillsDetail = () => {
               <li><span className="text-[#825432] dark:text-[#FFAA00]">✦</span> Nghề Thợ Rèn: +25 chất lượng Rèn</li>
             </ul>
 
-            <div className="bg-[#FEF7CD]/30 dark:bg-[#FFAA00]/10 p-4 rounded-md border border-[#FFAA00]/30 mb-6"> 
+            <div className="bg-[#FEF7CD]/30 dark:bg-[#FFAA00]/10 p-4 rounded-md border border-[#FFAA00]/30 mb-6"> {/* Added mb-6 here */}
               <h4 className="text-lg font-semibold mb-2 text-[#825432] dark:text-[#FFAA00]">Ảnh hưởng của chất lượng Rèn lên trang bị</h4>
               <div className="overflow-x-auto text-gray-700 dark:text-gray-300">
                 <table className="min-w-full">
@@ -456,7 +458,7 @@ const CraftingSkillsDetail = () => {
               <li><span className="text-purple-600 dark:text-purple-400">✦</span> Nghề Nhà Giả Kim: +25 chất lượng Giả Kim Thuật</li>
             </ul>
 
-            <div className="bg-purple-100/30 dark:bg-purple-900/10 p-4 rounded-md border border-purple-500/30 mb-6"> 
+            <div className="bg-purple-100/30 dark:bg-purple-900/10 p-4 rounded-md border border-purple-500/30 mb-6"> {/* Added mb-6 here */}
               <p className="italic text-purple-700 dark:text-purple-400">
                 Với cấu hình mặc định, bạn có thể tích lũy tổng cộng 425 chất lượng Giả Kim Thuật. Plugin này được cân bằng dựa trên mức tối đa giả định là 300, vì vậy bạn có thể tạo ra một số loại thuốc khá bá đạo khi thực hiện điều này.
               </p>
@@ -474,25 +476,27 @@ const CraftingSkillsDetail = () => {
               </p>
               <h5 className="font-medium mb-2 text-purple-600 dark:text-purple-400">Các Phản Ứng:</h5>
               <ul className="text-sm grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700 dark:text-gray-300">
-                <li>Oak Log &rarr; Birch Log &rarr; Spruce Log &rarr; Dark Oak Log &rarr; Jungle Log &rarr; Acacia Log &rarr; Oak Log</li>
-                <li>Crimson Stem &rarr; Warped Stem &rarr; Crimson Stem</li>
-                <li>Stone &rarr; Copper Ore &rarr; Iron Ore</li>
-                <li>Redstone Block &rarr; Lapis Lazuli Block &rarr; Redstone Block</li>
-                <li>Brown Mushroom &rarr; Red Mushroom &rarr; Brown Mushroom</li>
-                <li>Crimson Fungus &rarr; Warped Fungus &rarr; Crimson Fungus</li>
-                <li>Wheat &rarr; Potatoes &rarr; Carrots &rarr; Beetroots &rarr; Wheat</li>
-                <li>Melon &rarr; Pumpkin &rarr; Melon</li>
-                <li>Dirt &rarr; Sand &rarr; Red Sand &rarr; Gravel &rarr; Clay &rarr; Dirt</li>
-                <li>Grass Block &rarr; Mycelium &rarr; Grass Block</li>
-                <li>Grass &rarr; Warped Roots &rarr; Crimson roots &rarr; Grass</li>
-                <li>Netherrack &rarr; Coarse Dirt &rarr; Netherrack</li>
-                <li>Cobblestone &rarr; Mossy Cobblestone &rarr; Cobblestone</li>
-                <li>Obsidian &rarr; Crying Obsidian &rarr; Obsidian</li>
-                <li>Torch &rarr; Soul Torch &rarr; Torch</li>
-                <li>Copper Block &rarr; Iron Block &rarr; Gold Block</li>
-                <li>Emerald Block &rarr; Diamond Block &rarr; Emerald Block</li>
+                <li>Oak Log &gt; Birch Log &gt; Spruce Log &gt; Dark Oak Log &gt; Jungle Log &gt; Acacia Log &gt; Oak Log</li>
+                <li>Crimson Stem &gt; Warped Stem &gt; Crimson Stem</li>
+                <li>Stone &gt; Copper Ore &gt; Iron Ore</li>
+                <li>Redstone Block &gt; Lapis Lazuli Block &gt; Redstone Block</li>
+                <li>Brown Mushroom &gt; Red Mushroom &gt; Brown Mushroom</li>
+                <li>Crimson Fungus &gt; Warped Fungus &gt; Crimson Fungus</li>
+                <li>Wheat &gt; Potatoes &gt; Carrots &gt; Beetroots &gt; Wheat</li>
+                <li>Melon &gt; Pumpkin &gt; Melon</li>
+                <li>Dirt &gt; Sand &gt; Red Sand &gt; Gravel &gt; Clay &gt; Dirt</li>
+                <li>Grass Block &gt; Mycelium &gt; Grass Block</li>
+                <li>Grass &gt; Warped Roots &gt; Crimson roots &gt; Grass</li>
+                <li>Netherrack &gt; Coarse Dirt &gt; Netherrack</li>
+                <li>Cobblestone &gt; Mossy Cobblestone &gt; Cobblestone</li>
+                <li>Obsidian &gt; Crying Obsidian &gt; Obsidian</li>
+                <li>Torch &gt; Soul Torch &gt; Torch</li>
+                <li>Copper Block &gt; Iron Block &gt; Gold Block</li>
+                <li>Emerald Block &gt; Diamond Block &gt; Emerald Block</li>
               </ul>
             </div>
+
+
           </div>
         </TabsContent>
       </Tabs>
